@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Introduction to Two-Person Zero-Sum Games</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/javascript" src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\MyTikzmark}[2]{
+     \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
+\newcommand{\DrawVLine}[3][]{
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[shorten \lt =0.3ex, #1] (#2.north) -- (#3.south);
+  \end{tikzpicture}
+}
+\newcommand{\DrawHLine}[3][]{
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[shorten \lt =0.2em, #1] (#2.west) -- (#3.east);
+  \end{tikzpicture}
+}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="images/image-1.svg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">Introduction to Game Theory: a Discovery Approach</span></a></h1>
+<p class="byline">Jennifer Firkins Nordstrom</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="chapter-2.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-2.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_DominatedStrategies.html" title="Next" alt="Next">Next</a></span>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="chapter-2.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-2.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="S_DominatedStrategies.html" title="Next" alt="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+<h2 class="link"><a href="chapter-1.html" data-scroll="chapter-1"><span class="codenumber">1</span><span class="title">What is Game Theory?</span></a></h2>
+<ul>
+<li><a href="S_intro.html" data-scroll="S_intro">Players and Strategies</a></li>
+<li><a href="S_IntroMatrices.html" data-scroll="S_IntroMatrices">Game Matrices and Payoff Vectors</a></li>
+</ul>
+<h2 class="link active"><a href="chapter-2.html" data-scroll="chapter-2"><span class="codenumber">2</span><span class="title">Two-Person Zero-Sum Games</span></a></h2>
+<ul>
+<li><a href="S_IntroZeroSum.html" data-scroll="S_IntroZeroSum" class="active">Introduction to Two-Person Zero-Sum Games</a></li>
+<li><a href="S_DominatedStrategies.html" data-scroll="S_DominatedStrategies">More Two-Person Zero-Sum Games: Dominated Strategies</a></li>
+<li><a href="S_Probability.html" data-scroll="S_Probability">Probability and Expected Value</a></li>
+<li><a href="S_OneCardStud.html" data-scroll="S_OneCardStud">Determining the Payoff Matrix in a Game of Chance</a></li>
+<li><a href="S_EquilibPoints.html" data-scroll="S_EquilibPoints">Equilibrium Points</a></li>
+<li><a href="S_ZeroSumStrategySummary.html" data-scroll="S_ZeroSumStrategySummary">Strategies for Zero-Sum Games and Equilibrium Points</a></li>
+<li><a href="S_PopRationality.html" data-scroll="S_PopRationality">Applications to Popular Culture: Rationality and Perfect Information</a></li>
+</ul>
+<h2 class="link"><a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span><span class="title">Repeated Two-Person Zero-sum Games</span></a></h2>
+<ul>
+<li><a href="S_IntroRepeated.html" data-scroll="S_IntroRepeated">Introduction to Repeated Games</a></li>
+<li><a href="S_MixStratGraph.html" data-scroll="S_MixStratGraph">Mixed Strategies: Graphical Solution</a></li>
+<li><a href="S_solvingeq.html" data-scroll="S_solvingeq">Using Sage to Graph Lines and Solve Equations</a></li>
+<li><a href="S_MixStratEV.html" data-scroll="S_MixStratEV">Mixed Strategies: Expected Value Solution</a></li>
+<li><a href="S_LiarsPoker.html" data-scroll="S_LiarsPoker">Repeated Two-person Zero-Sum Games: Liar's Poker</a></li>
+<li><a href="S_AugMatrices.html" data-scroll="S_AugMatrices">Augmented Matrices</a></li>
+<li><a href="S_Undercut.html" data-scroll="S_Undercut">Undercut</a></li>
+</ul>
+<h2 class="link"><a href="chapter-4.html" data-scroll="chapter-4"><span class="codenumber">4</span><span class="title">Non-Zero-Sum Games</span></a></h2>
+<ul>
+<li><a href="Intrononzero.html" data-scroll="Intrononzero">Introduction to Two-Player Non-Zero-Sum Games</a></li>
+<li><a href="pdandchicken.html" data-scroll="pdandchicken">Two-Player Non-Zero-Sum Games: Prisoner's Dilemma and Chicken</a></li>
+<li><a href="S_CWPD.html" data-scroll="S_CWPD">A Class-Wide Experiment</a></li>
+<li><a href="S_PDconditions.html" data-scroll="S_PDconditions">What Makes a Prisoner's Dilemma?</a></li>
+<li><a href="VDexperiment.html" data-scroll="VDexperiment">Another Multiplayer Experiment</a></li>
+<li><a href="S_VolunteerDil.html" data-scroll="S_VolunteerDil">Volunteer's Dilemma</a></li>
+<li><a href="S_RepeatPD.html" data-scroll="S_RepeatPD">Repeated Prisoner's Dilemma</a></li>
+<li><a href="S_PopPD.html" data-scroll="S_PopPD">Applications to Popular Culture: Prisoner's Dilemma and Chicken</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="references-1.html" data-scroll="references-1">References</a></li>
+<li><a href="index-1.html" data-scroll="index-1">Index</a></li>
+<li><a href="colophon-2.html" data-scroll="colophon-2">Colophon</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="S_IntroZeroSum"><h2 class="heading hide-type" alt="Section 2.1 Introduction to Two-Person Zero-Sum Games">
+<span class="type">Section</span><span class="codenumber">2.1</span><span class="title">Introduction to Two-Person Zero-Sum Games</span>
+</h2>
+<a href="S_IntroZeroSum.html" class="permalink">¶</a><section class="introduction" id="introduction-5"><p id="p-91"></p>
+<p id="p-92">In all of the examples from the last section, whatever one player won, the other player lost.</p>
+<article class="definition-like" id="D_zerosum"><h6 class="heading">
+<span class="type">Definition</span><span class="codenumber">2.1.1</span>
+</h6>
+<p id="p-93">A two player game is called a <b class="terminology">zero-sum</b> game if the sum of the payoffs to each player is constant for all possible outcomes of the game. More specifically, the terms (or coordinates) in each payoff vector must add up to the same value for each payoff vector. Such games are sometimes called <b class="terminology">constant-sum</b> games instead.</p></article><p id="p-94">We can always think of zero-sum games as being games in which one player's win is the other player's loss.</p>
+<article class="example-like" id="poker"><h6 class="heading">
+<span class="type">Example</span><span class="codenumber">2.1.2</span>
+</h6>
+<p id="p-95">Consider a poker game in which each player comes to the game with $100. If there are five players, then the sum of money for all five players is always $500. At any give time during the game, a particular player may have more than $100, but then another player must have less than $100. One player's win is another player's loss.</p></article><article class="example-like" id="E_cakecutting2"><h6 class="heading">
+<span class="type">Example</span><span class="codenumber">2.1.3</span>
+</h6>
+<p id="p-96">Consider the cake division game. Determine the payoff matrix for this game. It is important to determine what each player's options are first: how can the “cutter” cut the cake? How can the “chooser” pick her piece? The payoff matrix is given in <a knowl="./knowl/T_cakecutting.html" knowl-id="xref-T_cakecutting" alt="Table 2.1.4 " title="Table 2.1.4 ">Table 2.1.4</a>.</p>
+<figure class="figure-like" id="T_cakecutting"><table>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" colspan="2">Chooser</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines">Larger Piece</td>
+<td class="l m b1 r0 l0 t0 lines">Smaller Piece</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Cutter</td>
+<td class="l m b0 r1 l0 t0 lines">Cut Evenly</td>
+<td class="c m b1 r1 l0 t0 lines">(half, half)</td>
+<td class="c m b1 r1 l0 t0 lines">(half, half)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r1 l0 t0 lines">Cut Unvenly</td>
+<td class="c m b1 r1 l0 t0 lines">(small piece, large piece)</td>
+<td class="c m b1 r1 l0 t0 lines">(large piece, small piece)</td>
+</tr>
+</table>
+<figcaption><span class="type">Table</span><span class="codenumber">2.1.4</span>Payoff matrix for Cake Cutting game.</figcaption></figure><p id="p-97">In order to better see that this game is zero-sum (or constant-sum), we could give values for the amount of cake each player gets. For example, half the cake would be 50%, a small piece might be 40%. Then we can rewrite the matrix with the percentage values in <a knowl="./knowl/T_cakecuttingpercent.html" knowl-id="xref-T_cakecuttingpercent" alt="Table 2.1.5 " title="Table 2.1.5 ">Table 2.1.5</a></p>
+<figure class="figure-like" id="T_cakecuttingpercent"><table>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" colspan="2">Chooser</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines">Larger Piece</td>
+<td class="l m b1 r0 l0 t0 lines">Smaller Piece</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Cutter</td>
+<td class="l m b0 r1 l0 t0 lines">Cut Evenly</td>
+<td class="c m b1 r1 l0 t0 lines">\((50, 50)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((50, 50)\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r1 l0 t0 lines">Cut Unvenly</td>
+<td class="c m b1 r1 l0 t0 lines">\((40, 60)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((60, 40)\)</td>
+</tr>
+</table>
+<figcaption><span class="type">Table</span><span class="codenumber">2.1.5</span>Payoff matrix, in percent of cake, for Cake Cutting game.</figcaption></figure><p id="p-98">In each outcome, the payoffs to each player add up to 100 (or 100%). In more mathematical terms, the coordinates of each payoff vector add up to 100. Thus the sum is the same, or constant, for each outcome.</p></article><p id="p-99">It is probably simple to see from the matrix in <a knowl="./knowl/T_cakecuttingpercent.html" knowl-id="xref-T_cakecuttingpercent" alt="Table 2.1.5 " title="Table 2.1.5 ">Table 2.1.5</a> that Player 2 will always choose the large piece, thus Player 1 does best to cut the cake evenly. The outcome of the game is the <em class="emphasis">strategy pair</em> denoted {Cut Evenly, Larger Piece}, with resulting payoff vector \((50, 50)\text{.}\)</p>
+<p id="p-100">But why are we going to call these games “zero-sum” rather than “constant-sum”? We can convert any zero-sum game to a game where the payoffs actually sum to zero.</p>
+<article class="example-like" id="E_pokerzero"><h6 class="heading">
+<span class="type">Example</span><span class="codenumber">2.1.6</span>
+</h6>
+<p id="p-101">Consider the above poker game where each player begins the game with $100. Suppose at some point in the game the five players have the following amounts of money: $50, $200, $140, $100. $10. Then we could think of their gain as -$50, $100, $40, $0, -$90. What do these five numbers add up to?</p></article><article class="example-like" id="E_cakecuttingzero"><h6 class="heading">
+<span class="type">Example</span><span class="codenumber">2.1.7</span>
+</h6>
+<p id="p-102">Convert the cake division payoffs so that the payoff vectors sum to zero (rather than 100).</p>
+<p id="p-103">The solution is given in <a knowl="./knowl/T_cakecuttingzerosum.html" knowl-id="xref-T_cakecuttingzerosum" alt="Table 2.1.8 " title="Table 2.1.8 ">Table 2.1.8</a>.</p>
+<figure class="figure-like" id="T_cakecuttingzerosum"><table>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" colspan="2">Chooser</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines">Larger Piece</td>
+<td class="l m b1 r0 l0 t0 lines">Smaller Piece</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Cutter</td>
+<td class="l m b0 r1 l0 t0 lines">Cut Evenly</td>
+<td class="c m b1 r1 l0 t0 lines">\((0, 0)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((0, 0)\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r1 l0 t0 lines">Cut Unvenly</td>
+<td class="c m b1 r1 l0 t0 lines">\((-10, 10)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((10, -10)\)</td>
+</tr>
+</table>
+<figcaption><span class="type">Table</span><span class="codenumber">2.1.8</span>Zero-sum payoff matrix for Cake Cutting game.</figcaption></figure><p id="p-104">But let's make sure we understand what these numbers mean. For example, a payoff of \((0,0)\) does not mean each player gets no cake, it means they don't get any more cake than the other player. In this example, each player gets half the cake (50%) plus the payoff.</p></article><p id="p-105">In the form of <a knowl="./knowl/E_cakecuttingzero.html" knowl-id="xref-E_cakecuttingzero" alt="Example 2.1.7 " title="Example 2.1.7 ">Example 2.1.7</a>, it is easy to recognize a zero-sum game since each payoff vector has the form \((a, -a)\) (or \((-a, a)\)).</p></section><section class="subsection" id="Ex_election"><h3 class="heading hide-type" alt="Subsection 2.1.1 Example: An Election Campaign Game">
+<span class="type">Subsection</span><span class="codenumber">2.1.1</span><span class="title">Example: An Election Campaign Game</span>
+</h3>
+<a href="S_IntroZeroSum.html#Ex_election" class="permalink">¶</a><p id="p-106">Two candidates, Arnold and Bainbridge, are facing each other in a state election. They have three choices regarding the issue of the speed limit on I-5: They can support raising the speed limit to 70 MPH, they can support keeping the current speed limit, or they can dodge the issue entirely. The next three examples present three different payoff matrices for Arnold and Bainbridge.</p>
+<article class="example-like" id="Ex_election1"><h6 class="heading">
+<span class="type">Example</span><span class="codenumber">2.1.9</span>
+</h6>
+<p id="p-107">The candidates have the information given in <a knowl="./knowl/T_election1.html" knowl-id="xref-T_election1" alt="Table 2.1.10 " title="Table 2.1.10 ">Table 2.1.10</a> about how they would likely fare in the election based on how they stand on the speed limit.</p>
+<figure class="figure-like" id="T_election1"><table>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" colspan="3">Bainbridge</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines">Raise Limit</td>
+<td class="l m b1 r0 l0 t0 lines">Keep Limit</td>
+<td class="l m b1 r0 l0 t0 lines">Dodge</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r1 l0 t0 lines">Raise Limit</td>
+<td class="c m b1 r1 l0 t0 lines">\((45, 55)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((50, 50)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((40, 60)\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Arnold</td>
+<td class="l m b0 r1 l0 t0 lines">Keep Limit</td>
+<td class="c m b1 r1 l0 t0 lines">\((60, 40)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((55, 45)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((50, 50)\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r1 l0 t0 lines">Dodge</td>
+<td class="c m b1 r1 l0 t0 lines">\((45, 55)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((55, 45)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((40, 60)\)</td>
+</tr>
+</table>
+<figcaption><span class="type">Table</span><span class="codenumber">2.1.10</span>Percentage of the vote for <a knowl="./knowl/Ex_election1.html" knowl-id="xref-Ex_election1" alt="Example 2.1.9 " title="Example 2.1.9 ">Example 2.1.9</a>.</figcaption></figure></article><article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_election1" id="E_election1"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.1.11</span>
+</h6></a></article><div id="hk-E_election1" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-108">For the following questions, assume Arnold and Bainbridge have the payoff matrix given in <a knowl="./knowl/Ex_election1.html" knowl-id="xref-Ex_election1" alt="Example 2.1.9 " title="Example 2.1.9 ">Example 2.1.9</a>.</p>
+<ol id="ol-8" style="list-style-type: lower-alpha;">
+<li id="li-42"><p id="p-109">Explain why <a knowl="./knowl/Ex_election1.html" knowl-id="xref-Ex_election1" alt="Example 2.1.9 " title="Example 2.1.9 ">Example 2.1.9</a> is a zero-sum game.</p></li>
+<li id="li-43"><p id="p-110">What should Arnold choose to do? What should Bainbridge choose to do? Be sure to explain each candidate's choice. And remember, a player doesn't just want to win, he wants to get THE MOST votes– for example, you could assume these are polling numbers and that there is some margin of error, thus a candidate prefers to have a larger margin over his opponent!</p></li>
+<li id="li-44"><p id="p-111">What is the outcome of the election?</p></li>
+<li id="li-45"><p id="p-112">Does Arnold need to consider Bainbridge's strategies is in order to decide on his own strategy? Does Bainbridge need to consider Arnold's strategies is in order to decide on his own strategy? Explain your answer.</p></li>
+</ol></article></div>
+<article class="example-like" id="Ex_election2"><h6 class="heading">
+<span class="type">Example</span><span class="codenumber">2.1.12</span>
+</h6>
+<p id="p-113">Bainbridge's mother is injured in a highway accident caused by speeding. The new payoff matrix is given in <a knowl="./knowl/T_election2.html" knowl-id="xref-T_election2" alt="Table 2.1.13 " title="Table 2.1.13 ">Table 2.1.13</a>.</p>
+<figure class="figure-like" id="T_election2"><table>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" colspan="3">Bainbridge</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines">Raise Limit</td>
+<td class="l m b1 r0 l0 t0 lines">Keep Limit</td>
+<td class="l m b1 r0 l0 t0 lines">Dodge</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r1 l0 t0 lines">Raise Limit</td>
+<td class="c m b1 r1 l0 t0 lines">\((45, 55)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((10, 90)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((40, 60)\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Arnold</td>
+<td class="l m b0 r1 l0 t0 lines">Keep Limit</td>
+<td class="c m b1 r1 l0 t0 lines">\((60, 40)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((55, 45)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((50, 50)\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r1 l0 t0 lines">Dodge</td>
+<td class="c m b1 r1 l0 t0 lines">\((45, 55)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((10, 90)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((40, 60)\)</td>
+</tr>
+</table>
+<figcaption><span class="type">Table</span><span class="codenumber">2.1.13</span>Percentage of the vote for <a knowl="./knowl/Ex_election2.html" knowl-id="xref-Ex_election2" alt="Example 2.1.12 " title="Example 2.1.12 ">Example 2.1.12</a>.</figcaption></figure></article><article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_election2" id="E_election2"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.1.14</span>
+</h6></a></article><div id="hk-E_election2" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-114">For the following questions, assume Arnold and Bainbridge have the payoff matrix given in <a knowl="./knowl/Ex_election2.html" knowl-id="xref-Ex_election2" alt="Example 2.1.12 " title="Example 2.1.12 ">Example 2.1.12</a>.</p>. <ol id="ol-9" style="list-style-type: lower-alpha;">
+<li id="li-46"><p id="p-115">Explain why <a knowl="./knowl/Ex_election2.html" knowl-id="xref-Ex_election2" alt="Example 2.1.12 " title="Example 2.1.12 ">Example 2.1.12</a> is a zero-sum game.</p></li>
+<li id="li-47"><p id="p-116">What should Arnold choose to do? What should Bainbridge choose to do? Be sure to explain each candidate's choice.</p></li>
+<li id="li-48"><p id="p-117">What is the outcome of the election?</p></li>
+<li id="li-49"><p id="p-118">Does Arnold need to consider Bainbridge's strategies is in order to decide on his own strategy? Does Bainbridge need to consider Arnold's strategies is in order to decide on his own strategy? Explain your answer.</p></li>
+</ol></article></div>
+<article class="example-like" id="Ex_election3"><h6 class="heading">
+<span class="type">Example</span><span class="codenumber">2.1.15</span>
+</h6>
+<p id="p-119">Bainbridge begins giving election speeches at college campuses and monster truck rallies. The new payoff matrix is given in <a knowl="./knowl/T_election3.html" knowl-id="xref-T_election3" alt="Table 2.1.16 " title="Table 2.1.16 ">Table 2.1.16</a>.</p>
+<figure class="figure-like" id="T_election3"><table>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" colspan="3">Bainbridge</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines">Raise Limit</td>
+<td class="l m b1 r0 l0 t0 lines">Keep Limit</td>
+<td class="l m b1 r0 l0 t0 lines">Dodge</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r1 l0 t0 lines">Raise Limit</td>
+<td class="c m b1 r1 l0 t0 lines">\((35, 65)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((10, 90)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((60, 40)\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Arnold</td>
+<td class="l m b0 r1 l0 t0 lines">Keep Limit</td>
+<td class="c m b1 r1 l0 t0 lines">\((45, 55)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((55, 45)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((50, 50)\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r1 l0 t0 lines">Dodge</td>
+<td class="c m b1 r1 l0 t0 lines">\((40, 60)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((10, 90)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((65, 35)\)</td>
+</tr>
+</table>
+<figcaption><span class="type">Table</span><span class="codenumber">2.1.16</span>Percentage of the vote for <a knowl="./knowl/Ex_election3.html" knowl-id="xref-Ex_election3" alt="Example 2.1.15 " title="Example 2.1.15 ">Example 2.1.15</a>.</figcaption></figure></article><article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_election3" id="E_election3"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.1.17</span>
+</h6></a></article><div id="hk-E_election3" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-120">For the following questions, assume Arnold and Bainbridge have the payoff matrix given in <a knowl="./knowl/Ex_election3.html" knowl-id="xref-Ex_election3" alt="Example 2.1.15 " title="Example 2.1.15 ">Example 2.1.15</a>.</p>
+<ol id="ol-10" style="list-style-type: lower-alpha;">
+<li id="li-50"><p id="p-121">Explain why <a knowl="./knowl/Ex_election3.html" knowl-id="xref-Ex_election3" alt="Example 2.1.15 " title="Example 2.1.15 ">Example 2.1.15</a> is a zero-sum game.</p></li>
+<li id="li-51"><p id="p-122">What should Arnold choose to do? What should Bainbridge choose to do? Be sure to explain each candidate's choice.</p></li>
+<li id="li-52"><p id="p-123">What is the outcome of the election?</p></li>
+<li id="li-53"><p id="p-124">Does Arnold need to consider Bainbridge's strategies is in order to decide on his own strategy? Does Bainbridge need to consider Arnold's strategies is in order to decide on his own strategy? Explain your answer.</p></li>
+</ol></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-11" id="exercise-11"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.1.18</span>
+</h6></a></article><div id="hk-exercise-11" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-125">In each of the above scenarios, is there any reason for Arnold or Bainbridge to change his strategy? If there is, explain under what circumstances it makes sense to change strategy. If not, explain why it never makes sense to change strategy.</p></article></div></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type" alt="Subsection 2.1.2 Equilibrium Pairs">
+<span class="type">Subsection</span><span class="codenumber">2.1.2</span><span class="title">Equilibrium Pairs</span>
+</h3>
+<p id="p-126">Chances are, in each of the exercises above, you were able to determine what each player should do. In particular, if both players play your suggested strategies, there is no reason for either player to change to a different strategy.</p>
+<article class="definition-like" id="D_equilpair"><h6 class="heading">
+<span class="type">Definition</span><span class="codenumber">2.1.19</span>
+</h6>
+<p id="p-127"> A pair of strategies is an <b class="terminology">equilibrium pair</b> if neither player gains by changing strategies.</p></article><p id="p-128">For example, consider the game matrix from <a knowl="./knowl/E_Sec2_2small.html" knowl-id="xref-E_Sec2_2small" alt="Example 1.2.5 " title="Example 1.2.5 ">Example 1.2.5</a>, <a knowl="./knowl/T_matrixEx1Sec2_2.html" knowl-id="xref-T_matrixEx1Sec2_2" alt="Table 1.2.6 " title="Table 1.2.6 ">Table 1.2.6</a>.</p>
+<figure class="figure-like" id="table-11"><table>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" colspan="2">Player 2</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines">X</td>
+<td class="c m b1 r0 l0 t0 lines">Y</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Player 1</td>
+<td class="l m b0 r1 l0 t0 lines">A</td>
+<td class="c m b1 r1 l0 t0 lines">\((100, -100)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((-10, 10)\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r1 l0 t0 lines">B</td>
+<td class="c m b1 r1 l0 t0 lines">\((0, 0)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((-1, 11)\)</td>
+</tr>
+</table>
+<figcaption><span class="type">Table</span><span class="codenumber">2.1.20</span>Payoff matrix for <a knowl="./knowl/E_Sec2_2small.html" knowl-id="xref-E_Sec2_2small" alt="Example 1.2.5 " title="Example 1.2.5 ">Example 1.2.5</a>.</figcaption></figure><p id="p-129">You determined that Player 2 should choose to play Y, and thus, Player 1 should play B (i.e., we have the strategy pair {B, Y}). Why is this an equilibrium pair? If Player 2 plays Y, does Player 1 have any reason to change to strategy A? No, she would lose 10 instead of 1! If Player 1 plays B, does Player 2 have any reason to change to strategy X? No, she would gain 0 instead of 1! Thus neither player benefits from changing strategy, and so we say {B, Y} is an equilibrium pair.</p>
+<p id="p-130">For now, we can use a “guess and check” method for finding equilibrium pairs. Take each outcome and decide whether either player would prefer to switch. Remember, Player 1 can only choose a different row, and Player 2 can only choose a different column. In our above example there are four outcomes to check: {A, X}, {A, Y}, {B, X}, and {B, Y}. We already know {B, Y} is an equilibrium pair, but let's check the rest. Suppose the players play {A, X}. Does Player 1 want to switch to B? No, she'd rather get 100 than 0. Does player 2 want to switch to Y? Yes! She'd rather get 10 than -100. So {A, X} is NOT an equilibrium pair since a player wants to switch. Now check that for {A, Y} Player 1 would want to switch, and for {B, X} both players would want to switch. Thus {A, Y} and {B, X} are NOT equilibrium pairs. Now you can try to find equilibrium pairs in any matrix game by just checking each payoff vector to see if one of the players would have wanted to switch to a different strategy.</p>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-12" id="exercise-12"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.1.21</span>
+</h6></a></article><div id="hk-exercise-12" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-131">Are the strategy pairs you determined in the three election scenarios equilibrium pairs? In other words, would either player prefer to change strategies? (You don't need to check whether any other strategies are equilibrium pairs.)</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-13" id="exercise-13"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.1.22</span>
+</h6></a></article><div id="hk-exercise-13" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-132">Use the “guess and check” method to determine any equilibrium pairs for the following payoff matrices. </p>
+<ol id="ol-11" style="list-style-type: lower-alpha;">
+<li id="li-54">
+<p id="p-133"></p>
+\begin{equation*}
+\left[\begin{matrix}
+(2,-2)\amp (2, -2)\\
+(1, -1) \amp  (3, -3)
+\end{matrix}\right]\hspace{.5in}
+\end{equation*}
+</li>
+<li id="li-55">
+<p id="p-134"></p>
+\begin{equation*}
+\left[\begin{matrix}
+(3,-3)\amp (1, -1)\\
+(2, -2) \amp  (4, -4)
+\end{matrix}\right]\hspace{.5in}
+\end{equation*}
+</li>
+<li id="li-56">
+<p id="p-135"></p>
+\begin{equation*}
+\left[\begin{matrix}
+(4,-4)\amp (5, -5)\amp (4, -4)\\
+(3, -3) \amp  (0, 0)\amp (1, -1)
+\end{matrix}\right]
+\end{equation*}
+</li>
+</ol></article></div>
+<p id="p-136">After trying the above examples, do you think every game has an equilibrium pair? Can games have multiple equilibrium pairs?</p>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-14" id="exercise-14"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.1.23</span>
+</h6></a></article><div id="hk-exercise-14" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-137">Do all games have equilibrium pairs?</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-15" id="exercise-15"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.1.24</span>
+</h6></a></article><div id="hk-exercise-15" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-138">Can a game have more than one equilibrium pair?</p></article></div>
+<p id="p-139">The last three exercises give you a few more games to practice with.</p>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-16" id="exercise-16"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.1.25</span>
+</h6></a></article><div id="hk-exercise-16" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-140">Consider the game ROCK, PAPER, SCISSORS (Rock beats Scissors, Scissors beat Paper, Paper beats Rock). Construct the payoff matrix for this game. Does it have an equilibrium pair? Explain your answer.</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_network" id="E_network"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.1.26</span>
+</h6></a></article><div id="hk-E_network" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-141">Two television networks are battling for viewers for 7 pm Monday night. They each need to decide if they are going to show a sitcom or a sporting event. <a knowl="./knowl/T_network.html" knowl-id="xref-T_network" alt="Table 2.1.27 " title="Table 2.1.27 ">Table 2.1.27</a> gives the payoffs as percent of viewers.</p>
+<figure class="figure-like" id="T_network"><table>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" colspan="2">Network 2</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines">Sitcom</td>
+<td class="l m b1 r0 l0 t0 lines">Sports</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Network 1</td>
+<td class="l m b0 r1 l0 t0 lines">Sitcom</td>
+<td class="l m b1 r1 l0 t0 lines">\((55, 45)\)</td>
+<td class="l m b1 r1 l0 t0 lines">\((52, 48)\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r1 l0 t0 lines">Sports</td>
+<td class="l m b1 r1 l0 t0 lines">\((50, 50)\)</td>
+<td class="l m b1 r1 l0 t0 lines">\((45, 55)\)</td>
+</tr>
+</table>
+<figcaption><span class="type">Table</span><span class="codenumber">2.1.27</span>Payoff matrix for Battle of the Networks.</figcaption></figure><ol id="ol-12" style="list-style-type: lower-alpha;">
+<li id="li-57"><p id="p-142">Explain why this is a zero-sum game.</p></li>
+<li id="li-58"><p id="p-143">Does this game have an equilibrium pair? If so, find it and explain what each network should do.</p></li>
+<li id="li-59"><p id="p-144">Convert this game to one in which the payoffs actually sum to zero. Hint: if a network wins 60% of the viewers, how much more than 50% of the viewers does it have?</p></li>
+</ol></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_compadvantage" id="E_compadvantage"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.1.28</span>
+</h6></a></article><div id="hk-E_compadvantage" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-145">This game is an example of what economists call <em class="emphasis">Competitive Advantage</em>. Two competing firms need to decide whether or not to adopt a new type of technology. The payoff matrix is in <a knowl="./knowl/T_compadvantage.html" knowl-id="xref-T_compadvantage" alt="Table 2.1.29 " title="Table 2.1.29 ">Table 2.1.29</a>. The variable \(a\) is a positive number representing the economic advantage a firm will gain if it is the first to adopt the new technology.</p>
+<figure class="figure-like" id="T_compadvantage"><table>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" colspan="2">Firm A</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines">Adopt New Tech</td>
+<td class="l m b1 r0 l0 t0 lines">Stay Put</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Firm B</td>
+<td class="l m b0 r1 l0 t0 lines">Adopt New Tech</td>
+<td class="c m b1 r1 l0 t0 lines">\((0, 0)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((a, -a)\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r1 l0 t0 lines">Stay Put</td>
+<td class="c m b1 r1 l0 t0 lines">\((-a, a)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((0, 0)\)</td>
+</tr>
+<tr><td class="l m b0 r0 l0 t0 lines"></td></tr>
+</table>
+<figcaption><span class="type">Table</span><span class="codenumber">2.1.29</span>Payoff matrix for Competitive Advantage.</figcaption></figure><ol id="ol-13" style="list-style-type: lower-alpha;">
+<li id="li-60"><p id="p-146">Explain the payoff vector for each strategy pair. For example, why should the pair {Adopt New Tech, Stay Put} have the payoff \((a, -a)\text{?}\)</p></li>
+<li id="li-61"><p id="p-147">Explain what each firm should do.</p></li>
+<li id="li-62"><p id="p-148">Give a real life example of Competitive Advantage.</p></li>
+</ol></article></div>
+<p id="p-149">We've seen how to describe a zero-sum game and how to find equilibrium pairs. We've tried to decide what each player's strategy should be. Each player may need to consider the strategy of the other player in order to determine his or her best strategy. But we need to be careful, although our intuition can be useful in deciding the best strategy, we'd like to be able to be more precise about finding strategies for each player. We'll learn some of these tools in the next section.</p></section></section></div></main>
+</div>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Equilibrium Points</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/javascript" src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\MyTikzmark}[2]{
+     \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
+\newcommand{\DrawVLine}[3][]{
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[shorten \lt =0.3ex, #1] (#2.north) -- (#3.south);
+  \end{tikzpicture}
+}
+\newcommand{\DrawHLine}[3][]{
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[shorten \lt =0.2em, #1] (#2.west) -- (#3.east);
+  \end{tikzpicture}
+}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="images/image-1.svg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">Introduction to Game Theory: a Discovery Approach</span></a></h1>
+<p class="byline">Jennifer Firkins Nordstrom</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_OneCardStud.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-2.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_ZeroSumStrategySummary.html" title="Next" alt="Next">Next</a></span>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_OneCardStud.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-2.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="S_ZeroSumStrategySummary.html" title="Next" alt="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+<h2 class="link"><a href="chapter-1.html" data-scroll="chapter-1"><span class="codenumber">1</span><span class="title">What is Game Theory?</span></a></h2>
+<ul>
+<li><a href="S_intro.html" data-scroll="S_intro">Players and Strategies</a></li>
+<li><a href="S_IntroMatrices.html" data-scroll="S_IntroMatrices">Game Matrices and Payoff Vectors</a></li>
+</ul>
+<h2 class="link active"><a href="chapter-2.html" data-scroll="chapter-2"><span class="codenumber">2</span><span class="title">Two-Person Zero-Sum Games</span></a></h2>
+<ul>
+<li><a href="S_IntroZeroSum.html" data-scroll="S_IntroZeroSum">Introduction to Two-Person Zero-Sum Games</a></li>
+<li><a href="S_DominatedStrategies.html" data-scroll="S_DominatedStrategies">More Two-Person Zero-Sum Games: Dominated Strategies</a></li>
+<li><a href="S_Probability.html" data-scroll="S_Probability">Probability and Expected Value</a></li>
+<li><a href="S_OneCardStud.html" data-scroll="S_OneCardStud">Determining the Payoff Matrix in a Game of Chance</a></li>
+<li><a href="S_EquilibPoints.html" data-scroll="S_EquilibPoints" class="active">Equilibrium Points</a></li>
+<li><a href="S_ZeroSumStrategySummary.html" data-scroll="S_ZeroSumStrategySummary">Strategies for Zero-Sum Games and Equilibrium Points</a></li>
+<li><a href="S_PopRationality.html" data-scroll="S_PopRationality">Applications to Popular Culture: Rationality and Perfect Information</a></li>
+</ul>
+<h2 class="link"><a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span><span class="title">Repeated Two-Person Zero-sum Games</span></a></h2>
+<ul>
+<li><a href="S_IntroRepeated.html" data-scroll="S_IntroRepeated">Introduction to Repeated Games</a></li>
+<li><a href="S_MixStratGraph.html" data-scroll="S_MixStratGraph">Mixed Strategies: Graphical Solution</a></li>
+<li><a href="S_solvingeq.html" data-scroll="S_solvingeq">Using Sage to Graph Lines and Solve Equations</a></li>
+<li><a href="S_MixStratEV.html" data-scroll="S_MixStratEV">Mixed Strategies: Expected Value Solution</a></li>
+<li><a href="S_LiarsPoker.html" data-scroll="S_LiarsPoker">Repeated Two-person Zero-Sum Games: Liar's Poker</a></li>
+<li><a href="S_AugMatrices.html" data-scroll="S_AugMatrices">Augmented Matrices</a></li>
+<li><a href="S_Undercut.html" data-scroll="S_Undercut">Undercut</a></li>
+</ul>
+<h2 class="link"><a href="chapter-4.html" data-scroll="chapter-4"><span class="codenumber">4</span><span class="title">Non-Zero-Sum Games</span></a></h2>
+<ul>
+<li><a href="Intrononzero.html" data-scroll="Intrononzero">Introduction to Two-Player Non-Zero-Sum Games</a></li>
+<li><a href="pdandchicken.html" data-scroll="pdandchicken">Two-Player Non-Zero-Sum Games: Prisoner's Dilemma and Chicken</a></li>
+<li><a href="S_CWPD.html" data-scroll="S_CWPD">A Class-Wide Experiment</a></li>
+<li><a href="S_PDconditions.html" data-scroll="S_PDconditions">What Makes a Prisoner's Dilemma?</a></li>
+<li><a href="VDexperiment.html" data-scroll="VDexperiment">Another Multiplayer Experiment</a></li>
+<li><a href="S_VolunteerDil.html" data-scroll="S_VolunteerDil">Volunteer's Dilemma</a></li>
+<li><a href="S_RepeatPD.html" data-scroll="S_RepeatPD">Repeated Prisoner's Dilemma</a></li>
+<li><a href="S_PopPD.html" data-scroll="S_PopPD">Applications to Popular Culture: Prisoner's Dilemma and Chicken</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="references-1.html" data-scroll="references-1">References</a></li>
+<li><a href="index-1.html" data-scroll="index-1">Index</a></li>
+<li><a href="colophon-2.html" data-scroll="colophon-2">Colophon</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="S_EquilibPoints"><h2 class="heading hide-type" alt="Section 2.5 Equilibrium Points">
+<span class="type">Section</span><span class="codenumber">2.5</span><span class="title">Equilibrium Points</span>
+</h2>
+<a href="S_EquilibPoints.html" class="permalink">¶</a><p id="p-285">In this section, we will try to gain a greater understanding of equilibrium strategies in a game. In general, we call the pair of equilibrium strategies an <em class="emphasis">equilibrium pair</em>, while we call the specific payoff vector associated with an equilibrium pair an <em class="emphasis">equilibrium point</em>.</p>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_matrixexamples" id="E_matrixexamples"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.5.1</span>
+</h6></a></article><div id="hk-E_matrixexamples" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-286">Determine the equilibrium point(s) for the following games. </p>
+<ol id="ol-19" style="list-style-type: lower-alpha;">
+<li id="li-86"><p id="p-287">\(\left[\begin{matrix}(2, -2)\amp (-1, 1)\\
+(2, -2)\amp (-1, 1)
+\end{matrix} \right]\)</p></li>
+<li id="li-87"><p id="p-288">\(\left[\begin{matrix}(0, 0)\amp (-1, 1)\amp (0, 0)\\
+(-1, 1)\amp (0, 0)\amp (-1, 1)\\
+(0, 0)\amp (1, -1)\amp (0, 0)
+\end{matrix} \right]\)</p></li>
+</ol></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-69" id="exercise-69"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.5.2</span>
+</h6></a></article><div id="hk-exercise-69" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-289">What do you notice about the values of the equilibrium points of the games in <a knowl="./knowl/E_matrixexamples.html" knowl-id="xref-E_matrixexamples" alt="Exercise 2.5.1 " title="Exercise 2.5.1 ">Exercise 2.5.1</a>?</p></article></div>
+<p id="p-290">The big question we want to answer is “Can two equilibrium points for a two-player zero-sum game have different values?” By experimenting with some examples, try to create an example of a game with two equilibrium points where those points have different values for one of the players. If you can successfully create such an example, you will have answered the question. But just because you can't find an example, that doesn't mean one doesn't exist!</p>
+<p id="p-291">After trying several examples, you might be beginning to believe that the answer to the above question is “no.” Now you are ready to try to prove the following theorem:</p>
+<article class="paragraphs" id="paragraphs-4"><h5 class="heading"><span class="title">Solution Theorem for Zero-Sum Games</span></h5>
+<p id="p-292"> Every equilibrium point of a two-person zero-sum game has the same value.</p></article><p id="p-293">Let's start with the \(2 \times 2\) case. We will use a <em class="emphasis">proof by contradiction</em>. We will assume the theorem is false and show that we get a logical contradiction. Once we reach a logical contradiction (a statement that is both true and false), we can conclude we were wrong to assume the theorem was false; hence, the theorem must be true. Make sure you are comfortable with the logic of this before moving on.</p>
+<p id="p-294">Since we want to assume the theorem is false, we assume we have a two-player zero-sum game with two different equilibrium values. Since we don't have a specific example of such a game, we want to represent the game in a general form. In particular, we can represent the general game</p>
+\begin{equation*}
+\left[\begin{matrix}(a, -a)\amp (c, -c)\\
+(d, -d)\amp (b, -b)
+\end{matrix} \right].
+\end{equation*}
+<p id="p-295">Note that if \(a\) is negative, then \(-a\) is positive; thus, every possible set of values is represented by this matrix. We want to look at the possible cases for equilibria.</p>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_col1neq" id="E_col1neq"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.5.3</span><span class="title">Equilibria in Column 1</span>
+</h6></a></article><div id="hk-E_col1neq" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-296">Explain what goes wrong if \((a, -a)\) and \((d, -d)\) are equilibria with \(a \neq d\text{?}\) Hint: think about the different cases, such as \(a\lt d\text{,}\) \(a&gt;d\text{.}\)</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_gencolneq" id="E_gencolneq"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.5.4</span><span class="title">Equilibria in the same column/row</span>
+</h6></a></article><div id="hk-E_gencolneq" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-297">Generalize you answer to <a knowl="./knowl/E_col1neq.html" knowl-id="xref-E_col1neq" alt="Exercise 2.5.3 Equilibria in Column 1" title="Exercise 2.5.3 Equilibria in Column 1">Exercise 2.5.3</a> to explain what goes wrong if the two equilibria are in the same column. Similarly, explain what happens if the two equilibria are in the same row.</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_diag" id="E_diag"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.5.5</span><span class="title">Diagonal equilibria</span>
+</h6></a></article><div id="hk-E_diag" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-298">Does the same explanation hold if the two equilibria are diagonal from each other? (Explain your answer!)</p></article></div>
+<p id="p-299">From your last answer, you should see that we need to do more work to figure out what happens if the equilibria are diagonal. So let's assume that the two equilibria are \((a, -a)\) and \((b, -b)\) with \(a \neq b\text{.}\) It might be helpful to draw the payoff matrix and circle the equilibria.</p>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_4ineq1" id="E_4ineq1"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.5.6</span><span class="title">A player prefers the value of an equilibrium to another choice</span>
+</h6></a></article><div id="hk-E_4ineq1" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-300">Construct a system of inequalities using the fact that a player prefers an equilibrium point to another choice. For example, Player 1 prefers \(a\) to \(d\text{.}\) Thus, \(a &gt; d\text{.}\) List all four inequalities you can get using this fact. You should get two for each player– remember that Player 1 can only compare values in the same column since he has no ability to switch columns. If necessary, convert all inequalities to ones without negatives. [Algebra review: \(-5 \lt  -2\) means \(5 &gt; 2\text{!}\)]</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_string1" id="E_string1"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.5.7</span><span class="title">Create strings of inequalities</span>
+</h6></a></article><div id="hk-E_string1" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-301">Now string your inequalities together. For example, if \(a \lt  b\) and \(b \lt  c\) then we can write \(a \lt  b \lt  c\text{.}\) [Be careful, the inequalities must face the same way; we cannot write \(a&gt; b \lt  c\text{!}\)]</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_contra1" id="E_contra1"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.5.8</span><span class="title">You now have a contradiction</span>
+</h6></a></article><div id="hk-E_contra1" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-302">Explain why you now have a contradiction (a statement that <em class="emphasis">must</em> be false). We can now conclude that our assumption that \(a \neq b\) was wrong.</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_repeatineq" id="E_repeatineq"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.5.9</span><span class="title">Diagonal case for \(c\) and \(d\)</span>
+</h6></a></article><div id="hk-E_repeatineq" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-303">Repeat the above argument (<a knowl="./knowl/E_4ineq1.html" knowl-id="xref-E_4ineq1" alt="Exercise 2.5.6 A player prefers the value of an equilibrium to another choice" title="Exercise 2.5.6 A player prefers the value of an equilibrium to another choice">Exercise 2.5.6</a>, <a knowl="./knowl/E_string1.html" knowl-id="xref-E_string1" alt="Exercise 2.5.7 Create strings of inequalities" title="Exercise 2.5.7 Create strings of inequalities">Exercise 2.5.7</a>, and <a knowl="./knowl/E_contra1.html" knowl-id="xref-E_contra1" alt="Exercise 2.5.8 You now have a contradiction" title="Exercise 2.5.8 You now have a contradiction">Exercise 2.5.8</a>) for the case that the two equilibria are \((d, -d)\) and \((c, -c)\) with \(d\neq c\text{.}\)</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_concl2x2" id="E_concl2x2"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.5.10</span><span class="title">Sumarize conclusion</span>
+</h6></a></article><div id="hk-E_concl2x2" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-304">Explain why you can conclude that all equilibria in a \(2 \times 2\) two-player zero-sum game have the same value.</p></article></div>
+<p id="p-305">We just worked through the proof, step-by-step, but now you need to put all the ideas together for yourself.</p>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_2x2proof" id="E_2x2proof"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.5.11</span>
+</h6></a></article><div id="hk-E_2x2proof" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-306">Write up the complete proof for the \(2 \times 2\) case in your own words.</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_nxn" id="E_nxn"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.5.12</span>
+</h6></a></article><div id="hk-E_nxn" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-307">Can you see how you might generalize to a larger game matrix? You do not need to write up a proof of the general case, just explain how the key ideas from the \(2 \times 2\) case would apply to a bigger game matrix. Hint: think about equilibria in (a) the same row, (b) in the same column, or (c) in a different row and column.</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_nonequil" id="E_nonequil"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.5.13</span>
+</h6></a></article><div id="hk-E_nonequil" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-308">It is important to note that just because two outcomes have the same value, it does not mean they are both equilibria. Give a specific example of a game matrix with two outcomes that are (0,0), where one is an equilibrium point and the other is not.</p></article></div>
+<p id="p-309">Working through the steps of a mathematical proof can be challenging. As you think about what we did in this section, first make sure you understand the argument for each step. Then work on understanding how the steps fit together to create the larger argument.</p>
+<p id="p-310">The next section summarizes all our work with finding equilibrium points for zero-sum games.</p></section></div></main>
+</div>
+</body>
+</html>

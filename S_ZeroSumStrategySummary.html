@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Strategies for Zero-Sum Games and Equilibrium Points</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/javascript" src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\MyTikzmark}[2]{
+     \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
+\newcommand{\DrawVLine}[3][]{
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[shorten \lt =0.3ex, #1] (#2.north) -- (#3.south);
+  \end{tikzpicture}
+}
+\newcommand{\DrawHLine}[3][]{
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[shorten \lt =0.2em, #1] (#2.west) -- (#3.east);
+  \end{tikzpicture}
+}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="images/image-1.svg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">Introduction to Game Theory: a Discovery Approach</span></a></h1>
+<p class="byline">Jennifer Firkins Nordstrom</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_EquilibPoints.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-2.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_PopRationality.html" title="Next" alt="Next">Next</a></span>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_EquilibPoints.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-2.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="S_PopRationality.html" title="Next" alt="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+<h2 class="link"><a href="chapter-1.html" data-scroll="chapter-1"><span class="codenumber">1</span><span class="title">What is Game Theory?</span></a></h2>
+<ul>
+<li><a href="S_intro.html" data-scroll="S_intro">Players and Strategies</a></li>
+<li><a href="S_IntroMatrices.html" data-scroll="S_IntroMatrices">Game Matrices and Payoff Vectors</a></li>
+</ul>
+<h2 class="link active"><a href="chapter-2.html" data-scroll="chapter-2"><span class="codenumber">2</span><span class="title">Two-Person Zero-Sum Games</span></a></h2>
+<ul>
+<li><a href="S_IntroZeroSum.html" data-scroll="S_IntroZeroSum">Introduction to Two-Person Zero-Sum Games</a></li>
+<li><a href="S_DominatedStrategies.html" data-scroll="S_DominatedStrategies">More Two-Person Zero-Sum Games: Dominated Strategies</a></li>
+<li><a href="S_Probability.html" data-scroll="S_Probability">Probability and Expected Value</a></li>
+<li><a href="S_OneCardStud.html" data-scroll="S_OneCardStud">Determining the Payoff Matrix in a Game of Chance</a></li>
+<li><a href="S_EquilibPoints.html" data-scroll="S_EquilibPoints">Equilibrium Points</a></li>
+<li><a href="S_ZeroSumStrategySummary.html" data-scroll="S_ZeroSumStrategySummary" class="active">Strategies for Zero-Sum Games and Equilibrium Points</a></li>
+<li><a href="S_PopRationality.html" data-scroll="S_PopRationality">Applications to Popular Culture: Rationality and Perfect Information</a></li>
+</ul>
+<h2 class="link"><a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span><span class="title">Repeated Two-Person Zero-sum Games</span></a></h2>
+<ul>
+<li><a href="S_IntroRepeated.html" data-scroll="S_IntroRepeated">Introduction to Repeated Games</a></li>
+<li><a href="S_MixStratGraph.html" data-scroll="S_MixStratGraph">Mixed Strategies: Graphical Solution</a></li>
+<li><a href="S_solvingeq.html" data-scroll="S_solvingeq">Using Sage to Graph Lines and Solve Equations</a></li>
+<li><a href="S_MixStratEV.html" data-scroll="S_MixStratEV">Mixed Strategies: Expected Value Solution</a></li>
+<li><a href="S_LiarsPoker.html" data-scroll="S_LiarsPoker">Repeated Two-person Zero-Sum Games: Liar's Poker</a></li>
+<li><a href="S_AugMatrices.html" data-scroll="S_AugMatrices">Augmented Matrices</a></li>
+<li><a href="S_Undercut.html" data-scroll="S_Undercut">Undercut</a></li>
+</ul>
+<h2 class="link"><a href="chapter-4.html" data-scroll="chapter-4"><span class="codenumber">4</span><span class="title">Non-Zero-Sum Games</span></a></h2>
+<ul>
+<li><a href="Intrononzero.html" data-scroll="Intrononzero">Introduction to Two-Player Non-Zero-Sum Games</a></li>
+<li><a href="pdandchicken.html" data-scroll="pdandchicken">Two-Player Non-Zero-Sum Games: Prisoner's Dilemma and Chicken</a></li>
+<li><a href="S_CWPD.html" data-scroll="S_CWPD">A Class-Wide Experiment</a></li>
+<li><a href="S_PDconditions.html" data-scroll="S_PDconditions">What Makes a Prisoner's Dilemma?</a></li>
+<li><a href="VDexperiment.html" data-scroll="VDexperiment">Another Multiplayer Experiment</a></li>
+<li><a href="S_VolunteerDil.html" data-scroll="S_VolunteerDil">Volunteer's Dilemma</a></li>
+<li><a href="S_RepeatPD.html" data-scroll="S_RepeatPD">Repeated Prisoner's Dilemma</a></li>
+<li><a href="S_PopPD.html" data-scroll="S_PopPD">Applications to Popular Culture: Prisoner's Dilemma and Chicken</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="references-1.html" data-scroll="references-1">References</a></li>
+<li><a href="index-1.html" data-scroll="index-1">Index</a></li>
+<li><a href="colophon-2.html" data-scroll="colophon-2">Colophon</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="S_ZeroSumStrategySummary"><h2 class="heading hide-type" alt="Section 2.6 Strategies for Zero-Sum Games and Equilibrium Points">
+<span class="type">Section</span><span class="codenumber">2.6</span><span class="title">Strategies for Zero-Sum Games and Equilibrium Points</span>
+</h2>
+<a href="S_ZeroSumStrategySummary.html" class="permalink">¶</a><p id="p-311">Throughout this chapter, we have been trying to find solutions for two player zero-sum games by deciding what two rational players should do. In this section, we will try to understand where we are with solving two-player zero-sum games. The exercises in this section are intended to review the concepts of dominated strategies, equlibrium points, and the maximin/minimax strategies. By working through your own examples, we hope to tie these concepts together and ask some bigger questions about equilibrium points. For example, should a player always play an equilibrium strategy? Will the maximin/minimax strategy always find an equilibrium point if one exists? What should a player do if no equlibrium exists? Although the formal answers to some of these questions are outside the scope of this book, you should be able to make some good conjectures about equilibrium points and rational solutions to two-player zero-sum games.</p>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_random2" id="E_random2"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.6.1</span>
+</h6></a></article><div id="hk-E_random2" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-312">Write down a random payoff (zero-sum) matrix with two strategy choices for each player.</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_random3" id="E_random3"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.6.2</span>
+</h6></a></article><div id="hk-E_random3" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-313">Write down a random payoff (zero-sum) matrix with three strategy choices for each player.</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_random4" id="E_random4"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.6.3</span>
+</h6></a></article><div id="hk-E_random4" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-314">Write down a random payoff (zero-sum) matrix with four strategy choices for each player.</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_exchangematrices" id="E_exchangematrices"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.6.4</span>
+</h6></a></article><div id="hk-E_exchangematrices" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-315">Exchange your list of matrices with another student in the class. For each matrix you have been given </p>
+<ol id="ol-20" style="list-style-type: lower-alpha;">
+<li id="li-88"><p id="p-316">try to determine any dominated strategies, if they exist.</p></li>
+<li id="li-89"><p id="p-317">try to determine any equilibrium points, if they exist.</p></li>
+<li id="li-90"><p id="p-318">determine the maximin and minimax strategies for Player 1 and Player 2, respectively. Can you always find these?</p></li>
+</ol></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_makelists" id="E_makelists"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.6.5</span>
+</h6></a></article><div id="hk-E_makelists" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-319">Now combine all the examples of payoff matrices in a group of 3 or 4 students. Make a list of the examples with equilibrium points and a list of examples without equilibrium points. If you have only one list, try creating examples for the other list. Based on your lists, do you think random payoff matrices are likely to have equilibrium points?</p></article></div>
+<p id="p-320">We want to use lists of matrices as experimental examples to try to answer some of the remaining questions we have about finding rational solutions for games and equilibrium points. If you don't feel you have enough examples, you are welcome to create more or gather more from your classmates.</p>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-86" id="exercise-86"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.6.6</span>
+</h6></a></article><div id="hk-exercise-86" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-321">If a matrix has an equilibrium point, can a player ever do better to <em class="emphasis">not</em> play an equilibrium strategy? Explain.</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-87" id="exercise-87"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.6.7</span>
+</h6></a></article><div id="hk-exercise-87" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-322">If a matrix has an equilibrium point, does the maximin/minimax strategy always find it? Explain.</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-88" id="exercise-88"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.6.8</span>
+</h6></a></article><div id="hk-exercise-88" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-323">If a matrix does NOT have an equilibrium point, should a player always play the maximin/minimax strategy? Explain.</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-89" id="exercise-89"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.6.9</span>
+</h6></a></article><div id="hk-exercise-89" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-324">If a matrix does NOT have an equilibrium point is there an ideal strategy for each player? Explain.</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-90" id="exercise-90"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.6.10</span>
+</h6></a></article><div id="hk-exercise-90" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-325">Write a brief summary of the connections you have observed between finding a rational solution for a game and equilibrium points.</p></article></div>
+<p id="p-326">Now you should have an understanding of how to find equilibrium strategies in two-player zero-sum games. The main advantage of equilibrium strategies is that if both players play them, neither player would have gained by playing a different strategy. Thus, we can think of the equilibrium strategies as the solution to the game for two rational players. But what should our players do if the game has no equilibrium point? We will look more closely at games with no equilibrium point in the next chapter.</p></section></div></main>
+</div>
+</body>
+</html>

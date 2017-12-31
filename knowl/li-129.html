@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script>
+</head>
+<body>
+<article class="listitem"><h6 class="heading">
+<span class="type">Item</span><span class="title">Step 2c.</span>
+</h6>
+<p>Now, on our same graph from Step 1, we can plot the points we determined in Step 2a and Step 2b. We will connect them with a line representing Player 2's pure strategy \(D\text{.}\) See <a knowl="./knowl/F_Player_2_s_pure_strategy_D.html" knowl-id="xref-F_Player_2_s_pure_strategy_D" alt="Figure 3.2.5 " title="Figure 3.2.5 ">Figure 3.2.5</a>.</p>
+<div class="sagecell-sage" id="sage-2"><script type="text/x-sage">u=(0,1);
+v=(1,-1);
+w=(0,0);
+z=(1, 2);
+show(line([u, v], thickness=2, color=('blue'))+point(u, color=('blue'), pointsize=70)
+  +point(v, color=('blue'), pointsize=70)
+  +line([w, z], thickness=2, color=('red'))
+  +point(w, color=('red'), pointsize=70)+point(z, color=('red'), pointsize=70), figsize=4)
+</script></div>
+<p>Now we can see that if Player 2 plays only \(D\text{,}\) then Player 1 does best by playing only \(B\text{.}\) Again, you can use this Sage cell to plot both Player 2's pure strategies. Points \(u\) and \(v\) are for strategy \(C\text{,}\) while points \(w\) and \(z\) are for strategy \(D\text{.}\)</p></article><span class="incontext"><a href="S_solvingeq.html#li-129">in-context</a></span>
+</body>
+</html>

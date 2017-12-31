@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>What Makes a Prisoner's Dilemma?</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/javascript" src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\MyTikzmark}[2]{
+     \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
+\newcommand{\DrawVLine}[3][]{
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[shorten \lt =0.3ex, #1] (#2.north) -- (#3.south);
+  \end{tikzpicture}
+}
+\newcommand{\DrawHLine}[3][]{
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[shorten \lt =0.2em, #1] (#2.west) -- (#3.east);
+  \end{tikzpicture}
+}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="images/image-1.svg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">Introduction to Game Theory: a Discovery Approach</span></a></h1>
+<p class="byline">Jennifer Firkins Nordstrom</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_CWPD.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-4.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="VDexperiment.html" title="Next" alt="Next">Next</a></span>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_CWPD.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-4.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="VDexperiment.html" title="Next" alt="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+<h2 class="link"><a href="chapter-1.html" data-scroll="chapter-1"><span class="codenumber">1</span><span class="title">What is Game Theory?</span></a></h2>
+<ul>
+<li><a href="S_intro.html" data-scroll="S_intro">Players and Strategies</a></li>
+<li><a href="S_IntroMatrices.html" data-scroll="S_IntroMatrices">Game Matrices and Payoff Vectors</a></li>
+</ul>
+<h2 class="link"><a href="chapter-2.html" data-scroll="chapter-2"><span class="codenumber">2</span><span class="title">Two-Person Zero-Sum Games</span></a></h2>
+<ul>
+<li><a href="S_IntroZeroSum.html" data-scroll="S_IntroZeroSum">Introduction to Two-Person Zero-Sum Games</a></li>
+<li><a href="S_DominatedStrategies.html" data-scroll="S_DominatedStrategies">More Two-Person Zero-Sum Games: Dominated Strategies</a></li>
+<li><a href="S_Probability.html" data-scroll="S_Probability">Probability and Expected Value</a></li>
+<li><a href="S_OneCardStud.html" data-scroll="S_OneCardStud">Determining the Payoff Matrix in a Game of Chance</a></li>
+<li><a href="S_EquilibPoints.html" data-scroll="S_EquilibPoints">Equilibrium Points</a></li>
+<li><a href="S_ZeroSumStrategySummary.html" data-scroll="S_ZeroSumStrategySummary">Strategies for Zero-Sum Games and Equilibrium Points</a></li>
+<li><a href="S_PopRationality.html" data-scroll="S_PopRationality">Applications to Popular Culture: Rationality and Perfect Information</a></li>
+</ul>
+<h2 class="link"><a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span><span class="title">Repeated Two-Person Zero-sum Games</span></a></h2>
+<ul>
+<li><a href="S_IntroRepeated.html" data-scroll="S_IntroRepeated">Introduction to Repeated Games</a></li>
+<li><a href="S_MixStratGraph.html" data-scroll="S_MixStratGraph">Mixed Strategies: Graphical Solution</a></li>
+<li><a href="S_solvingeq.html" data-scroll="S_solvingeq">Using Sage to Graph Lines and Solve Equations</a></li>
+<li><a href="S_MixStratEV.html" data-scroll="S_MixStratEV">Mixed Strategies: Expected Value Solution</a></li>
+<li><a href="S_LiarsPoker.html" data-scroll="S_LiarsPoker">Repeated Two-person Zero-Sum Games: Liar's Poker</a></li>
+<li><a href="S_AugMatrices.html" data-scroll="S_AugMatrices">Augmented Matrices</a></li>
+<li><a href="S_Undercut.html" data-scroll="S_Undercut">Undercut</a></li>
+</ul>
+<h2 class="link active"><a href="chapter-4.html" data-scroll="chapter-4"><span class="codenumber">4</span><span class="title">Non-Zero-Sum Games</span></a></h2>
+<ul>
+<li><a href="Intrononzero.html" data-scroll="Intrononzero">Introduction to Two-Player Non-Zero-Sum Games</a></li>
+<li><a href="pdandchicken.html" data-scroll="pdandchicken">Two-Player Non-Zero-Sum Games: Prisoner's Dilemma and Chicken</a></li>
+<li><a href="S_CWPD.html" data-scroll="S_CWPD">A Class-Wide Experiment</a></li>
+<li><a href="S_PDconditions.html" data-scroll="S_PDconditions" class="active">What Makes a Prisoner's Dilemma?</a></li>
+<li><a href="VDexperiment.html" data-scroll="VDexperiment">Another Multiplayer Experiment</a></li>
+<li><a href="S_VolunteerDil.html" data-scroll="S_VolunteerDil">Volunteer's Dilemma</a></li>
+<li><a href="S_RepeatPD.html" data-scroll="S_RepeatPD">Repeated Prisoner's Dilemma</a></li>
+<li><a href="S_PopPD.html" data-scroll="S_PopPD">Applications to Popular Culture: Prisoner's Dilemma and Chicken</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="references-1.html" data-scroll="references-1">References</a></li>
+<li><a href="index-1.html" data-scroll="index-1">Index</a></li>
+<li><a href="colophon-2.html" data-scroll="colophon-2">Colophon</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="S_PDconditions"><h2 class="heading hide-type" alt="Section 4.4 What Makes a Prisoner's Dilemma?">
+<span class="type">Section</span><span class="codenumber">4.4</span><span class="title">What Makes a Prisoner's Dilemma?</span>
+</h2>
+<a href="S_PDconditions.html" class="permalink">¶</a><p id="p-731">In this section we give a mathematical description of Prisoner's Dilemma and compare it to some similar games.</p>
+<p id="p-732">The Class-wide Prisoner's Dilemma game we played in <a href="S_CWPD.html" class="xref" alt="Section 4.3 A Class-Wide Experiment" title="Section 4.3 A Class-Wide Experiment">Section 4.3</a> has the payoff matrix given in <a knowl="./knowl/T_CWPD.html" knowl-id="xref-T_CWPD" alt="Table 4.4.1 " title="Table 4.4.1 ">Table 4.4.1</a> for each pair of players.</p>
+<figure class="figure-like" id="T_CWPD"><table>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" colspan="2">Player 2</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines">Cooperate</td>
+<td class="c m b1 r0 l0 t0 lines">Defect</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Player 1</td>
+<td class="l m b0 r1 l0 t0 lines">Cooperate</td>
+<td class="c m b1 r1 l0 t0 lines">\((3, 3)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((0, 5)\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r1 l0 t0 lines">Defect</td>
+<td class="c m b1 r1 l0 t0 lines">\((5, 0)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((1, 1)\)</td>
+</tr>
+</table>
+<figcaption><span class="type">Table</span><span class="codenumber">4.4.1</span>A Class-wide Prisoner's Dilemma.</figcaption></figure><p id="p-733">We can classify each of the values for the payoffs as follows: </p>
+<ul id="ul-7" style="list-style-type: disc;">
+<li id="li-170"><p id="p-734">Reward for Mutual Cooperation: \(R=3.\)</p></li>
+<li id="li-171"><p id="p-735">Punishment for Defecting: \(P=1.\)</p></li>
+<li id="li-172"><p id="p-736">Temptation to Defect: \(T=5.\)</p></li>
+<li id="li-173"><p id="p-737">Sucker's Payoff: \(S=0.\)</p></li>
+</ul>
+<p id="p-738">In order for a game to be a variation of Prisoner's Dilemma it must satisfy two conditions: </p>
+<ol id="ol-33" style="list-style-type: decimal;">
+<li id="li-174"><p id="p-739">\(T&gt;R&gt;P&gt;S\)</p></li>
+<li id="li-175"><p id="p-740">\((T+S)/2 \lt  R\)</p></li>
+</ol>
+<p id="p-741">Let's apply this description of Prisoner's Dilemma to a few games we've seen. We can use the conditions to check if a game is really a Prisoner's Dilemma.</p>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_describeconditions" id="E_describeconditions"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">4.4.2</span>
+</h6></a></article><div id="hk-E_describeconditions" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-742">Describe each of the conditions (A) and (B) in words. Hint: \((T+S)/2\) is the average of \(T\) and \(S\text{.}\)</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_CWPDshow" id="E_CWPDshow"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">4.4.3</span>
+</h6></a></article><div id="hk-E_CWPDshow" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-743">Show that the two conditions hold for the Class-wide Prisoner's Dilemma.</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_PDshow" id="E_PDshow"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">4.4.4</span>
+</h6></a></article><div id="hk-E_PDshow" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-744">Recall the matrix for Prisoner's Dilemma from <a knowl="./knowl/E_PrisonersDilemma.html" knowl-id="xref-E_PrisonersDilemma" alt="Example 4.2.7 " title="Example 4.2.7 ">Example 4.2.7</a>.</p>
+<figure class="figure-like" id="table-34"><table>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" colspan="2">Prisoner 2</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines">Confess</td>
+<td class="c m b1 r0 l0 t0 lines">Don't Confess</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Prisoner 1</td>
+<td class="l m b0 r1 l0 t0 lines">Confess</td>
+<td class="c m b1 r1 l0 t0 lines">\((8, 8)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((0.25, 10)\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r1 l0 t0 lines">Don't Confess</td>
+<td class="c m b1 r1 l0 t0 lines">\((10, 0.25)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((1, 1)\)</td>
+</tr>
+</table>
+<figcaption><span class="type">Table</span><span class="codenumber">4.4.5</span>Prisoner's Dilemma (again).</figcaption></figure><p id="p-745">Determine \(R, P, T,\) and \(S\) for this game. Be careful: think about what cooperating versus defecting should mean. Show the conditions for Prisoner's Dilemma are satisfied. (Hint: time in jail is bad, so the bigger the number, the worse you do; thus, it might be helpful to think of the payoffs as negatives.)</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_chickenshow" id="E_chickenshow"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">4.4.6</span>
+</h6></a></article><div id="hk-E_chickenshow" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-746">Recall the matrix for Chicken from <a knowl="./knowl/E_Chicken.html" knowl-id="xref-E_Chicken" alt="Example 4.2.16 " title="Example 4.2.16 ">Example 4.2.16</a>.</p>
+<figure class="figure-like" id="table-35"><table>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines" colspan="2">Driver 2</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines">Swerve</td>
+<td class="c m b1 r0 l0 t0 lines">Straight</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Driver 1</td>
+<td class="l m b0 r1 l0 t0 lines">Swerve</td>
+<td class="c m b1 r1 l0 t0 lines">\((0, 0)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((-1, 10)\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r1 l0 t0 lines">Straight</td>
+<td class="c m b1 r1 l0 t0 lines">\((10, -1)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\((-100, -100)\)</td>
+</tr>
+</table>
+<figcaption><span class="type">Table</span><span class="codenumber">4.4.7</span>Chicken (again).</figcaption></figure><p id="p-747">Determine \(R, P, T,\) and \(S\) for this game. Again, think about what cooperating and defecting mean in this game. Determine if the conditions for Prisoner's Dilemma are satisfied. If not, which condition(s) fail?</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_conditionspractice1" id="E_conditionspractice1"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">4.4.8</span>
+</h6></a></article><div id="hk-E_conditionspractice1" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-748">Consider the game:</p>
+\begin{equation*}
+\begin{matrix}\amp  C\amp  D\\
+C\amp  (3, 3) \amp  (0, 50)\\
+D \amp (50, 0) \amp  (.01, .01)
+\end{matrix}
+\end{equation*}
+<p id="p-749">Determine \(R, P, T,\) and \(S\) for this game. Determine if the conditions for Prisoner's Dilemma are satisfied. If not, which condition(s) fail?</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_conditionspractice2" id="E_conditionspractice2"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">4.4.9</span>
+</h6></a></article><div id="hk-E_conditionspractice2" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-750">Consider the game:</p>
+\begin{equation*}
+\begin{matrix}\amp  C\amp  D\\
+C\amp  (1000, 1000) \amp  (0, 100)\\
+D \amp (100, 0) \amp  (100, 100)
+\end{matrix}
+\end{equation*}
+<p id="p-751">Determine \(R, P, T,\) and \(S\) for this game. Determine if the conditions for Prisoner's Dilemma are satisfied. If not, which condition(s) fail?</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_conditionscompare" id="E_conditionscompare"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">4.4.10</span>
+</h6></a></article><div id="hk-E_conditionscompare" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-752">The games in <a knowl="./knowl/E_chickenshow.html" knowl-id="xref-E_chickenshow" alt="Exercise 4.4.6 " title="Exercise 4.4.6 ">Exercise 4.4.6</a>, <a knowl="./knowl/E_conditionspractice1.html" knowl-id="xref-E_conditionspractice1" alt="Exercise 4.4.8 " title="Exercise 4.4.8 ">Exercise 4.4.8</a>, and <a knowl="./knowl/E_conditionspractice2.html" knowl-id="xref-E_conditionspractice2" alt="Exercise 4.4.9 " title="Exercise 4.4.9 ">Exercise 4.4.9</a> are not true Prisoner's Dilemmas. For each game, how do the changes in payoffs affect how you play? In particular, in Prisoner's Dilemma, a player will generally choose to defect. This results in a non-optimal payoff for each player. Is this still true in <a knowl="./knowl/E_chickenshow.html" knowl-id="xref-E_chickenshow" alt="Exercise 4.4.6 " title="Exercise 4.4.6 ">Exercise 4.4.6</a>, <a knowl="./knowl/E_conditionspractice1.html" knowl-id="xref-E_conditionspractice1" alt="Exercise 4.4.8 " title="Exercise 4.4.8 ">Exercise 4.4.8</a>, and <a knowl="./knowl/E_conditionspractice2.html" knowl-id="xref-E_conditionspractice2" alt="Exercise 4.4.9 " title="Exercise 4.4.9 ">Exercise 4.4.9</a>? If possible, use the changes in the conditions (A) and (B) to help explain any differences in how one should play.</p></article></div>
+<p id="p-753">We can now define <em class="emphasis">defection</em> as the idea that if everyone did it, things would be worse for everyone. Yet, if only one (or a small) number did it, life would be sweeter for that individual. We can define <em class="emphasis">cooperation</em> as the act of resisting temptation for the betterment of all players.</p>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_reallifeex" id="E_reallifeex"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">4.4.11</span>
+</h6></a></article><div id="hk-E_reallifeex" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-754">Give an example of defection and cooperation from real life.</p></article></div></section></div></main>
+</div>
+</body>
+</html>

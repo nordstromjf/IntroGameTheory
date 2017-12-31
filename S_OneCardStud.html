@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Determining the Payoff Matrix in a Game of Chance</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/javascript" src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\MyTikzmark}[2]{
+     \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
+\newcommand{\DrawVLine}[3][]{
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[shorten \lt =0.3ex, #1] (#2.north) -- (#3.south);
+  \end{tikzpicture}
+}
+\newcommand{\DrawHLine}[3][]{
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[shorten \lt =0.2em, #1] (#2.west) -- (#3.east);
+  \end{tikzpicture}
+}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="images/image-1.svg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">Introduction to Game Theory: a Discovery Approach</span></a></h1>
+<p class="byline">Jennifer Firkins Nordstrom</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_Probability.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-2.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_EquilibPoints.html" title="Next" alt="Next">Next</a></span>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_Probability.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-2.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="S_EquilibPoints.html" title="Next" alt="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+<h2 class="link"><a href="chapter-1.html" data-scroll="chapter-1"><span class="codenumber">1</span><span class="title">What is Game Theory?</span></a></h2>
+<ul>
+<li><a href="S_intro.html" data-scroll="S_intro">Players and Strategies</a></li>
+<li><a href="S_IntroMatrices.html" data-scroll="S_IntroMatrices">Game Matrices and Payoff Vectors</a></li>
+</ul>
+<h2 class="link active"><a href="chapter-2.html" data-scroll="chapter-2"><span class="codenumber">2</span><span class="title">Two-Person Zero-Sum Games</span></a></h2>
+<ul>
+<li><a href="S_IntroZeroSum.html" data-scroll="S_IntroZeroSum">Introduction to Two-Person Zero-Sum Games</a></li>
+<li><a href="S_DominatedStrategies.html" data-scroll="S_DominatedStrategies">More Two-Person Zero-Sum Games: Dominated Strategies</a></li>
+<li><a href="S_Probability.html" data-scroll="S_Probability">Probability and Expected Value</a></li>
+<li><a href="S_OneCardStud.html" data-scroll="S_OneCardStud" class="active">Determining the Payoff Matrix in a Game of Chance</a></li>
+<li><a href="S_EquilibPoints.html" data-scroll="S_EquilibPoints">Equilibrium Points</a></li>
+<li><a href="S_ZeroSumStrategySummary.html" data-scroll="S_ZeroSumStrategySummary">Strategies for Zero-Sum Games and Equilibrium Points</a></li>
+<li><a href="S_PopRationality.html" data-scroll="S_PopRationality">Applications to Popular Culture: Rationality and Perfect Information</a></li>
+</ul>
+<h2 class="link"><a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span><span class="title">Repeated Two-Person Zero-sum Games</span></a></h2>
+<ul>
+<li><a href="S_IntroRepeated.html" data-scroll="S_IntroRepeated">Introduction to Repeated Games</a></li>
+<li><a href="S_MixStratGraph.html" data-scroll="S_MixStratGraph">Mixed Strategies: Graphical Solution</a></li>
+<li><a href="S_solvingeq.html" data-scroll="S_solvingeq">Using Sage to Graph Lines and Solve Equations</a></li>
+<li><a href="S_MixStratEV.html" data-scroll="S_MixStratEV">Mixed Strategies: Expected Value Solution</a></li>
+<li><a href="S_LiarsPoker.html" data-scroll="S_LiarsPoker">Repeated Two-person Zero-Sum Games: Liar's Poker</a></li>
+<li><a href="S_AugMatrices.html" data-scroll="S_AugMatrices">Augmented Matrices</a></li>
+<li><a href="S_Undercut.html" data-scroll="S_Undercut">Undercut</a></li>
+</ul>
+<h2 class="link"><a href="chapter-4.html" data-scroll="chapter-4"><span class="codenumber">4</span><span class="title">Non-Zero-Sum Games</span></a></h2>
+<ul>
+<li><a href="Intrononzero.html" data-scroll="Intrononzero">Introduction to Two-Player Non-Zero-Sum Games</a></li>
+<li><a href="pdandchicken.html" data-scroll="pdandchicken">Two-Player Non-Zero-Sum Games: Prisoner's Dilemma and Chicken</a></li>
+<li><a href="S_CWPD.html" data-scroll="S_CWPD">A Class-Wide Experiment</a></li>
+<li><a href="S_PDconditions.html" data-scroll="S_PDconditions">What Makes a Prisoner's Dilemma?</a></li>
+<li><a href="VDexperiment.html" data-scroll="VDexperiment">Another Multiplayer Experiment</a></li>
+<li><a href="S_VolunteerDil.html" data-scroll="S_VolunteerDil">Volunteer's Dilemma</a></li>
+<li><a href="S_RepeatPD.html" data-scroll="S_RepeatPD">Repeated Prisoner's Dilemma</a></li>
+<li><a href="S_PopPD.html" data-scroll="S_PopPD">Applications to Popular Culture: Prisoner's Dilemma and Chicken</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="references-1.html" data-scroll="references-1">References</a></li>
+<li><a href="index-1.html" data-scroll="index-1">Index</a></li>
+<li><a href="colophon-2.html" data-scroll="colophon-2">Colophon</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="S_OneCardStud"><h2 class="heading hide-type" alt="Section 2.4 Determining the Payoff Matrix in a Game of Chance">
+<span class="type">Section</span><span class="codenumber">2.4</span><span class="title">Determining the Payoff Matrix in a Game of Chance</span>
+</h2>
+<a href="S_OneCardStud.html" class="permalink">¶</a><p id="p-248">Now that we have worked with expected value, we can begin to analyze some simple games that involve an element of chance.</p>
+<article class="example-like" id="E_onecardstud"><h6 class="heading">
+<span class="type">Example</span><span class="codenumber">2.4.1</span>
+</h6>
+<p id="p-249"><em class="emphasis">One-Card Stud Poker.</em></p>
+<p id="p-250">We begin with a deck of cards in which 50% are Aces (you can use Red cards for Aces) and 50% are Kings (you can use Black cards for Kings). There are two players and one dealer. The play begins by each player putting in the ante (1 chip). Each player is dealt one card face down. WITHOUT LOOKING AT HIS OR HER CARD, the players decide to Bet (say, 1 chip) or Fold. Players secretly show the dealer their choice. If one player bet and the other folded, then the player who bet wins. If both bet or both fold, then Ace beats King (or Red beats Black); winner takes the pot (all the chips from the ante and any bets). If there is a tie, they split the pot.</p></article><article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_playonecard" id="E_playonecard"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.4.2</span>
+</h6></a></article><div id="hk-E_playonecard" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-251">Play the game several times with two other people (so you have two players and a dealer), keeping track of the strategy choices of the players and the resulting payoffs.</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_onecardconjecturestrat" id="E_onecardconjecturestrat"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.4.3</span>
+</h6></a></article><div id="hk-E_onecardconjecturestrat" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-252">Based on playing the game, determine a possible winning strategy.</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_onecardzerosum" id="E_onecardzerosum"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.4.4</span>
+</h6></a></article><div id="hk-E_onecardzerosum" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-253">Is this a zero-sum game? Why or why not?</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-48" id="exercise-48"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.4.5</span>
+</h6></a></article><div id="hk-exercise-48" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-254">Does the actual deal affect the choice of strategy?</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-49" id="exercise-49"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.4.6</span>
+</h6></a></article><div id="hk-exercise-49" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-255">On any given deal, what strategy choices does a player have?</p></article></div>
+<p id="p-256">Before moving on, you should attempt to determine the payoff matrix. The remainder of this section will be more meaningful if you have given some thought to what the payoff matrix should be. It is OK to be wrong at this point, it is not OK to not try.</p>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_possiblematrix" id="E_possiblematrix"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.4.7</span>
+</h6></a></article><div id="hk-E_possiblematrix" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-257">Write down a possible payoff matrix for this game.</p></article></div>
+<p id="p-258">Now let's work through creating the payoff matrix for One-Card Stud Poker.</p>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_payoffBF" id="E_payoffBF"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.4.8</span>
+</h6></a></article><div id="hk-E_payoffBF" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-259">If Player 1 Bets and Player 2 Folds, does it matter which cards were dealt? How much does Player 1 win? How much does Player 2 lose? What is the payoff vector for {Bet, Fold}? (Keep in mind your answer to <a knowl="./knowl/E_onecardzerosum.html" knowl-id="xref-E_onecardzerosum" alt="Exercise 2.4.4 " title="Exercise 2.4.4 ">Exercise 2.4.4</a>.)</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_payoffFB" id="E_payoffFB"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.4.9</span>
+</h6></a></article><div id="hk-E_payoffFB" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-260">If Player 1 Folds and Player 2 Bets, does it matter which cards were dealt? What is the payoff vector for {Fold, Bet}?</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-53" id="exercise-53"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.4.10</span>
+</h6></a></article><div id="hk-exercise-53" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-261">If both players Bet, does the payoff depend on which cards were dealt?</p></article></div>
+<p id="p-262">To determine the payoff vector for {Bet, Bet} and {Fold, Fold} we will need to consider which cards were dealt. We can use some probability to determine the remaining payoff vectors.</p>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_probofdeal" id="E_probofdeal"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.4.11</span>
+</h6></a></article><div id="hk-E_probofdeal" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-263">There are four possible outcomes of the deal– list them. What is the probability that each occurs? (Remember: the probability of an event is a number between 0 and 1.)</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_BBpayoffperdeal" id="E_BBpayoffperdeal"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.4.12</span>
+</h6></a></article><div id="hk-E_BBpayoffperdeal" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-264">Consider the pair of strategies {Bet, Bet}. For each possible deal, determine the payoff vector. For example, if the players are each dealt an Ace (Red), how much does each player win? (Again, keep in mind your answer to <a knowl="./knowl/E_onecardzerosum.html" knowl-id="xref-E_onecardzerosum" alt="Exercise 2.4.4 " title="Exercise 2.4.4 ">Exercise 2.4.4</a>.)</p></article></div>
+<p id="p-265">In order to calculate the payoff for {Bet, Bet}, we need to take a weighted average of the possible payoff vectors in <a knowl="./knowl/E_BBpayoffperdeal.html" knowl-id="xref-E_BBpayoffperdeal" alt="Exercise 2.4.12 " title="Exercise 2.4.12 ">Exercise 2.4.12</a>. In particular, we will “weight” a payoff by the probability that it occurs. Recall that this is the <em class="emphasis">expected value</em>. We will calculate the expected value separately for each player.</p>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_BBev1" id="E_BBev1"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.4.13</span>
+</h6></a></article><div id="hk-E_BBev1" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-266">Find the expected value for {Bet, Bet} for Player 1.</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_BBev2" id="E_BBev2"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.4.14</span>
+</h6></a></article><div id="hk-E_BBev2" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-267">Find the expected value for {Bet, Bet} for Player 2.</p></article></div>
+<p id="p-268">The pair of expected values from <a knowl="./knowl/E_BBev1.html" knowl-id="xref-E_BBev1" alt="Exercise 2.4.13 " title="Exercise 2.4.13 ">Exercise 2.4.13</a> and <a knowl="./knowl/E_BBev2.html" knowl-id="xref-E_BBev2" alt="Exercise 2.4.14 " title="Exercise 2.4.14 ">Exercise 2.4.14</a> is the payoff vector for {Bet, Bet}.</p>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_BBexplain" id="E_BBexplain"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.4.15</span>
+</h6></a></article><div id="hk-E_BBexplain" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-269">Explain why it should make sense to use the expected values for the payoffs in the matrix for the strategy pair {Bet, Bet}. Hint: think about what a player needs to know to choose a strategy in a game of chance.</p></article></div>
+<p id="p-270">We can use a similar process to find the payoff vector for {Fold, Fold}.</p>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_FF" id="E_FF"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.4.16</span>
+</h6></a></article><div id="hk-E_FF" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-271">Repeat <a knowl="./knowl/E_BBpayoffperdeal.html" knowl-id="xref-E_BBpayoffperdeal" alt="Exercise 2.4.12 " title="Exercise 2.4.12 ">Exercise 2.4.12</a>, <a knowl="./knowl/E_BBev1.html" knowl-id="xref-E_BBev1" alt="Exercise 2.4.13 " title="Exercise 2.4.13 ">Exercise 2.4.13</a>, and <a knowl="./knowl/E_BBev2.html" knowl-id="xref-E_BBev2" alt="Exercise 2.4.14 " title="Exercise 2.4.14 ">Exercise 2.4.14</a> for the pair of strategies {Fold, Fold}.</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_onecardmatrix" id="E_onecardmatrix"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.4.17</span>
+</h6></a></article><div id="hk-E_onecardmatrix" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-272">Summarize the above work by giving the completed payoff matrix for One-Card Stud Poker.</p></article></div>
+<p id="p-273">Now that you have done all the hard work of finding the payoff matrix for One-Card Stud Poker, we can analyze our two-player zero-sum game using the techniques we learned in the previous sections. It is also important to see how the mathematical solution compares to our conjectured solution from <a knowl="./knowl/E_onecardconjecturestrat.html" knowl-id="xref-E_onecardconjecturestrat" alt="Exercise 2.4.3 " title="Exercise 2.4.3 ">Exercise 2.4.3</a>.</p>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_onecardstrategy" id="E_onecardstrategy"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.4.18</span>
+</h6></a></article><div id="hk-E_onecardstrategy" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-274">Use the payoff matrix to determine the best strategy for each player. If each player uses their best strategy, what will be the outcome of the game?</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_onecardcompare" id="E_onecardcompare"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.4.19</span>
+</h6></a></article><div id="hk-E_onecardcompare" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-275">Compare the strategy you found in <a knowl="./knowl/E_onecardstrategy.html" knowl-id="xref-E_onecardstrategy" alt="Exercise 2.4.18 " title="Exercise 2.4.18 ">Exercise 2.4.18</a> to your suggested strategy in <a knowl="./knowl/E_onecardconjecturestrat.html" knowl-id="xref-E_onecardconjecturestrat" alt="Exercise 2.4.3 " title="Exercise 2.4.3 ">Exercise 2.4.3</a>. In particular, discuss how knowing the payoff matrix might have changed your strategy. Also compare the payoff that results from the strategy in <a knowl="./knowl/E_onecardstrategy.html" knowl-id="xref-E_onecardstrategy" alt="Exercise 2.4.18 " title="Exercise 2.4.18 ">Exercise 2.4.18</a> to the payoff that results from your original strategy in <a knowl="./knowl/E_onecardconjecturestrat.html" knowl-id="xref-E_onecardconjecturestrat" alt="Exercise 2.4.3 " title="Exercise 2.4.3 ">Exercise 2.4.3</a> .</p></article></div>
+<p id="p-276">Since One-Card Stud Poker has an element of chance, we should see what happens if we play the game several times using the strategy from <a knowl="./knowl/E_onecardstrategy.html" knowl-id="xref-E_onecardstrategy" alt="Exercise 2.4.18 " title="Exercise 2.4.18 ">Exercise 2.4.18</a>.</p>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_onecardlongrun" id="E_onecardlongrun"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.4.20</span>
+</h6></a></article><div id="hk-E_onecardlongrun" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-277">Use the payoff matrix to predict what the payoff to each player would be if the game is played ten times.</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_onecardtrials" id="E_onecardtrials"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.4.21</span>
+</h6></a></article><div id="hk-E_onecardtrials" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-278">Play the game ten times using the best strategy. How much has each player won or lost after ten hands of One-Card Stud Poker? Compare your answer to your prediction in <a knowl="./knowl/E_onecardlongrun.html" knowl-id="xref-E_onecardlongrun" alt="Exercise 2.4.20 " title="Exercise 2.4.20 ">Exercise 2.4.20</a>. Does the actual payoff differ from the theoretical payoff? If so, why do you think this might be?</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_onecardfair" id="E_onecardfair"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.4.22</span>
+</h6></a></article><div id="hk-E_onecardfair" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-279">Explain why this game is considered fair.</p></article></div>
+<article class="example-like" id="E_genonecardstud"><h6 class="heading">
+<span class="type">Example</span><span class="codenumber">2.4.23</span>
+</h6>
+<p id="p-280"><em class="emphasis">Generalized One-Card Stud Poker.</em></p>
+<p id="p-281">In One-Card Stud Poker we anted one chip and bet one chip. Now, suppose we let players ante a different amount and bet a different amount (although players will still ante and bet the same amount as each other). Suppose a player antes \(a\) and bets \(b\text{.}\) How might this change the game?</p></article><article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_genonecard" id="E_genonecard"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.4.24</span>
+</h6></a></article><div id="hk-E_genonecard" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-282">Use the method outlined for One-Card Stud Poker to determine the payoff matrix for Generalized One-Card Stud Poker.</p></article></div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-67" id="exercise-67"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">2.4.25</span>
+</h6></a></article><div id="hk-exercise-67" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-283">Does the strategy change for the generalized version of the game? Explain.</p></article></div>
+<p id="p-284">Now that we have analyzed several zero-sum games, we can see how important is is to find any equilibrium pairs. In the next section we explore equilibrium strategies in more detail.</p></section></div></main>
+</div>
+</body>
+</html>
