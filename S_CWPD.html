@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
 <!--*                                    *-->
@@ -11,7 +11,7 @@
 <title>A Class-Wide Experiment</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/javascript" src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']],
@@ -34,10 +34,10 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
-<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\MyTikzmark}[2]{
@@ -62,105 +62,111 @@ MathJax.Hub.Config({
 <p class="byline">Jennifer Firkins Nordstrom</p>
 </div>
 </div></div>
-<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="pdandchicken.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-4.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_PDconditions.html" title="Next" alt="Next">Next</a></span>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="pdandchicken.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-4.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_PDconditions.html" title="Next">Next</a></span>
 </div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="pdandchicken.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-4.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="S_PDconditions.html" title="Next" alt="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="pdandchicken.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-4.html" title="Up">Up</a><a class="next-button button toolbar-item" href="S_PDconditions.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
-<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
 <ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
 </ul>
-<h2 class="link"><a href="chapter-1.html" data-scroll="chapter-1"><span class="codenumber">1</span><span class="title">What is Game Theory?</span></a></h2>
+<h2 class="link"><a href="chapter-1.html" data-scroll="chapter-1"><span class="codenumber">1</span> <span class="title punctuated">What is Game Theory?</span></a></h2>
 <ul>
 <li><a href="S_intro.html" data-scroll="S_intro">Players and Strategies</a></li>
 <li><a href="S_IntroMatrices.html" data-scroll="S_IntroMatrices">Game Matrices and Payoff Vectors</a></li>
 </ul>
-<h2 class="link"><a href="chapter-2.html" data-scroll="chapter-2"><span class="codenumber">2</span><span class="title">Two-Person Zero-Sum Games</span></a></h2>
+<h2 class="link"><a href="chapter-2.html" data-scroll="chapter-2"><span class="codenumber">2</span> <span class="title">Two-Person Zero-Sum Games</span></a></h2>
 <ul>
 <li><a href="S_IntroZeroSum.html" data-scroll="S_IntroZeroSum">Introduction to Two-Person Zero-Sum Games</a></li>
-<li><a href="S_DominatedStrategies.html" data-scroll="S_DominatedStrategies">More Two-Person Zero-Sum Games: Dominated Strategies</a></li>
+<li><a href="S_DominatedStrategies.html" data-scroll="S_DominatedStrategies">Dominated Strategies</a></li>
 <li><a href="S_Probability.html" data-scroll="S_Probability">Probability and Expected Value</a></li>
-<li><a href="S_OneCardStud.html" data-scroll="S_OneCardStud">Determining the Payoff Matrix in a Game of Chance</a></li>
+<li><a href="S_OneCardStud.html" data-scroll="S_OneCardStud">A Game of Chance</a></li>
 <li><a href="S_EquilibPoints.html" data-scroll="S_EquilibPoints">Equilibrium Points</a></li>
 <li><a href="S_ZeroSumStrategySummary.html" data-scroll="S_ZeroSumStrategySummary">Strategies for Zero-Sum Games and Equilibrium Points</a></li>
-<li><a href="S_PopRationality.html" data-scroll="S_PopRationality">Applications to Popular Culture: Rationality and Perfect Information</a></li>
+<li><a href="S_PopRationality.html" data-scroll="S_PopRationality">Popular Culture: Rationality and Perfect Information</a></li>
 </ul>
-<h2 class="link"><a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span><span class="title">Repeated Two-Person Zero-sum Games</span></a></h2>
+<h2 class="link"><a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span> <span class="title">Repeated Two-Person Zero-sum Games</span></a></h2>
 <ul>
 <li><a href="S_IntroRepeated.html" data-scroll="S_IntroRepeated">Introduction to Repeated Games</a></li>
 <li><a href="S_MixStratGraph.html" data-scroll="S_MixStratGraph">Mixed Strategies: Graphical Solution</a></li>
 <li><a href="S_solvingeq.html" data-scroll="S_solvingeq">Using Sage to Graph Lines and Solve Equations</a></li>
 <li><a href="S_MixStratEV.html" data-scroll="S_MixStratEV">Mixed Strategies: Expected Value Solution</a></li>
-<li><a href="S_LiarsPoker.html" data-scroll="S_LiarsPoker">Repeated Two-person Zero-Sum Games: Liar's Poker</a></li>
+<li><a href="S_LiarsPoker.html" data-scroll="S_LiarsPoker">Liar's Poker</a></li>
 <li><a href="S_AugMatrices.html" data-scroll="S_AugMatrices">Augmented Matrices</a></li>
 <li><a href="S_Undercut.html" data-scroll="S_Undercut">Undercut</a></li>
 </ul>
-<h2 class="link active"><a href="chapter-4.html" data-scroll="chapter-4"><span class="codenumber">4</span><span class="title">Non-Zero-Sum Games</span></a></h2>
+<h2 class="link"><a href="chapter-4.html" data-scroll="chapter-4"><span class="codenumber">4</span> <span class="title">Non-Zero-Sum Games</span></a></h2>
 <ul>
 <li><a href="Intrononzero.html" data-scroll="Intrononzero">Introduction to Two-Player Non-Zero-Sum Games</a></li>
-<li><a href="pdandchicken.html" data-scroll="pdandchicken">Two-Player Non-Zero-Sum Games: Prisoner's Dilemma and Chicken</a></li>
+<li><a href="pdandchicken.html" data-scroll="pdandchicken">Prisoner's Dilemma and Chicken</a></li>
 <li><a href="S_CWPD.html" data-scroll="S_CWPD" class="active">A Class-Wide Experiment</a></li>
 <li><a href="S_PDconditions.html" data-scroll="S_PDconditions">What Makes a Prisoner's Dilemma?</a></li>
 <li><a href="VDexperiment.html" data-scroll="VDexperiment">Another Multiplayer Experiment</a></li>
 <li><a href="S_VolunteerDil.html" data-scroll="S_VolunteerDil">Volunteer's Dilemma</a></li>
 <li><a href="S_RepeatPD.html" data-scroll="S_RepeatPD">Repeated Prisoner's Dilemma</a></li>
-<li><a href="S_PopPD.html" data-scroll="S_PopPD">Applications to Popular Culture: Prisoner's Dilemma and Chicken</a></li>
+<li><a href="S_PopPD.html" data-scroll="S_PopPD">Popular Culture: Prisoner's Dilemma and Chicken</a></li>
 </ul>
 <h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
 <ul>
 <li><a href="references-1.html" data-scroll="references-1">References</a></li>
 <li><a href="index-1.html" data-scroll="index-1">Index</a></li>
 <li><a href="colophon-2.html" data-scroll="colophon-2">Colophon</a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="S_CWPD"><h2 class="heading hide-type" alt="Section 4.3 A Class-Wide Experiment">
-<span class="type">Section</span><span class="codenumber">4.3</span><span class="title">A Class-Wide Experiment</span>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="section" id="S_CWPD"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4.3</span> <span class="title">A Class-Wide Experiment</span>
 </h2>
-<a href="S_CWPD.html" class="permalink">¶</a><p id="p-703"></p>
-<p id="p-704">We are going to look at a class-wide game.</p>
-<p id="p-705">Each member of the class secretly chooses a single letter: “C” or “D,” standing for “cooperate” or “defect.” This will be used as your strategy choice in the following game with each of the other players in the class. Here is how it works for each pair of players: if they both cooperate, they get each get 3 points. If they both defect, they each get 1 point. If one cooperates and one defects, the cooperator gets nothing, but the defector gets 5 points. Your one choice of “C” or “D” will be used to play the game with all the other players in the class.</p>
-<p id="p-706">Thus, if everyone chooses “C,” everyone will get 3 points per person (not counting yourself). If everyone chooses “D,” everyone will get 1 point per person (not counting yourself). You can't lose! And of course, anyone chooses “D” will get at least as much as everyone else will. If, for example in a class of 20 poeple, 11 people choose “C” and 9 choose “D,” then the 11 C-ers will get 3 points apiece from the other C-ers (making 30 points), and zero from the D-ers. So C-ers will get 30 points each. The D-ers, by contrast, will pick up 5 points apiece from each of the C-ers, making 55 points, and 1 point from each of the other D-ers, making 8 points, for a grand total of 63 points. No matter what the distribution is, D-ers always do better than C-ers. Of course, the more C-ers there are, the better everyone will do!</p>
-<p id="p-707">By the way, I should make it clear that in making your choice, you should not aim to be the winner, but simply to get as many points for yourself as possible. Thus you should be happier to get 30 points (as a result of saying “C” along with 10 others, even though the 9 D-sayers get more than you) than to get 19 points (by saying “D” along with everybody else, so nobody “beats” you).</p>
-<p id="p-708">Of course, your hope is to be the only defector, thus really cleaning up: with 19 C-ers, you'll get 95 points, and they'll each get 18 times 3, namely 54 points! But why am I doing the multiplication or any of this figuring for you? You've been studying game theory. So have all of you! You are all equally versed in game theory and understand about making rational choices. Therefore, I hardly need to tell you that you are to make what you consider to be your maximally rational choice. In particular, feelings of morality, guilt, apathy, and so on, are to be disregarded. Reasoning alone (of course including reasoning about others' reasoning) should be the basis of your decision.</p>
-<p id="p-709">So all you need to do is make your choice. Write it down.</p>
-<p id="p-710">It is to be understood (it almost goes without saying, but not quite) that you are not to discuss your answer with anyone else from the class. The purpose is to see what people do on their own, in isolation. Along with your answer you should include a short explanation for why you made your particular choice.</p>
-<p id="p-711">[Adapted from Douglas Hofstadter, <em class="emphasis">Metamagical Themas</em>,  p. 740.]</p>
-<p id="p-712">–––––––––––––––––––––</p>
-<p id="p-713">Once everyone in class has made his or her choice, share your answers with the class. Then answer the following questions about the class's responses.</p>
+<a href="S_CWPD.html" class="permalink">¶</a><p id="p-716"></p>
+<p id="p-717">We are going to look at a class-wide game.</p>
+<p id="p-718">Each member of the class secretly chooses a single letter: “C” or “D,” standing for “cooperate” or “defect.” This will be used as your strategy choice in the following game with each of the other players in the class. Here is how it works for each pair of players: if they both cooperate, they get each get 3 points. If they both defect, they each get 1 point. If one cooperates and one defects, the cooperator gets nothing, but the defector gets 5 points. Your one choice of “C” or “D” will be used to play the game with all the other players in the class.</p>
+<p id="p-719">Thus, if everyone chooses “C,” everyone will get 3 points per person (not counting yourself). If everyone chooses “D,” everyone will get 1 point per person (not counting yourself). You can't lose! And of course, anyone chooses “D” will get at least as much as everyone else will. If, for example in a class of 20 poeple, 11 people choose “C” and 9 choose “D,” then the 11 C-ers will get 3 points apiece from the other C-ers (making 30 points), and zero from the D-ers. So C-ers will get 30 points each. The D-ers, by contrast, will pick up 5 points apiece from each of the C-ers, making 55 points, and 1 point from each of the other D-ers, making 8 points, for a grand total of 63 points. No matter what the distribution is, D-ers always do better than C-ers. Of course, the more C-ers there are, the better everyone will do!</p>
+<p id="p-720">By the way, I should make it clear that in making your choice, you should not aim to be the winner, but simply to get as many points for yourself as possible. Thus you should be happier to get 30 points (as a result of saying “C” along with 10 others, even though the 9 D-sayers get more than you) than to get 19 points (by saying “D” along with everybody else, so nobody “beats” you).</p>
+<p id="p-721">Of course, your hope is to be the only defector, thus really cleaning up: with 19 C-ers, you'll get 95 points, and they'll each get 18 times 3, namely 54 points! But why am I doing the multiplication or any of this figuring for you? You've been studying game theory. So have all of you! You are all equally versed in game theory and understand about making rational choices. Therefore, I hardly need to tell you that you are to make what you consider to be your maximally rational choice. In particular, feelings of morality, guilt, apathy, and so on, are to be disregarded. Reasoning alone (of course including reasoning about others' reasoning) should be the basis of your decision.</p>
+<p id="p-722">So all you need to do is make your choice. Write it down.</p>
+<p id="p-723">It is to be understood (it almost goes without saying, but not quite) that you are not to discuss your answer with anyone else from the class. The purpose is to see what people do on their own, in isolation. Along with your answer you should include a short explanation for why you made your particular choice.</p>
+<p id="p-724">Adapted from Douglas Hofstadter, <span class="booktitle">Metamagical Themas</span>,  p. 740.</p>
+<p id="p-725">–––––––––––––––––––––</p>
+<p id="p-726">Once everyone in class has made his or her choice, share your answers with the class. Then answer the following questions about the class's responses.</p>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_CWPDsummary" id="E_CWPDsummary"><h6 class="heading">
-<span class="type">Exercise</span><span class="codenumber">4.3.1</span>
-</h6></a></article><div id="hk-E_CWPDsummary" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-714"></p>
-<ol id="ol-32" style="list-style-type: lower-alpha;">
-<li id="li-166"><p id="p-715">How many C's were there?</p></li>
-<li id="li-167"><p id="p-716">How many D's were there?</p></li>
-<li id="li-168"><p id="p-717">What was the payoff to each C?</p></li>
-<li id="li-169"><p id="p-718">What was the payoff to each D?</p></li>
+<span class="type">Exercise</span> <span class="codenumber">4.3.1</span> <span class="title">Summary of responses</span>
+</h6></a></article><div id="hk-E_CWPDsummary" class="hidden-content tex2jax_ignore"><article class="exercise-like"><ol id="p-727" class="lower-alpha">
+<li id="li-166"><p id="p-728">How many C's were there?</p></li>
+<li id="li-167"><p id="p-729">How many D's were there?</p></li>
+<li id="li-168"><p id="p-730">What was the payoff to each C?</p></li>
+<li id="li-169"><p id="p-731">What was the payoff to each D?</p></li>
 </ol></article></div>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_CWPDmatrix" id="E_CWPDmatrix"><h6 class="heading">
-<span class="type">Exercise</span><span class="codenumber">4.3.2</span>
-</h6></a></article><div id="hk-E_CWPDmatrix" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-719">Determine the payoff matrix for class-wide Prisoner's Dilemma. (Hint: although you played this game with each other person in the class, this is still a 2 person game!)</p></article></div>
+<span class="type">Exercise</span> <span class="codenumber">4.3.2</span> <span class="title">Payoff matrix</span>
+</h6></a></article><div id="hk-E_CWPDmatrix" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-732">Determine the payoff matrix for class-wide Prisoner's Dilemma.</p>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-hint-15" id="hint-15"><span class="type">Hint</span></a><div id="hk-hint-15" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-733">Although you played this game with each other person in the class, this is still a 2 person game!</p></div></div>
+</div></article></div>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_CWPDreasons" id="E_CWPDreasons"><h6 class="heading">
-<span class="type">Exercise</span><span class="codenumber">4.3.3</span>
-</h6></a></article><div id="hk-E_CWPDreasons" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-720">What are some reasons people chose C? What are some reasons people chose D?</p></article></div>
-<p id="p-721">Although we can now see what everyone chose, we might not agree that everyone made the most rational choice. How might perfectly rational players play the game?</p>
+<span class="type">Exercise</span> <span class="codenumber">4.3.3</span> <span class="title">Reasons for choice</span>
+</h6></a></article><div id="hk-E_CWPDreasons" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-734">What are some reasons people chose C? What are some reasons people chose D?</p></article></div>
+<p id="p-735">Although we can now see what everyone chose, we might not agree that everyone made the most rational choice. How might perfectly rational players play the game?</p>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_CWPDrational" id="E_CWPDrational"><h6 class="heading">
-<span class="type">Exercise</span><span class="codenumber">4.3.4</span>
-</h6></a></article><div id="hk-E_CWPDrational" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-722">Thinking about the idea of <em class="emphasis">rationality</em>, what appears to be the most rational choice, C or D? If everyone is <em class="emphasis">equally</em> rational, then what would everyone do? If everyone is equally rational, should everyone choose the same thing?</p></article></div>
+<span class="type">Exercise</span> <span class="codenumber">4.3.4</span> <span class="title">The rational choice</span>
+</h6></a></article><div id="hk-E_CWPDrational" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-736">Thinking about the idea of <em class="emphasis">rationality</em>, what appears to be the most rational choice, C or D? If everyone is <em class="emphasis">equally</em> rational, then what would everyone do? If everyone is equally rational, should everyone choose the same thing?</p></article></div>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_CWPDsame" id="E_CWPDsame"><h6 class="heading">
-<span class="type">Exercise</span><span class="codenumber">4.3.5</span>
-</h6></a></article><div id="hk-E_CWPDsame" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-723">Now suppose everyone is equally (and perfectly) rational. AND everyone knows that everyone else is equally (and perfectly) rational. What should everyone choose? (Hint: if everyone knows that everyone will choose the same answer, what should everyone choose to do?)</p></article></div>
-<p id="p-724">The next two exercises look at two more examples of games where players can “Cooperate” or “Defect”. How does changing the payoffs change the players' incentive to cooperate or defect?</p>
+<span class="type">Exercise</span> <span class="codenumber">4.3.5</span> <span class="title">Everyone is rational</span>
+</h6></a></article><div id="hk-E_CWPDsame" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-737">Now suppose everyone is equally (and perfectly) rational. AND everyone knows that everyone else is equally (and perfectly) rational. What should everyone choose?</p>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-hint-16" id="hint-16"><span class="type">Hint</span></a><div id="hk-hint-16" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-738">If everyone knows that everyone will choose the same answer, what should everyone choose to do?</p></div></div>
+</div></article></div>
+<p id="p-739">The next two exercises look at two more examples of games where players can “Cooperate” or “Defect”. How does changing the payoffs change the players' incentive to cooperate or defect?</p>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_PDvariant1" id="E_PDvariant1"><h6 class="heading">
-<span class="type">Exercise</span><span class="codenumber">4.3.6</span>
-</h6></a></article><div id="hk-E_PDvariant1" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-725">Consider the game in <a knowl="./knowl/T_PDvariant1.html" knowl-id="xref-T_PDvariant1" alt="Table 4.3.7 " title="Table 4.3.7 ">Table 4.3.7</a></p>
+<span class="type">Exercise</span> <span class="codenumber">4.3.6</span> <span class="title">A game of cooperation and defection</span>
+</h6></a></article><div id="hk-E_PDvariant1" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-740">Consider the game in <a knowl="./knowl/T_PDvariant1.html" title="Table 4.3.7">Table 4.3.7</a></p>
 <figure class="figure-like" id="T_PDvariant1"><table>
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
@@ -178,10 +184,10 @@ MathJax.Hub.Config({
 <td class="c m b0 r0 l0 t0 lines">(.01, .01)</td>
 </tr>
 </table>
-<figcaption><span class="type">Table</span><span class="codenumber">4.3.7</span>Matrix for <a knowl="./knowl/E_PDvariant1.html" knowl-id="xref-E_PDvariant1" alt="Exercise 4.3.6 " title="Exercise 4.3.6 ">Exercise 4.3.6</a></figcaption></figure><p id="p-726">What would you do? Why? What seems to be the most rational thing to do? Why?</p></article></div>
+<figcaption><span class="type">Table</span> <span class="codenumber">4.3.7</span> Matrix for <a knowl="./knowl/E_PDvariant1.html" title="Exercise 4.3.6: A game of cooperation and defection">Exercise 4.3.6</a></figcaption></figure><p id="p-741">What would you do? Why? What seems to be the most rational thing to do? Why?</p></article></div>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_PDvariant2" id="E_PDvariant2"><h6 class="heading">
-<span class="type">Exercise</span><span class="codenumber">4.3.8</span>
-</h6></a></article><div id="hk-E_PDvariant2" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-727">Consider the game in <a knowl="./knowl/T_PDvariant2.html" knowl-id="xref-T_PDvariant2" alt="Table 4.3.9 " title="Table 4.3.9 ">Table 4.3.9</a></p>
+<span class="type">Exercise</span> <span class="codenumber">4.3.8</span> <span class="title">Another game of cooperation and defection</span>
+</h6></a></article><div id="hk-E_PDvariant2" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-742">Consider the game in <a knowl="./knowl/T_PDvariant2.html" title="Table 4.3.9">Table 4.3.9</a></p>
 <figure class="figure-like" id="T_PDvariant2"><table>
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
@@ -199,11 +205,11 @@ MathJax.Hub.Config({
 <td class="c m b0 r0 l0 t0 lines">(100, 100)</td>
 </tr>
 </table>
-<figcaption><span class="type">Table</span><span class="codenumber">4.3.9</span>Matrix for <a knowl="./knowl/E_PDvariant2.html" knowl-id="xref-E_PDvariant2" alt="Exercise 4.3.8 " title="Exercise 4.3.8 ">Exercise 4.3.8</a></figcaption></figure><p id="p-728">What would you do? Why? What seems to be the most rational thing to do? Why?</p></article></div>
+<figcaption><span class="type">Table</span> <span class="codenumber">4.3.9</span> Matrix for <a knowl="./knowl/E_PDvariant2.html" title="Exercise 4.3.8: Another game of cooperation and defection">Exercise 4.3.8</a></figcaption></figure><p id="p-743">What would you do? Why? What seems to be the most rational thing to do? Why?</p></article></div>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_CWPDpayoffs" id="E_CWPDpayoffs"><h6 class="heading">
-<span class="type">Exercise</span><span class="codenumber">4.3.10</span>
-</h6></a></article><div id="hk-E_CWPDpayoffs" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-729">Looking at all three of the above games, can you think of what sort of payoffs you would need in order to cooperate (C)? What about to defect (D)?</p></article></div>
-<p id="p-730">Not every game where player's cooperate or defect is a Prisoner's Dilemma, or even a dilemma. You can certainly change the payoffs in the above matrices so that it is very clear what each player should do. But as you've seen with this section's experiment, there is something special about the Prisoner's Dilemma. Everyone does better if they all cooperate, but any one player does better to defect. The next section will look more specifically at what makes a game a Prisoner's Dilemma.</p></section></div></main>
+<span class="type">Exercise</span> <span class="codenumber">4.3.10</span> <span class="title">Motivation to cooperate or defect</span>
+</h6></a></article><div id="hk-E_CWPDpayoffs" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-744">Looking at all three of the above games, can you think of what sort of payoffs you would need in order to cooperate (C)? What about to defect (D)?</p></article></div>
+<p id="p-745">Not every game where player's cooperate or defect is a Prisoner's Dilemma, or even a dilemma. You can certainly change the payoffs in the above matrices so that it is very clear what each player should do. But as you've seen with this section's experiment, there is something special about the Prisoner's Dilemma. Everyone does better if they all cooperate, but any one player does better to defect. The next section will look more specifically at what makes a game a Prisoner's Dilemma.</p></section></div></main>
 </div>
 </body>
 </html>

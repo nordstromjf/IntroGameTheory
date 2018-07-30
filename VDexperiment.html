@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
 <!--*                                    *-->
@@ -11,7 +11,7 @@
 <title>Another Multiplayer Experiment</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/javascript" src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']],
@@ -34,10 +34,10 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
-<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\MyTikzmark}[2]{
@@ -62,184 +62,185 @@ MathJax.Hub.Config({
 <p class="byline">Jennifer Firkins Nordstrom</p>
 </div>
 </div></div>
-<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_PDconditions.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-4.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_VolunteerDil.html" title="Next" alt="Next">Next</a></span>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_PDconditions.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-4.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_VolunteerDil.html" title="Next">Next</a></span>
 </div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_PDconditions.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-4.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="S_VolunteerDil.html" title="Next" alt="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_PDconditions.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-4.html" title="Up">Up</a><a class="next-button button toolbar-item" href="S_VolunteerDil.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
-<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
 <ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
 </ul>
-<h2 class="link"><a href="chapter-1.html" data-scroll="chapter-1"><span class="codenumber">1</span><span class="title">What is Game Theory?</span></a></h2>
+<h2 class="link"><a href="chapter-1.html" data-scroll="chapter-1"><span class="codenumber">1</span> <span class="title punctuated">What is Game Theory?</span></a></h2>
 <ul>
 <li><a href="S_intro.html" data-scroll="S_intro">Players and Strategies</a></li>
 <li><a href="S_IntroMatrices.html" data-scroll="S_IntroMatrices">Game Matrices and Payoff Vectors</a></li>
 </ul>
-<h2 class="link"><a href="chapter-2.html" data-scroll="chapter-2"><span class="codenumber">2</span><span class="title">Two-Person Zero-Sum Games</span></a></h2>
+<h2 class="link"><a href="chapter-2.html" data-scroll="chapter-2"><span class="codenumber">2</span> <span class="title">Two-Person Zero-Sum Games</span></a></h2>
 <ul>
 <li><a href="S_IntroZeroSum.html" data-scroll="S_IntroZeroSum">Introduction to Two-Person Zero-Sum Games</a></li>
-<li><a href="S_DominatedStrategies.html" data-scroll="S_DominatedStrategies">More Two-Person Zero-Sum Games: Dominated Strategies</a></li>
+<li><a href="S_DominatedStrategies.html" data-scroll="S_DominatedStrategies">Dominated Strategies</a></li>
 <li><a href="S_Probability.html" data-scroll="S_Probability">Probability and Expected Value</a></li>
-<li><a href="S_OneCardStud.html" data-scroll="S_OneCardStud">Determining the Payoff Matrix in a Game of Chance</a></li>
+<li><a href="S_OneCardStud.html" data-scroll="S_OneCardStud">A Game of Chance</a></li>
 <li><a href="S_EquilibPoints.html" data-scroll="S_EquilibPoints">Equilibrium Points</a></li>
 <li><a href="S_ZeroSumStrategySummary.html" data-scroll="S_ZeroSumStrategySummary">Strategies for Zero-Sum Games and Equilibrium Points</a></li>
-<li><a href="S_PopRationality.html" data-scroll="S_PopRationality">Applications to Popular Culture: Rationality and Perfect Information</a></li>
+<li><a href="S_PopRationality.html" data-scroll="S_PopRationality">Popular Culture: Rationality and Perfect Information</a></li>
 </ul>
-<h2 class="link"><a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span><span class="title">Repeated Two-Person Zero-sum Games</span></a></h2>
+<h2 class="link"><a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span> <span class="title">Repeated Two-Person Zero-sum Games</span></a></h2>
 <ul>
 <li><a href="S_IntroRepeated.html" data-scroll="S_IntroRepeated">Introduction to Repeated Games</a></li>
 <li><a href="S_MixStratGraph.html" data-scroll="S_MixStratGraph">Mixed Strategies: Graphical Solution</a></li>
 <li><a href="S_solvingeq.html" data-scroll="S_solvingeq">Using Sage to Graph Lines and Solve Equations</a></li>
 <li><a href="S_MixStratEV.html" data-scroll="S_MixStratEV">Mixed Strategies: Expected Value Solution</a></li>
-<li><a href="S_LiarsPoker.html" data-scroll="S_LiarsPoker">Repeated Two-person Zero-Sum Games: Liar's Poker</a></li>
+<li><a href="S_LiarsPoker.html" data-scroll="S_LiarsPoker">Liar's Poker</a></li>
 <li><a href="S_AugMatrices.html" data-scroll="S_AugMatrices">Augmented Matrices</a></li>
 <li><a href="S_Undercut.html" data-scroll="S_Undercut">Undercut</a></li>
 </ul>
-<h2 class="link active"><a href="chapter-4.html" data-scroll="chapter-4"><span class="codenumber">4</span><span class="title">Non-Zero-Sum Games</span></a></h2>
+<h2 class="link"><a href="chapter-4.html" data-scroll="chapter-4"><span class="codenumber">4</span> <span class="title">Non-Zero-Sum Games</span></a></h2>
 <ul>
 <li><a href="Intrononzero.html" data-scroll="Intrononzero">Introduction to Two-Player Non-Zero-Sum Games</a></li>
-<li><a href="pdandchicken.html" data-scroll="pdandchicken">Two-Player Non-Zero-Sum Games: Prisoner's Dilemma and Chicken</a></li>
+<li><a href="pdandchicken.html" data-scroll="pdandchicken">Prisoner's Dilemma and Chicken</a></li>
 <li><a href="S_CWPD.html" data-scroll="S_CWPD">A Class-Wide Experiment</a></li>
 <li><a href="S_PDconditions.html" data-scroll="S_PDconditions">What Makes a Prisoner's Dilemma?</a></li>
 <li><a href="VDexperiment.html" data-scroll="VDexperiment" class="active">Another Multiplayer Experiment</a></li>
 <li><a href="S_VolunteerDil.html" data-scroll="S_VolunteerDil">Volunteer's Dilemma</a></li>
 <li><a href="S_RepeatPD.html" data-scroll="S_RepeatPD">Repeated Prisoner's Dilemma</a></li>
-<li><a href="S_PopPD.html" data-scroll="S_PopPD">Applications to Popular Culture: Prisoner's Dilemma and Chicken</a></li>
+<li><a href="S_PopPD.html" data-scroll="S_PopPD">Popular Culture: Prisoner's Dilemma and Chicken</a></li>
 </ul>
 <h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
 <ul>
 <li><a href="references-1.html" data-scroll="references-1">References</a></li>
 <li><a href="index-1.html" data-scroll="index-1">Index</a></li>
 <li><a href="colophon-2.html" data-scroll="colophon-2">Colophon</a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="VDexperiment"><h2 class="heading hide-type" alt="Section 4.5 Another Multiplayer Experiment">
-<span class="type">Section</span><span class="codenumber">4.5</span><span class="title">Another Multiplayer Experiment</span>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="section" id="VDexperiment"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4.5</span> <span class="title">Another Multiplayer Experiment</span>
 </h2>
-<a href="VDexperiment.html" class="permalink">¶</a><p id="p-755">This activity needs to be played as a class. All players need to be able to respond without being able to see the responses of others. Answers may be revealed before moving on to the next question.</p>
-<p id="p-756">Without sharing your answers with others, select your answer to the following questions. Try to be as honest about your answer as possible. Make sure you have a reason for each answer.</p>
-<ol id="ol-34" style="list-style-type: decimal;">
+<a href="VDexperiment.html" class="permalink">¶</a><p id="p-772">This activity needs to be played as a class. All players need to be able to respond without being able to see the responses of others. Answers may be revealed before moving on to the next question.</p>
+<p id="p-773">Without sharing your answers with others, select your answer to the following questions. Try to be as honest about your answer as possible. Make sure you have a reason for each answer.</p>
+<ol class="decimal">
 <li id="li-176">
-<p id="p-757">The lights go out in the neighborhood. Someone needs to call the power company. If someone calls, everyone's lights go on.</p>
-<ol id="ol-35" style="list-style-type: lower-alpha;">
-<li id="li-177"><p id="p-758">Call</p></li>
-<li id="li-178"><p id="p-759">Don't call</p></li>
+<p id="p-774">The lights go out in the neighborhood. Someone needs to call the power company. If someone calls, everyone's lights go on.</p>
+<ol class="lower-alpha">
+<li id="li-177"><p id="p-775">Call</p></li>
+<li id="li-178"><p id="p-776">Don't call</p></li>
 </ol>
 </li>
 <li id="li-179">
-<p id="p-760">The same as in (1), but now you have to wait on hold for 5 minutes. </p>
-<ol id="ol-36" style="list-style-type: lower-alpha;">
-<li id="li-180"><p id="p-761">Call</p></li>
-<li id="li-181"><p id="p-762">Don't call</p></li>
+<p id="p-777">The same as in (1), but now you have to wait on hold for 5 minutes. </p>
+<ol class="lower-alpha">
+<li id="li-180"><p id="p-778">Call</p></li>
+<li id="li-181"><p id="p-779">Don't call</p></li>
 </ol>
 </li>
 <li id="li-182">
-<p id="p-763">The same as in (1), but now you have to wait on hold for 30 minutes. </p>
-<ol id="ol-37" style="list-style-type: lower-alpha;">
-<li id="li-183"><p id="p-764">Call</p></li>
-<li id="li-184"><p id="p-765">Don't call</p></li>
+<p id="p-780">The same as in (1), but now you have to wait on hold for 30 minutes. </p>
+<ol class="lower-alpha">
+<li id="li-183"><p id="p-781">Call</p></li>
+<li id="li-184"><p id="p-782">Don't call</p></li>
 </ol>
 </li>
 <li id="li-185">
-<p id="p-766">The same as in (1), but now you have to pay a $.50 service fee. </p>
-<ol id="ol-38" style="list-style-type: lower-alpha;">
-<li id="li-186"><p id="p-767">Call</p></li>
-<li id="li-187"><p id="p-768">Don't call</p></li>
+<p id="p-783">The same as in (1), but now you have to pay a $.50 service fee. </p>
+<ol class="lower-alpha">
+<li id="li-186"><p id="p-784">Call</p></li>
+<li id="li-187"><p id="p-785">Don't call</p></li>
 </ol>
 </li>
 <li id="li-188">
-<p id="p-769">The same as in (1), but now you have to pay a $2.50 service fee. </p>
-<ol id="ol-39" style="list-style-type: lower-alpha;">
-<li id="li-189"><p id="p-770">Call</p></li>
-<li id="li-190"><p id="p-771">Don't call</p></li>
+<p id="p-786">The same as in (1), but now you have to pay a $2.50 service fee. </p>
+<ol class="lower-alpha">
+<li id="li-189"><p id="p-787">Call</p></li>
+<li id="li-190"><p id="p-788">Don't call</p></li>
 </ol>
 </li>
 <li id="li-191">
-<p id="p-772">The phone lines go down in your small mountain community. You have to hike 3 miles in the snow to notify the power company. </p>
-<ol id="ol-40" style="list-style-type: lower-alpha;">
-<li id="li-192"><p id="p-773">Hike to notify the phone company</p></li>
-<li id="li-193"><p id="p-774">Stay home and let someone else do the hiking</p></li>
+<p id="p-789">The phone lines go down in your small mountain community. You have to hike 3 miles in the snow to notify the power company. </p>
+<ol class="lower-alpha">
+<li id="li-192"><p id="p-790">Hike to notify the phone company</p></li>
+<li id="li-193"><p id="p-791">Stay home and let someone else do the hiking</p></li>
 </ol>
 </li>
 <li id="li-194">
-<p id="p-775">Everyone in your class cheats on an exam. The professor says if someone confesses they receive an F. If no one confesses, everyone fails. </p>
-<ol id="ol-41" style="list-style-type: lower-alpha;">
-<li id="li-195"><p id="p-776">Confess</p></li>
-<li id="li-196"><p id="p-777">Don't confess</p></li>
+<p id="p-792">Everyone in your class cheats on an exam. The professor says if someone confesses they receive an F. If no one confesses, everyone fails. </p>
+<ol class="lower-alpha">
+<li id="li-195"><p id="p-793">Confess</p></li>
+<li id="li-196"><p id="p-794">Don't confess</p></li>
 </ol>
 </li>
 <li id="li-197">
-<p id="p-778">Evil Dr. No captures the class and puts you in all in a shark tank separated so you can't communicate. If one person volunteers to be eaten then the rest go free. If no one volunteers after 10 minutes all get eaten by sharks. </p>
-<ol id="ol-42" style="list-style-type: lower-alpha;">
-<li id="li-198"><p id="p-779">Volunteer</p></li>
-<li id="li-199"><p id="p-780">Don't volunteer</p></li>
+<p id="p-795">Evil Dr. No captures the class and puts you in all in a shark tank separated so you can't communicate. If one person volunteers to be eaten then the rest go free. If no one volunteers after 10 minutes all get eaten by sharks. </p>
+<ol class="lower-alpha">
+<li id="li-198"><p id="p-796">Volunteer</p></li>
+<li id="li-199"><p id="p-797">Don't volunteer</p></li>
 </ol>
 </li>
 <li id="li-200">
-<p id="p-781">Evil Dr. No captures your family and puts you in all in a shark tank separated so you can't communicate. If one person volunteers to be eaten then the rest go free. If no one volunteers after 10 minutes all get eaten by sharks. </p>
-<ol id="ol-43" style="list-style-type: lower-alpha;">
-<li id="li-201"><p id="p-782">Volunteer</p></li>
-<li id="li-202"><p id="p-783">Don't volunteer</p></li>
+<p id="p-798">Evil Dr. No captures your family and puts you in all in a shark tank separated so you can't communicate. If one person volunteers to be eaten then the rest go free. If no one volunteers after 10 minutes all get eaten by sharks. </p>
+<ol class="lower-alpha">
+<li id="li-201"><p id="p-799">Volunteer</p></li>
+<li id="li-202"><p id="p-800">Don't volunteer</p></li>
 </ol>
 </li>
 <li id="li-203">
-<p id="p-784">For any “Big Brother” fans. Choose to eat all your favorite foods for a week or nasty “slop” for a week. If at least three people say slop, everyone gets what they asked for. Otherwise everyone is on slop. </p>
-<ol id="ol-44" style="list-style-type: lower-alpha;">
-<li id="li-204"><p id="p-785">Favorite foods</p></li>
-<li id="li-205"><p id="p-786">Slop</p></li>
+<p id="p-801">For any “Big Brother” fans. Choose to eat all your favorite foods for a week or nasty “slop” for a week. If at least three people say slop, everyone gets what they asked for. Otherwise everyone is on slop. </p>
+<ol class="lower-alpha">
+<li id="li-204"><p id="p-802">Favorite foods</p></li>
+<li id="li-205"><p id="p-803">Slop</p></li>
 </ol>
 </li>
 <li id="li-206">
-<p id="p-787">OK, now let's get serious about this. Answer 5 points or 1 point. If at least one person says 1 point, everyone gets the number of points they chose. Otherwise, everyone gets 0 points. </p>
-<ol id="ol-45" style="list-style-type: lower-alpha;">
-<li id="li-207"><p id="p-788">5 points</p></li>
-<li id="li-208"><p id="p-789">1 point</p></li>
+<p id="p-804">OK, now let's get serious about this. Answer 5 points or 1 point. If at least one person says 1 point, everyone gets the number of points they chose. Otherwise, everyone gets 0 points. </p>
+<ol class="lower-alpha">
+<li id="li-207"><p id="p-805">5 points</p></li>
+<li id="li-208"><p id="p-806">1 point</p></li>
 </ol>
 </li>
 <li id="li-209">
-<p id="p-790">Answer 20 points or 1 point. If at least one person says 1 point, everyone gets the number of points they chose. Otherwise, everyone gets 0 points. </p>
-<ol id="ol-46" style="list-style-type: lower-alpha;">
-<li id="li-210"><p id="p-791">20 points</p></li>
-<li id="li-211"><p id="p-792">1 point</p></li>
+<p id="p-807">Answer 20 points or 1 point. If at least one person says 1 point, everyone gets the number of points they chose. Otherwise, everyone gets 0 points. </p>
+<ol class="lower-alpha">
+<li id="li-210"><p id="p-808">20 points</p></li>
+<li id="li-211"><p id="p-809">1 point</p></li>
 </ol>
 </li>
 <li id="li-212">
-<p id="p-793">Answer 6 points or 5 points. If at least one person says 5 points, everyone gets the number of points they chose. Otherwise, everyone gets 0 points. </p>
-<ol id="ol-47" style="list-style-type: lower-alpha;">
-<li id="li-213"><p id="p-794">6 points</p></li>
-<li id="li-214"><p id="p-795">5 points</p></li>
+<p id="p-810">Answer 6 points or 5 points. If at least one person says 5 points, everyone gets the number of points they chose. Otherwise, everyone gets 0 points. </p>
+<ol class="lower-alpha">
+<li id="li-213"><p id="p-811">6 points</p></li>
+<li id="li-214"><p id="p-812">5 points</p></li>
 </ol>
 </li>
 <li id="li-215">
-<p id="p-796">Answer 20 points or 1 point. If at least <em class="emphasis">five</em>  people say 1 point, everyone gets the number of points they chose. Otherwise, everyone gets 0 points. </p>
-<ol id="ol-48" style="list-style-type: lower-alpha;">
-<li id="li-216"><p id="p-797">20 points</p></li>
-<li id="li-217"><p id="p-798">1 point</p></li>
+<p id="p-813">Answer 20 points or 1 point. If at least <em class="emphasis">five</em>  people say 1 point, everyone gets the number of points they chose. Otherwise, everyone gets 0 points. </p>
+<ol class="lower-alpha">
+<li id="li-216"><p id="p-814">20 points</p></li>
+<li id="li-217"><p id="p-815">1 point</p></li>
 </ol>
 </li>
 </ol>
-<p id="p-799">––––––––––––––––––––––––––-</p>
-<p id="p-800">After answering the above questions and seeing the reponses from your classmates, think about how you responded. Did this differ from how your classmates responded? Try to give reasons for how you chose your responses to the above questions. Ask classmates for their reasons for responding as they did. It can be particularly useful to share your answers with someone who chose a different response from you. You can summarize the various reasons for voluteering and not volunteering in the exercises below.</p>
+<p id="p-816">––––––––––––––––––––––––––-</p>
+<p id="p-817">After answering the above questions and seeing the reponses from your classmates, think about how you responded. Did this differ from how your classmates responded? Try to give reasons for how you chose your responses to the above questions. Ask classmates for their reasons for responding as they did. It can be particularly useful to share your answers with someone who chose a different response from you. You can summarize the various reasons for voluteering and not volunteering in the exercises below.</p>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-239" id="exercise-239"><h6 class="heading">
-<span class="type">Exercise</span><span class="codenumber">4.5.1</span>
-</h6></a></article><div id="hk-exercise-239" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-801">After answering the questions, were you likely to volunteer or unlikely to volunteer? For example, were you likely to be the one to call the power company or get eaten by sharks, or were you generally hoping someone else would do it? If it depended on the situation, explain under what circumstances you were likely to volunteer.</p></article></div>
+<span class="type">Exercise</span> <span class="codenumber">4.5.1</span> <span class="title">Volunteer or not</span>
+</h6></a></article><div id="hk-exercise-239" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-818">After answering the questions, were you likely to volunteer or unlikely to volunteer? For example, were you likely to be the one to call the power company or get eaten by sharks, or were you generally hoping someone else would do it? If it depended on the situation, explain under what circumstances you were likely to volunteer.</p></article></div>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-240" id="exercise-240"><h6 class="heading">
-<span class="type">Exercise</span><span class="codenumber">4.5.2</span>
-</h6></a></article><div id="hk-exercise-240" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-802">After sharing your answers as a class, did each situation have a volunteer? In other words, was there always someone willing to call the power company or take fewer points? If there was a question with no volunteer, can you suggest why?</p></article></div>
+<span class="type">Exercise</span> <span class="codenumber">4.5.2</span> <span class="title">Always a volunteer</span>
+</h6></a></article><div id="hk-exercise-240" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-819">After sharing your answers as a class, did each situation have a volunteer? In other words, was there always someone willing to call the power company or take fewer points? If there was a question with no volunteer, can you suggest why?</p></article></div>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-241" id="exercise-241"><h6 class="heading">
-<span class="type">Exercise</span><span class="codenumber">4.5.3</span>
-</h6></a></article><div id="hk-exercise-241" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-803">For which questions was it unlikely that there would be very many volunteers? Did you take that into consideration when deciding if you were going to volunteer?</p></article></div>
+<span class="type">Exercise</span> <span class="codenumber">4.5.3</span> <span class="title">Unlikely to volunteer</span>
+</h6></a></article><div id="hk-exercise-241" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-820">For which questions was it unlikely that there would be very many volunteers? Did you take that into consideration when deciding if you were going to volunteer?</p></article></div>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-242" id="exercise-242"><h6 class="heading">
-<span class="type">Exercise</span><span class="codenumber">4.5.4</span>
-</h6></a></article><div id="hk-exercise-242" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-804">What are some reasons for volunteering? What are some reasons for not to volunteer?</p></article></div></section></div></main>
+<span class="type">Exercise</span> <span class="codenumber">4.5.4</span> <span class="title">Reasons to volunteer</span>
+</h6></a></article><div id="hk-exercise-242" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-821">What are some reasons for volunteering? What are some reasons for not to volunteer?</p></article></div></section></div></main>
 </div>
 </body>
 </html>

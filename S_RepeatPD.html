@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
 <!--*                                    *-->
@@ -11,7 +11,7 @@
 <title>Repeated Prisoner's Dilemma</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/javascript" src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']],
@@ -34,10 +34,10 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
-<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\MyTikzmark}[2]{
@@ -62,69 +62,70 @@ MathJax.Hub.Config({
 <p class="byline">Jennifer Firkins Nordstrom</p>
 </div>
 </div></div>
-<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_VolunteerDil.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-4.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_PopPD.html" title="Next" alt="Next">Next</a></span>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_VolunteerDil.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-4.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_PopPD.html" title="Next">Next</a></span>
 </div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_VolunteerDil.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-4.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="S_PopPD.html" title="Next" alt="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_VolunteerDil.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-4.html" title="Up">Up</a><a class="next-button button toolbar-item" href="S_PopPD.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
-<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
 <ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
 </ul>
-<h2 class="link"><a href="chapter-1.html" data-scroll="chapter-1"><span class="codenumber">1</span><span class="title">What is Game Theory?</span></a></h2>
+<h2 class="link"><a href="chapter-1.html" data-scroll="chapter-1"><span class="codenumber">1</span> <span class="title punctuated">What is Game Theory?</span></a></h2>
 <ul>
 <li><a href="S_intro.html" data-scroll="S_intro">Players and Strategies</a></li>
 <li><a href="S_IntroMatrices.html" data-scroll="S_IntroMatrices">Game Matrices and Payoff Vectors</a></li>
 </ul>
-<h2 class="link"><a href="chapter-2.html" data-scroll="chapter-2"><span class="codenumber">2</span><span class="title">Two-Person Zero-Sum Games</span></a></h2>
+<h2 class="link"><a href="chapter-2.html" data-scroll="chapter-2"><span class="codenumber">2</span> <span class="title">Two-Person Zero-Sum Games</span></a></h2>
 <ul>
 <li><a href="S_IntroZeroSum.html" data-scroll="S_IntroZeroSum">Introduction to Two-Person Zero-Sum Games</a></li>
-<li><a href="S_DominatedStrategies.html" data-scroll="S_DominatedStrategies">More Two-Person Zero-Sum Games: Dominated Strategies</a></li>
+<li><a href="S_DominatedStrategies.html" data-scroll="S_DominatedStrategies">Dominated Strategies</a></li>
 <li><a href="S_Probability.html" data-scroll="S_Probability">Probability and Expected Value</a></li>
-<li><a href="S_OneCardStud.html" data-scroll="S_OneCardStud">Determining the Payoff Matrix in a Game of Chance</a></li>
+<li><a href="S_OneCardStud.html" data-scroll="S_OneCardStud">A Game of Chance</a></li>
 <li><a href="S_EquilibPoints.html" data-scroll="S_EquilibPoints">Equilibrium Points</a></li>
 <li><a href="S_ZeroSumStrategySummary.html" data-scroll="S_ZeroSumStrategySummary">Strategies for Zero-Sum Games and Equilibrium Points</a></li>
-<li><a href="S_PopRationality.html" data-scroll="S_PopRationality">Applications to Popular Culture: Rationality and Perfect Information</a></li>
+<li><a href="S_PopRationality.html" data-scroll="S_PopRationality">Popular Culture: Rationality and Perfect Information</a></li>
 </ul>
-<h2 class="link"><a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span><span class="title">Repeated Two-Person Zero-sum Games</span></a></h2>
+<h2 class="link"><a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span> <span class="title">Repeated Two-Person Zero-sum Games</span></a></h2>
 <ul>
 <li><a href="S_IntroRepeated.html" data-scroll="S_IntroRepeated">Introduction to Repeated Games</a></li>
 <li><a href="S_MixStratGraph.html" data-scroll="S_MixStratGraph">Mixed Strategies: Graphical Solution</a></li>
 <li><a href="S_solvingeq.html" data-scroll="S_solvingeq">Using Sage to Graph Lines and Solve Equations</a></li>
 <li><a href="S_MixStratEV.html" data-scroll="S_MixStratEV">Mixed Strategies: Expected Value Solution</a></li>
-<li><a href="S_LiarsPoker.html" data-scroll="S_LiarsPoker">Repeated Two-person Zero-Sum Games: Liar's Poker</a></li>
+<li><a href="S_LiarsPoker.html" data-scroll="S_LiarsPoker">Liar's Poker</a></li>
 <li><a href="S_AugMatrices.html" data-scroll="S_AugMatrices">Augmented Matrices</a></li>
 <li><a href="S_Undercut.html" data-scroll="S_Undercut">Undercut</a></li>
 </ul>
-<h2 class="link active"><a href="chapter-4.html" data-scroll="chapter-4"><span class="codenumber">4</span><span class="title">Non-Zero-Sum Games</span></a></h2>
+<h2 class="link"><a href="chapter-4.html" data-scroll="chapter-4"><span class="codenumber">4</span> <span class="title">Non-Zero-Sum Games</span></a></h2>
 <ul>
 <li><a href="Intrononzero.html" data-scroll="Intrononzero">Introduction to Two-Player Non-Zero-Sum Games</a></li>
-<li><a href="pdandchicken.html" data-scroll="pdandchicken">Two-Player Non-Zero-Sum Games: Prisoner's Dilemma and Chicken</a></li>
+<li><a href="pdandchicken.html" data-scroll="pdandchicken">Prisoner's Dilemma and Chicken</a></li>
 <li><a href="S_CWPD.html" data-scroll="S_CWPD">A Class-Wide Experiment</a></li>
 <li><a href="S_PDconditions.html" data-scroll="S_PDconditions">What Makes a Prisoner's Dilemma?</a></li>
 <li><a href="VDexperiment.html" data-scroll="VDexperiment">Another Multiplayer Experiment</a></li>
 <li><a href="S_VolunteerDil.html" data-scroll="S_VolunteerDil">Volunteer's Dilemma</a></li>
 <li><a href="S_RepeatPD.html" data-scroll="S_RepeatPD" class="active">Repeated Prisoner's Dilemma</a></li>
-<li><a href="S_PopPD.html" data-scroll="S_PopPD">Applications to Popular Culture: Prisoner's Dilemma and Chicken</a></li>
+<li><a href="S_PopPD.html" data-scroll="S_PopPD">Popular Culture: Prisoner's Dilemma and Chicken</a></li>
 </ul>
 <h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
 <ul>
 <li><a href="references-1.html" data-scroll="references-1">References</a></li>
 <li><a href="index-1.html" data-scroll="index-1">Index</a></li>
 <li><a href="colophon-2.html" data-scroll="colophon-2">Colophon</a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="S_RepeatPD"><h2 class="heading hide-type" alt="Section 4.7 Repeated Prisoner's Dilemma">
-<span class="type">Section</span><span class="codenumber">4.7</span><span class="title">Repeated Prisoner's Dilemma</span>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="section" id="S_RepeatPD"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4.7</span> <span class="title">Repeated Prisoner's Dilemma</span>
 </h2>
-<a href="S_RepeatPD.html" class="permalink">¶</a><p id="p-822">In this section we look at two players playing Prisoner's Dilemma repeatedly. We call this game an <em class="emphasis">iterated</em> Prisoner's Dilemma. Recall the general Prisoner's Dilemma matrix from previous sections, given again in <a knowl="./knowl/T_CWPD3.html" knowl-id="xref-T_CWPD3" alt="Table 4.7.1 " title="Table 4.7.1 ">Table 4.7.1</a>.</p>
+<a href="S_RepeatPD.html" class="permalink">¶</a><p id="p-839">In this section we look at two players playing Prisoner's Dilemma repeatedly. We call this game an <em class="emphasis">iterated</em> Prisoner's Dilemma. Recall the general Prisoner's Dilemma matrix from previous sections, given again in <a knowl="./knowl/T_CWPD3.html" title="Table 4.7.1">Table 4.7.1</a>.</p>
 <figure class="figure-like" id="T_CWPD3"><table>
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
@@ -150,65 +151,65 @@ MathJax.Hub.Config({
 <td class="c m b1 r1 l0 t0 lines">\((1, 1)\)</td>
 </tr>
 </table>
-<figcaption><span class="type">Table</span><span class="codenumber">4.7.1</span>A Prisoner's Dilemma matrix.</figcaption></figure><p id="p-823">Before playing the iterated version, think about how you would play the above game if you only play it once with an opponent. But let's also give the game some context as in the following exercise.</p>
+<figcaption><span class="type">Table</span> <span class="codenumber">4.7.1</span> A Prisoner's Dilemma matrix.</figcaption></figure><p id="p-840">Before playing the iterated version, think about how you would play the above game if you only play it once with an opponent. But let's also give the game some context as in the following exercise.</p>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_internetpurchaseonce" id="E_internetpurchaseonce"><h6 class="heading">
-<span class="type">Exercise</span><span class="codenumber">4.7.2</span>
-</h6></a></article><div id="hk-E_internetpurchaseonce" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-824">Suppose the above matrix represents the situation of purchasing an item (say, a used textbook) on the internet where both parties are untraceable. You agree to send the money at the same time that the seller agrees to send the book. Then we can think of Cooperating as each of you sending money/ book, and Defecting as not sending money/ book. Why might a player Cooperate? Why might a player Defect?</p></article></div>
+<span class="type">Exercise</span> <span class="codenumber">4.7.2</span> <span class="title">A single internet purcase</span>
+</h6></a></article><div id="hk-E_internetpurchaseonce" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-841">Suppose the above matrix represents the situation of purchasing an item (say, a used textbook) on the internet where both parties are untraceable. You agree to send the money at the same time that the seller agrees to send the book. Then we can think of Cooperating as each of you sending money/ book, and Defecting as not sending money/ book. Why might a player Cooperate? Why might a player Defect?</p></article></div>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_internetpurchaserepeat" id="E_internetpurchaserepeat"><h6 class="heading">
-<span class="type">Exercise</span><span class="codenumber">4.7.3</span>
-</h6></a></article><div id="hk-E_internetpurchaserepeat" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-825">Now suppose you wish to continue to do business with the other party. For example, instead of buying a used textbook, maybe you are buying music downloads. Why might a player cooperate? Why might a player defect? Do these resons differ from your reasons in <a knowl="./knowl/E_internetpurchaseonce.html" knowl-id="xref-E_internetpurchaseonce" alt="Exercise 4.7.2 " title="Exercise 4.7.2 ">Exercise 4.7.2</a>?</p></article></div>
-<p id="p-826">It is possible that your answers to the above questions depended on the context, so let's go back to just thinking about the game as a simple matrix game. Think about how you played the Class-wide Prisoner's Dilemma, but now think about repeating the game several times with the same player. Do you think your strategy would change? Remember, if we repeat the game we are not restricted to playing a pure strategy.</p>
+<span class="type">Exercise</span> <span class="codenumber">4.7.3</span> <span class="title">Repeated internet purchases</span>
+</h6></a></article><div id="hk-E_internetpurchaserepeat" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-842">Now suppose you wish to continue to do business with the other party. For example, instead of buying a used textbook, maybe you are buying music downloads. Why might a player cooperate? Why might a player defect? Do these resons differ from your reasons in <a knowl="./knowl/E_internetpurchaseonce.html" title="Exercise 4.7.2: A single internet purcase">Exercise 4.7.2</a>?</p></article></div>
+<p id="p-843">It is possible that your answers to the above questions depended on the context, so let's go back to just thinking about the game as a simple matrix game. Think about how you played the Class-wide Prisoner's Dilemma, but now think about repeating the game several times with the same player. Do you think your strategy would change? Remember, if we repeat the game we are not restricted to playing a pure strategy.</p>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_RPDstrategy" id="E_RPDstrategy"><h6 class="heading">
-<span class="type">Exercise</span><span class="codenumber">4.7.4</span>
-</h6></a></article><div id="hk-E_RPDstrategy" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-827">Suggest a strategy for playing the Prisoner's Dilemma in <a knowl="./knowl/T_CWPD3.html" knowl-id="xref-T_CWPD3" alt="Table 4.7.1 " title="Table 4.7.1 ">Table 4.7.1</a> repeatedly. DON'T SHARE YOUR STRATEGY WITH ANYONE YET!</p></article></div>
-<p id="p-828">Now let's see how your strategy works by actually playing the game several times.</p>
+<span class="type">Exercise</span> <span class="codenumber">4.7.4</span> <span class="title">Strategy for repeated Prisoner's Dilemma</span>
+</h6></a></article><div id="hk-E_RPDstrategy" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-844">Suggest a strategy for playing the Prisoner's Dilemma in <a knowl="./knowl/T_CWPD3.html" title="Table 4.7.1">Table 4.7.1</a> repeatedly. DON'T SHARE YOUR STRATEGY WITH ANYONE YET!</p></article></div>
+<p id="p-845">Now let's see how your strategy works by actually playing the game several times.</p>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_RPDplay" id="E_RPDplay"><h6 class="heading">
-<span class="type">Exercise</span><span class="codenumber">4.7.5</span>
-</h6></a></article><div id="hk-E_RPDplay" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-829">Play 10 rounds of Prisoner's Dilemma with someone in class. Use your suggested strategy. Keep track of the payoffs. Did your strategy seem effective? What should it mean to have an “effective” strategy?</p></article></div>
-<p id="p-830">We are now going to play a Prisoner's Dilemma Tournament! Several strategies are suggested below. Choose one of the strategies below (or keep playing with your own strategy). You are to play your strategy against everyone else in the class. Keep a running total of your score. Don't tell your opponents your strategy.</p>
-<p id="p-831">Some possible strategies: </p>
-<ul id="ul-8" style="list-style-type: disc;">
-<li id="li-218"><p id="p-832">Strategy: <b class="terminology">Defection.</b> Your strategy is to <em class="emphasis">always</em> choose DEFECT (D).</p></li>
-<li id="li-219"><p id="p-833">Strategy: <b class="terminology">Cooperation.</b> Your strategy is to <em class="emphasis">always</em> choose COOPERATE (C).</p></li>
-<li id="li-220"><p id="p-834">Strategy: <b class="terminology">Tit for Tat.</b> Your strategy is to play whatever your opponent just played. Your first move is to COOPERATE (C), but then you need to repeat your opponent's last move.</p></li>
-<li id="li-221"><p id="p-835">Strategy: <b class="terminology">Tit for Two Tats.</b> Your strategy is to COOPERATE (C) unless your opponent DEFECTS twice in a row. After two D's you respond with D.</p></li>
-<li id="li-222"><p id="p-836">Strategy: <b class="terminology">Random (1/2, 1/2).</b> Your strategy is to COOPERATE (C) randomly 50% of the time and DEFECT (D) 50% of the time. [Note: it will be hard to be truly random, but try to play each option approximately the same amount.]</p></li>
-<li id="li-223"><p id="p-837">Strategy: <b class="terminology">Random (3/4, 1/4).</b> Your strategy is to COOPERATE (C) randomly 75% of the time and DEFECT (D) 25% of the time. [Note: it will be hard to be truly random, but try to play C more often than D.]</p></li>
-<li id="li-224"><p id="p-838">Strategy: <b class="terminology">Random (1/4, 3/4).</b> Your strategy is to COOPERATE (C) randomly 25% of the time and DEFECT (D) 75% of the time. [Note: it will be hard to be truly random, but try to play D more often than C.]</p></li>
-<li id="li-225"><p id="p-839">Strategy: <b class="terminology">Tit for Tat with Occasional Surprise D.</b> Your strategy is to play whatever your opponent just played. Your first move is to COOPERATE (C), but then you need to repeat your opponent's last move. Occasionally, you will deviate from this strategy by playing D.</p></li>
+<span class="type">Exercise</span> <span class="codenumber">4.7.5</span> <span class="title">Play Prisoner's Dilemma repeatedly</span>
+</h6></a></article><div id="hk-E_RPDplay" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-846">Play 10 rounds of Prisoner's Dilemma with someone in class. Use your suggested strategy. Keep track of the payoffs. Did your strategy seem effective? What should it mean to have an “effective” strategy?</p></article></div>
+<p id="p-847">We are now going to play a Prisoner's Dilemma Tournament! Several strategies are suggested below. Choose one of the strategies below (or keep playing with your own strategy). You are to play your strategy against everyone else in the class. Keep a running total of your score. Don't tell your opponents your strategy.</p>
+<p id="p-848">Some possible strategies: </p>
+<ul class="disc">
+<li id="li-218"><p id="p-849">Strategy: <dfn class="terminology">Defection.</dfn> Your strategy is to <em class="emphasis">always</em> choose DEFECT (D).</p></li>
+<li id="li-219"><p id="p-850">Strategy: <dfn class="terminology">Cooperation.</dfn> Your strategy is to <em class="emphasis">always</em> choose COOPERATE (C).</p></li>
+<li id="li-220"><p id="p-851">Strategy: <dfn class="terminology">Tit for Tat.</dfn> Your strategy is to play whatever your opponent just played. Your first move is to COOPERATE (C), but then you need to repeat your opponent's last move.</p></li>
+<li id="li-221"><p id="p-852">Strategy: <dfn class="terminology">Tit for Two Tats.</dfn> Your strategy is to COOPERATE (C) unless your opponent DEFECTS twice in a row. After two D's you respond with D.</p></li>
+<li id="li-222"><p id="p-853">Strategy: <dfn class="terminology">Random (1/2, 1/2).</dfn> Your strategy is to COOPERATE (C) randomly 50% of the time and DEFECT (D) 50% of the time. [Note: it will be hard to be truly random, but try to play each option approximately the same amount.]</p></li>
+<li id="li-223"><p id="p-854">Strategy: <dfn class="terminology">Random (3/4, 1/4).</dfn> Your strategy is to COOPERATE (C) randomly 75% of the time and DEFECT (D) 25% of the time. [Note: it will be hard to be truly random, but try to play C more often than D.]</p></li>
+<li id="li-224"><p id="p-855">Strategy: <dfn class="terminology">Random (1/4, 3/4).</dfn> Your strategy is to COOPERATE (C) randomly 25% of the time and DEFECT (D) 75% of the time. [Note: it will be hard to be truly random, but try to play D more often than C.]</p></li>
+<li id="li-225"><p id="p-856">Strategy: <dfn class="terminology">Tit for Tat with Occasional Surprise D.</dfn> Your strategy is to play whatever your opponent just played. Your first move is to COOPERATE (C), but then you need to repeat your opponent's last move. Occasionally, you will deviate from this strategy by playing D.</p></li>
 </ul>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_RPDplaytournament" id="E_RPDplaytournament"><h6 class="heading">
-<span class="type">Exercise</span><span class="codenumber">4.7.6</span>
-</h6></a></article><div id="hk-E_RPDplaytournament" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-840">WITHOUT SHARING YOUR STRATEGY, play Prisoner's Dilemma 10 times with each of the other members of the class. Keep track of the payoffs for each game and your total score.</p></article></div>
-<p id="p-841">After playing Repeated Prisoner's Dilemma as a class, can you determine who used which strategy? At this point you may share your strategy with others. Was your strategy more effective with some strategies than with others? If some of the above strategies were not used, can you guess how your strategy would have done against them?</p>
+<span class="type">Exercise</span> <span class="codenumber">4.7.6</span> <span class="title">A Prisoner's Dilemma tournament</span>
+</h6></a></article><div id="hk-E_RPDplaytournament" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-857">WITHOUT SHARING YOUR STRATEGY, play Prisoner's Dilemma 10 times with each of the other members of the class. Keep track of the payoffs for each game and your total score.</p></article></div>
+<p id="p-858">After playing Repeated Prisoner's Dilemma as a class, can you determine who used which strategy? At this point you may share your strategy with others. Was your strategy more effective with some strategies than with others? If some of the above strategies were not used, can you guess how your strategy would have done against them?</p>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_RPDeffectivestrategies" id="E_RPDeffectivestrategies"><h6 class="heading">
-<span class="type">Exercise</span><span class="codenumber">4.7.7</span>
-</h6></a></article><div id="hk-E_RPDeffectivestrategies" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-842">Describe which opponents' strategies seemed to give you more points, which seemed to give you fewer?</p></article></div>
+<span class="type">Exercise</span> <span class="codenumber">4.7.7</span> <span class="title">Effectiveness of your strategy</span>
+</h6></a></article><div id="hk-E_RPDeffectivestrategies" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-859">Describe which opponents' strategies seemed to give you more points, which seemed to give you fewer?</p></article></div>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_RPDbeststrategies" id="E_RPDbeststrategies"><h6 class="heading">
-<span class="type">Exercise</span><span class="codenumber">4.7.8</span>
-</h6></a></article><div id="hk-E_RPDbeststrategies" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-843">Describe the strategy or strategies that had the highest scores in the tournament. Does this seem surprising? Why or why not? How do the winning strategies compare to the strategy you suggested in <a knowl="./knowl/E_RPDstrategy.html" knowl-id="xref-E_RPDstrategy" alt="Exercise 4.7.4 " title="Exercise 4.7.4 ">Exercise 4.7.4</a>?</p></article></div>
-<p id="p-844">What strategies seem the most rational? Are pure strategies the most rational? Does it depend on what sort of strategy your opponent is playing?</p>
+<span class="type">Exercise</span> <span class="codenumber">4.7.8</span> <span class="title">Winning strategies</span>
+</h6></a></article><div id="hk-E_RPDbeststrategies" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-860">Describe the strategy or strategies that had the highest scores in the tournament. Does this seem surprising? Why or why not? How do the winning strategies compare to the strategy you suggested in <a knowl="./knowl/E_RPDstrategy.html" title="Exercise 4.7.4: Strategy for repeated Prisoner's Dilemma">Exercise 4.7.4</a>?</p></article></div>
+<p id="p-861">What strategies seem the most rational? Are pure strategies the most rational? Does it depend on what sort of strategy your opponent is playing?</p>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_RPDcompare" id="E_RPDcompare"><h6 class="heading">
-<span class="type">Exercise</span><span class="codenumber">4.7.9</span>
-</h6></a></article><div id="hk-E_RPDcompare" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-845">How does Repeated Prisoner's Dilemma differ from the “one-time” Prisoner's Dilemma? Try to think in terms of rational strategies.</p></article></div>
-<p id="p-846">As <a knowl="./knowl/E_internetpurchaserepeat.html" knowl-id="xref-E_internetpurchaserepeat" alt="Exercise 4.7.3 " title="Exercise 4.7.3 ">Exercise 4.7.3</a> suggests we can think of real-life interactions that can be modeled as a Prisoner's Dilemma.</p>
+<span class="type">Exercise</span> <span class="codenumber">4.7.9</span> <span class="title">Rationality in repeated Prisoner's Dilemma</span>
+</h6></a></article><div id="hk-E_RPDcompare" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-862">How does Repeated Prisoner's Dilemma differ from the “one-time” Prisoner's Dilemma? Try to think in terms of rational strategies.</p></article></div>
+<p id="p-863">As <a knowl="./knowl/E_internetpurchaserepeat.html" title="Exercise 4.7.3: Repeated internet purchases">Exercise 4.7.3</a> suggests we can think of real-life interactions that can be modeled as a Prisoner's Dilemma.</p>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_RPDreallife" id="E_RPDreallife"><h6 class="heading">
-<span class="type">Exercise</span><span class="codenumber">4.7.10</span>
-</h6></a></article><div id="hk-E_RPDreallife" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-847">Describe a situation from real life that resembles a Repeated Prisoner's Dilemma.</p></article></div>
-<p id="p-848">Repeated or Iterated Prisoner's Dilemma has applications to biology and sociology. If you think of higher point totals as “success as a species” in biology or “success of a society” in sociology, we can try to determine which strategies seem the most effective or successful. Individuals do not need the highest point total to be successful, but low point totals will not succeed. Just like grades in a course, you don't need the highest score to pass a class, but very bad scores will fail. In order to model the situation of a society, think about what happens to defectors in a society of cooperators or cooperators in a society of defectors. Who will be able to succeed?</p>
+<span class="type">Exercise</span> <span class="codenumber">4.7.10</span> <span class="title">Example of Repeated Prisoner's Dilemma in real life</span>
+</h6></a></article><div id="hk-E_RPDreallife" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-864">Describe a situation from real life that resembles a Repeated Prisoner's Dilemma.</p></article></div>
+<p id="p-865">Repeated or Iterated Prisoner's Dilemma has applications to biology and sociology. If you think of higher point totals as “success as a species” in biology or “success of a society” in sociology, we can try to determine which strategies seem the most effective or successful. Individuals do not need the highest point total to be successful, but low point totals will not succeed. Just like grades in a course, you don't need the highest score to pass a class, but very bad scores will fail. In order to model the situation of a society, think about what happens to defectors in a society of cooperators or cooperators in a society of defectors. Who will be able to succeed?</p>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_RPDfewdefect" id="E_RPDfewdefect"><h6 class="heading">
-<span class="type">Exercise</span><span class="codenumber">4.7.11</span>
-</h6></a></article><div id="hk-E_RPDfewdefect" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-849">How do a few defectors fare in a society of mostly cooperators? How do the cooperators fare? (In other words, who will be more successful?) Keep in mind that everyone is playing with lots of cooperators and only a few defectors. Who will have the most points, cooperators or defectors?</p></article></div>
+<span class="type">Exercise</span> <span class="codenumber">4.7.11</span> <span class="title">Only a few defectors</span>
+</h6></a></article><div id="hk-E_RPDfewdefect" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-866">How do a few defectors fare in a society of mostly cooperators? How do the cooperators fare? (In other words, who will be more successful?) Keep in mind that everyone is playing with lots of cooperators and only a few defectors. Who will have the most points, cooperators or defectors?</p></article></div>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_RPDfewcoop" id="E_RPDfewcoop"><h6 class="heading">
-<span class="type">Exercise</span><span class="codenumber">4.7.12</span>
-</h6></a></article><div id="hk-E_RPDfewcoop" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-850">How do a few cooperators fare in a society of mostly defectors? How do the defectors fare? (In other words, who will be more successful?) Keep in mind that everyone is playing with lots of defectors and only a few cooperators. Who will have the most points, cooperators or defectors?</p></article></div>
-<p id="p-851">After thinking about individuals in a society playing pure strategies, what happens to individiuals who are playing some of the mixed strategies listed above?</p>
+<span class="type">Exercise</span> <span class="codenumber">4.7.12</span> <span class="title">Only a few cooperators</span>
+</h6></a></article><div id="hk-E_RPDfewcoop" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-867">How do a few cooperators fare in a society of mostly defectors? How do the defectors fare? (In other words, who will be more successful?) Keep in mind that everyone is playing with lots of defectors and only a few cooperators. Who will have the most points, cooperators or defectors?</p></article></div>
+<p id="p-868">After thinking about individuals in a society playing pure strategies, what happens to individiuals who are playing some of the mixed strategies listed above?</p>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_RPDtft" id="E_RPDtft"><h6 class="heading">
-<span class="type">Exercise</span><span class="codenumber">4.7.13</span>
-</h6></a></article><div id="hk-E_RPDtft" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-852">Now consider a society of mostly TIT-FOR-TATers. How do a few defectors fare in a society of mostly TIT-FOR-TATers? How do the TIT-FOR-TATers fare? How would a few cooperators fare with the TIT-FOR-TATers? Would the evolution of such a society favor cooperation or defection?</p></article></div>
-<p id="p-853">The TIT-FOR-TAT strategy is particularly interesting in an iterated Prisoner's Dilemma. It has a few special characteristics that lead to success. First it is <em class="emphasis">responsive</em> in that it responds to the strategy of the other player. If the other player is cooperating, the TIT-FOR-TAT strategy will be able to gain the 3 points on each round. If the other player is defecting, it will defect so as to not keep getting the sucker's payoff of 0. The random strategies and pure strategies, for example, are not responsive. They do not respond to how the other player is playing. Chances are when you played in the tournament, you wanted to be able to adapt your strategy to respond to how your opponent was playing.</p>
-<p id="p-854">The TIT-FOR-TAT strategy is also <em class="emphasis">nice</em> in that it starts by cooperating. If it meets another cooperator it will continue to cooperate. If the opponent at some point begins cooperating, it will, too. However, it is also <em class="emphasis">unexploitable</em>. This means that a defector cannot take advantage of the “niceness.” It “punishes” any defection with an in-kind defection.</p>
-<p id="p-855">The TIT-FOR-TAT behavior has been observed in some animal populations, but you also might be able to think of situations in your own life where you or your friends have employed such a strategy with each other! Has it been effective for you?</p></section></div></main>
+<span class="type">Exercise</span> <span class="codenumber">4.7.13</span> <span class="title">A society of TIT-FOR-TATers</span>
+</h6></a></article><div id="hk-E_RPDtft" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-869">Now consider a society of mostly TIT-FOR-TATers. How do a few defectors fare in a society of mostly TIT-FOR-TATers? How do the TIT-FOR-TATers fare? How would a few cooperators fare with the TIT-FOR-TATers? Would the evolution of such a society favor cooperation or defection?</p></article></div>
+<p id="p-870">The TIT-FOR-TAT strategy is particularly interesting in an iterated Prisoner's Dilemma. It has a few special characteristics that lead to success. First it is <em class="emphasis">responsive</em> in that it responds to the strategy of the other player. If the other player is cooperating, the TIT-FOR-TAT strategy will be able to gain the 3 points on each round. If the other player is defecting, it will defect so as to not keep getting the sucker's payoff of 0. The random strategies and pure strategies, for example, are not responsive. They do not respond to how the other player is playing. Chances are when you played in the tournament, you wanted to be able to adapt your strategy to respond to how your opponent was playing.</p>
+<p id="p-871">The TIT-FOR-TAT strategy is also <em class="emphasis">nice</em> in that it starts by cooperating. If it meets another cooperator it will continue to cooperate. If the opponent at some point begins cooperating, it will, too. However, it is also <em class="emphasis">unexploitable</em>. This means that a defector cannot take advantage of the “niceness.” It “punishes” any defection with an in-kind defection.</p>
+<p id="p-872">The TIT-FOR-TAT behavior has been observed in some animal populations, but you also might be able to think of situations in your own life where you or your friends have employed such a strategy with each other! Has it been effective for you?</p></section></div></main>
 </div>
 </body>
 </html>

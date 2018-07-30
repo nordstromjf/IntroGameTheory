@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
@@ -9,22 +9,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
-<script>$(function () {
-    // Make *any* div with class 'sagecell-sage' an executable Sage cell
-    // Their results will be linked, only within language type
-    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
-                           linked: true,
-                           languages: ['sage'],
-                           evalButtonText: 'Evaluate (Sage)'});
-});
-</script>
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Now we can use technology to help us solve the equations. <div class="sagecell-sage" id="sage-3"><script type="text/x-sage">p, m = var('p, m')
-S=solve([m==-2*p+1, m==2*p], p, m)[0]
-pretty_print(html("The solution for Player 1 is $%s$, $%s$."%(latex(S[0]),latex(S[1]))))
-</script></div> We can use this Sage cell to solve for \(p\) and \(m\) by editing the equations \(m==-2*p+1, m==2*p\text{.}\)</p>
+<p>Now we can see that if Player 2 plays only \(D\text{,}\) then Player 1 does best by playing only \(B\text{.}\) Again, you can use this Sage cell to plot both Player 2's pure strategies. Points \(u\) and \(v\) are for strategy \(C\text{,}\) while points \(w\) and \(z\) are for strategy \(D\text{.}\)</p>
 <span class="incontext"><a href="S_solvingeq.html#p-469">in-context</a></span>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
 <!--*                                    *-->
@@ -11,7 +11,7 @@
 <title>Using Sage to Graph Lines and Solve Equations</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/javascript" src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']],
@@ -34,7 +34,7 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>$(function () {
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>$(function () {
     // Make *any* div with class 'sagecell-sage' an executable Sage cell
     // Their results will be linked, only within language type
     sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
@@ -42,10 +42,10 @@ MathJax.Hub.Config({
                            languages: ['sage'],
                            evalButtonText: 'Evaluate (Sage)'});
 });
-</script><script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
-<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\MyTikzmark}[2]{
@@ -70,70 +70,71 @@ MathJax.Hub.Config({
 <p class="byline">Jennifer Firkins Nordstrom</p>
 </div>
 </div></div>
-<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_MixStratGraph.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-3.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_MixStratEV.html" title="Next" alt="Next">Next</a></span>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_MixStratGraph.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-3.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_MixStratEV.html" title="Next">Next</a></span>
 </div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_MixStratGraph.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-3.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="S_MixStratEV.html" title="Next" alt="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_MixStratGraph.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-3.html" title="Up">Up</a><a class="next-button button toolbar-item" href="S_MixStratEV.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
-<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
 <ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
 </ul>
-<h2 class="link"><a href="chapter-1.html" data-scroll="chapter-1"><span class="codenumber">1</span><span class="title">What is Game Theory?</span></a></h2>
+<h2 class="link"><a href="chapter-1.html" data-scroll="chapter-1"><span class="codenumber">1</span> <span class="title punctuated">What is Game Theory?</span></a></h2>
 <ul>
 <li><a href="S_intro.html" data-scroll="S_intro">Players and Strategies</a></li>
 <li><a href="S_IntroMatrices.html" data-scroll="S_IntroMatrices">Game Matrices and Payoff Vectors</a></li>
 </ul>
-<h2 class="link"><a href="chapter-2.html" data-scroll="chapter-2"><span class="codenumber">2</span><span class="title">Two-Person Zero-Sum Games</span></a></h2>
+<h2 class="link"><a href="chapter-2.html" data-scroll="chapter-2"><span class="codenumber">2</span> <span class="title">Two-Person Zero-Sum Games</span></a></h2>
 <ul>
 <li><a href="S_IntroZeroSum.html" data-scroll="S_IntroZeroSum">Introduction to Two-Person Zero-Sum Games</a></li>
-<li><a href="S_DominatedStrategies.html" data-scroll="S_DominatedStrategies">More Two-Person Zero-Sum Games: Dominated Strategies</a></li>
+<li><a href="S_DominatedStrategies.html" data-scroll="S_DominatedStrategies">Dominated Strategies</a></li>
 <li><a href="S_Probability.html" data-scroll="S_Probability">Probability and Expected Value</a></li>
-<li><a href="S_OneCardStud.html" data-scroll="S_OneCardStud">Determining the Payoff Matrix in a Game of Chance</a></li>
+<li><a href="S_OneCardStud.html" data-scroll="S_OneCardStud">A Game of Chance</a></li>
 <li><a href="S_EquilibPoints.html" data-scroll="S_EquilibPoints">Equilibrium Points</a></li>
 <li><a href="S_ZeroSumStrategySummary.html" data-scroll="S_ZeroSumStrategySummary">Strategies for Zero-Sum Games and Equilibrium Points</a></li>
-<li><a href="S_PopRationality.html" data-scroll="S_PopRationality">Applications to Popular Culture: Rationality and Perfect Information</a></li>
+<li><a href="S_PopRationality.html" data-scroll="S_PopRationality">Popular Culture: Rationality and Perfect Information</a></li>
 </ul>
-<h2 class="link active"><a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span><span class="title">Repeated Two-Person Zero-sum Games</span></a></h2>
+<h2 class="link"><a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span> <span class="title">Repeated Two-Person Zero-sum Games</span></a></h2>
 <ul>
 <li><a href="S_IntroRepeated.html" data-scroll="S_IntroRepeated">Introduction to Repeated Games</a></li>
 <li><a href="S_MixStratGraph.html" data-scroll="S_MixStratGraph">Mixed Strategies: Graphical Solution</a></li>
 <li><a href="S_solvingeq.html" data-scroll="S_solvingeq" class="active">Using Sage to Graph Lines and Solve Equations</a></li>
 <li><a href="S_MixStratEV.html" data-scroll="S_MixStratEV">Mixed Strategies: Expected Value Solution</a></li>
-<li><a href="S_LiarsPoker.html" data-scroll="S_LiarsPoker">Repeated Two-person Zero-Sum Games: Liar's Poker</a></li>
+<li><a href="S_LiarsPoker.html" data-scroll="S_LiarsPoker">Liar's Poker</a></li>
 <li><a href="S_AugMatrices.html" data-scroll="S_AugMatrices">Augmented Matrices</a></li>
 <li><a href="S_Undercut.html" data-scroll="S_Undercut">Undercut</a></li>
 </ul>
-<h2 class="link"><a href="chapter-4.html" data-scroll="chapter-4"><span class="codenumber">4</span><span class="title">Non-Zero-Sum Games</span></a></h2>
+<h2 class="link"><a href="chapter-4.html" data-scroll="chapter-4"><span class="codenumber">4</span> <span class="title">Non-Zero-Sum Games</span></a></h2>
 <ul>
 <li><a href="Intrononzero.html" data-scroll="Intrononzero">Introduction to Two-Player Non-Zero-Sum Games</a></li>
-<li><a href="pdandchicken.html" data-scroll="pdandchicken">Two-Player Non-Zero-Sum Games: Prisoner's Dilemma and Chicken</a></li>
+<li><a href="pdandchicken.html" data-scroll="pdandchicken">Prisoner's Dilemma and Chicken</a></li>
 <li><a href="S_CWPD.html" data-scroll="S_CWPD">A Class-Wide Experiment</a></li>
 <li><a href="S_PDconditions.html" data-scroll="S_PDconditions">What Makes a Prisoner's Dilemma?</a></li>
 <li><a href="VDexperiment.html" data-scroll="VDexperiment">Another Multiplayer Experiment</a></li>
 <li><a href="S_VolunteerDil.html" data-scroll="S_VolunteerDil">Volunteer's Dilemma</a></li>
 <li><a href="S_RepeatPD.html" data-scroll="S_RepeatPD">Repeated Prisoner's Dilemma</a></li>
-<li><a href="S_PopPD.html" data-scroll="S_PopPD">Applications to Popular Culture: Prisoner's Dilemma and Chicken</a></li>
+<li><a href="S_PopPD.html" data-scroll="S_PopPD">Popular Culture: Prisoner's Dilemma and Chicken</a></li>
 </ul>
 <h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
 <ul>
 <li><a href="references-1.html" data-scroll="references-1">References</a></li>
 <li><a href="index-1.html" data-scroll="index-1">Index</a></li>
 <li><a href="colophon-2.html" data-scroll="colophon-2">Colophon</a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="S_solvingeq"><h2 class="heading hide-type" alt="Section 3.3 Using Sage to Graph Lines and Solve Equations">
-<span class="type">Section</span><span class="codenumber">3.3</span><span class="title">Using Sage to Graph Lines and Solve Equations</span>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="section" id="S_solvingeq"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.3</span> <span class="title">Using Sage to Graph Lines and Solve Equations</span>
 </h2>
-<a href="S_solvingeq.html" class="permalink">¶</a><p id="p-448">In this section we will use technology to graph lines and solve for the intersection point. In particular, we will use an open online resource called <span class="booktitle">Sage</span>.</p>
-<p id="p-449">Let's continue to consider the game given in <a knowl="./knowl/T_smallrepeat.html" knowl-id="xref-T_smallrepeat" alt="Table 3.2.1 " title="Table 3.2.1 ">Table 3.2.1</a> by <figure class="figure-like" id="table-26"><table>
+<a href="S_solvingeq.html" class="permalink">¶</a><p id="p-453">In this section we will use technology to graph lines and solve for the intersection point. In particular, we will use an open online resource called <span class="booktitle">Sage</span>.</p>
+<p id="p-454">Let's continue to consider the game given in <a knowl="./knowl/T_smallrepeat.html" title="Table 3.2.1">Table 3.2.1</a> by <figure class="figure-like" id="table-26"><table>
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="l m b0 r0 l0 t0 lines">\(C\)</td>
@@ -150,37 +151,37 @@ MathJax.Hub.Config({
 <td class="l m b0 r0 l0 t0 lines">2</td>
 </tr>
 </table>
-<figcaption><span class="type">Table</span><span class="codenumber">3.3.1</span>Game from <a knowl="./knowl/E_smallrepeat.html" knowl-id="xref-E_smallrepeat" alt="Example 3.1.1 " title="Example 3.1.1 ">Example 3.1.1</a>.</figcaption></figure></p>
-<p id="p-450">Recall, our goal is to determine how often Player 1 should play A and how often she should play B.</p>
-<p id="p-451">We will follow the same steps as in <a href="S_MixStratGraph.html" class="xref" alt="Section 3.2 Mixed Strategies: Graphical Solution" title="Section 3.2 Mixed Strategies: Graphical Solution">Section 3.2</a>. Let \(p\) be the probability that Player 1 plays B. Let \(m\) be the payoff to Player 1. Since we are trying to find a mixed strategy for Player 1, we will pick a strategy for Player 2 and try to determine the possible payoffs for Player 1.</p>
-<p id="p-452">Let us determine some pairs \((p, m)\text{.}\)</p>
-<dl id="dl-4" class="description-list">
+<figcaption><span class="type">Table</span> <span class="codenumber">3.3.1</span> Game from <a knowl="./knowl/E_smallrepeat.html" title="Example 3.1.1: A \(2\times 2\) Repeated Game">Example 3.1.1</a>.</figcaption></figure></p>
+<p id="p-455">Recall, our goal is to determine how often Player 1 should play A and how often she should play B.</p>
+<p id="p-456">We will follow the same steps as in <a href="S_MixStratGraph.html" class="xref" title="Section 3.2: Mixed Strategies: Graphical Solution">Section 3.2</a>. Let \(p\) be the probability that Player 1 plays B. Let \(m\) be the payoff to Player 1. Since we are trying to find a mixed strategy for Player 1, we will pick a strategy for Player 2 and try to determine the possible payoffs for Player 1.</p>
+<p id="p-457">Let us determine some pairs \((p, m)\text{.}\)</p>
+<dl class="description-list">
 <dt id="li-121">Step 1.</dt>
-<dd><p id="p-453">Assume <em class="emphasis">Player 2</em> plays pure strategy \(C\text{.}\)</p></dd>
+<dd><p id="p-458">Assume <em class="emphasis">Player 2</em> plays pure strategy \(C\text{.}\)</p></dd>
 <dt id="li-122">Step 1a.</dt>
-<dd><p id="p-454">If Player 1 always plays \(A\text{,}\) then we are considering the strategy pair \(\{A, C\}\text{.}\) Since Player 1 never plays \(B\text{,}\)  \(p=0\text{.}\) The payoff to Player 1 for  \(\{A, C\}\) is \(m=1\text{.}\) Thus, for the strategy pair \(\{A, C\}\) we get \((p, m)=(0, 1)\text{.}\)</p></dd>
+<dd><p id="p-459">If Player 1 always plays \(A\text{,}\) then we are considering the strategy pair \([A, C]\text{.}\) Since Player 1 never plays \(B\text{,}\)  \(p=0\text{.}\) The payoff to Player 1 for  \([A, C]\) is \(m=1\text{.}\) Thus, for the strategy pair \([A, C]\) we get \((p, m)=(0, 1)\text{.}\)</p></dd>
 <dt id="li-123">Step 1b.</dt>
-<dd><p id="p-455">If Player 1 always plays \(B\text{,}\) then we are considering the strategy pair \(\{B, C\}\text{.}\) Since Player 1 always plays \(B\text{,}\) \(p=1\text{.}\) The payoff to Player 1 for \(\{A, C\}\) is \(m=-1\text{.}\) Thus, for the strategy pair \(\{B, C\}\) we get \((p, m)=(1, -1)\text{.}\)</p></dd>
+<dd><p id="p-460">If Player 1 always plays \(B\text{,}\) then we are considering the strategy pair \([B, C]\text{.}\) Since Player 1 always plays \(B\text{,}\) \(p=1\text{.}\) The payoff to Player 1 for \([A, C]\) is \(m=-1\text{.}\) Thus, for the strategy pair \([B, C]\) we get \((p, m)=(1, -1)\text{.}\)</p></dd>
 <dt id="li-124">Step 1c.</dt>
-<dd><p id="p-456">Now we want to know what Player 1's payoff will be as she varies the probability, \(p\text{,}\) with which she plays \(B\text{.}\) We can draw a graph where the \(x\)-axis represents to probability with which she plays B (\(p\)) and the \(y\)-axis represents the expected payoff (\(m\)). Thus, when Player 1 plays only \(A\text{,}\) she is playing \(B\) with probability 0; when Player 1 plays only B, she is playing B with probability 1. It might be easier to remember if you label your graph as in <a knowl="./knowl/F_MixedStrategyAxes.html" knowl-id="xref-F_MixedStrategyAxes" alt="Figure 3.2.3 " title="Figure 3.2.3 ">Figure 3.2.3</a>.</p></dd>
+<dd><p id="p-461">Now we want to know what Player 1's payoff will be as she varies the probability, \(p\text{,}\) with which she plays \(B\text{.}\) We can draw a graph where the \(x\)-axis represents to probability with which she plays B (\(p\)) and the \(y\)-axis represents the expected payoff (\(m\)). Thus, when Player 1 plays only \(A\text{,}\) she is playing \(B\) with probability 0; when Player 1 plays only B, she is playing B with probability 1. It might be easier to remember if you label your graph as in <a knowl="./knowl/F_MixedStrategyAxes.html" title="Figure 3.2.3">Figure 3.2.3</a>.</p></dd>
 <dt id="li-125">Step 1d.</dt>
-<dd><p id="p-457">Now we can use <span class="booktitle">Sage</span> to plot the points we determined in Step 1a and Step 1b  and the line between them. This line represents Player 2's pure strategy \(C\text{.}\) See <a knowl="./knowl/F_MixedStrategyOneLine.html" knowl-id="xref-F_MixedStrategyOneLine" alt="Figure 3.2.4 " title="Figure 3.2.4 ">Figure 3.2.4</a>. Click on the “Evaluate (Sage)” button to plot the line between the points \((0, 1)\) and \((1, -1)\text{.}\) <div class="sagecell-sage" id="sage-1"><script type="text/x-sage">u=(0,1);
+<dd><p id="p-462">Now we can use <span class="booktitle">Sage</span> to plot the points we determined in Step 1a and Step 1b  and the line between them. This line represents Player 2's pure strategy \(C\text{.}\) See <a knowl="./knowl/F_MixedStrategyOneLine.html" title="Figure 3.2.4">Figure 3.2.4</a>. Click on the “Evaluate (Sage)” button to plot the line between the points \((0, 1)\) and \((1, -1)\text{.}\) <div class="sagecell-sage" id="sage-1"><script type="text/x-sage">u=(0,1);
 v=(1,-1);
 show(line([u, v], thickness=2, color=('blue'))+point(u, color=('blue'), pointsize=70)+point(v, color=('blue'), pointsize=70), figsize=4)
 </script></div></p></dd>
 </dl>
-<p id="p-458">Before moving on, let's again, make sure we understand what this line represents. Any point on it represents the expected payoff to Player 1 as she varies her strategy, <em class="emphasis">assuming Player 2 only plays \(C\)</em>. In this case, we can see that as she plays \(B\) more often, her expected payoff goes down. You can now use this Sage cell to plot any line for Player 2's pure strategy \(C\text{.}\) Just edit the values for the points \(u\) and \(v\text{.}\) Go ahead and try it! (Don't worry the original values will reset when you refresh the page.)</p>
-<p id="p-459">Now let's do the same thing, assuming Player 2 plays only \(D\text{.}\)</p>
-<dl id="dl-5" class="description-list">
+<p id="p-463">Before moving on, let's again, make sure we understand what this line represents. Any point on it represents the expected payoff to Player 1 as she varies her strategy, <em class="emphasis">assuming Player 2 only plays \(C\)</em>. In this case, we can see that as she plays \(B\) more often, her expected payoff goes down. You can now use this Sage cell to plot any line for Player 2's pure strategy \(C\text{.}\) Just edit the values for the points \(u\) and \(v\text{.}\) Go ahead and try it! (Don't worry the original values will reset when you refresh the page.)</p>
+<p id="p-464">Now let's do the same thing, assuming Player 2 plays only \(D\text{.}\)</p>
+<dl class="description-list">
 <dt id="li-126">Step 2.</dt>
-<dd><p id="p-460">Assume <em class="emphasis">Player 2</em> plays pure strategy \(D\text{.}\)</p></dd>
+<dd><p id="p-465">Assume <em class="emphasis">Player 2</em> plays pure strategy \(D\text{.}\)</p></dd>
 <dt id="li-127">Step 2a.</dt>
-<dd><p id="p-461">If Player 1 always plays \(A\text{,}\) then we are considering the strategy pair \(\{A, D\}\text{.}\) Since Player 1 never plays \(B\text{,}\)  \(p=0\text{.}\) The payoff to Player 1 for  \(\{A, D\}\) is \(m=0\text{.}\) Thus, for the strategy pair \(\{A, D\}\) we get \((p, m)=(0, 0)\text{.}\)</p></dd>
+<dd><p id="p-466">If Player 1 always plays \(A\text{,}\) then we are considering the strategy pair \([A, D]\text{.}\) Since Player 1 never plays \(B\text{,}\)  \(p=0\text{.}\) The payoff to Player 1 for  \([A, D]\) is \(m=0\text{.}\) Thus, for the strategy pair \([A, D]\) we get \((p, m)=(0, 0)\text{.}\)</p></dd>
 <dt id="li-128">Step 2b.</dt>
-<dd><p id="p-462">If Player 1 always plays \(B\text{,}\) then we are considering the strategy pair \(\{B, D\}\text{.}\) Since Player 1 always plays \(B\text{,}\)  \(p=1\text{.}\) The payoff to Player 1 for  \(\{B, D\}\) is \(m=2\text{.}\) Thus, for the strategy pair \(\{B, D\}\) we get \((p, m)=(1, 2)\text{.}\)</p></dd>
+<dd><p id="p-467">If Player 1 always plays \(B\text{,}\) then we are considering the strategy pair \([B, D]\text{.}\) Since Player 1 always plays \(B\text{,}\)  \(p=1\text{.}\) The payoff to Player 1 for  \([B, D]\) is \(m=2\text{.}\) Thus, for the strategy pair \([B, D]\) we get \((p, m)=(1, 2)\text{.}\)</p></dd>
 <dt id="li-129">Step 2c.</dt>
 <dd>
-<p id="p-463">Now, on our same graph from Step 1, we can plot the points we determined in Step 2a and Step 2b. We will connect them with a line representing Player 2's pure strategy \(D\text{.}\) See <a knowl="./knowl/F_Player_2_s_pure_strategy_D.html" knowl-id="xref-F_Player_2_s_pure_strategy_D" alt="Figure 3.2.5 " title="Figure 3.2.5 ">Figure 3.2.5</a>.</p>
+<p id="p-468">Now, on our same graph from Step 1, we can plot the points we determined in Step 2a and Step 2b. We will connect them with a line representing Player 2's pure strategy \(D\text{.}\) See <a knowl="./knowl/F_Player_2_s_pure_strategy_D.html" title="Figure 3.2.5">Figure 3.2.5</a>.</p>
 <div class="sagecell-sage" id="sage-2"><script type="text/x-sage">u=(0,1);
 v=(1,-1);
 w=(0,0);
@@ -190,31 +191,37 @@ show(line([u, v], thickness=2, color=('blue'))+point(u, color=('blue'), pointsiz
   +line([w, z], thickness=2, color=('red'))
   +point(w, color=('red'), pointsize=70)+point(z, color=('red'), pointsize=70), figsize=4)
 </script></div>
-<p id="p-464">Now we can see that if Player 2 plays only \(D\text{,}\) then Player 1 does best by playing only \(B\text{.}\) Again, you can use this Sage cell to plot both Player 2's pure strategies. Points \(u\) and \(v\) are for strategy \(C\text{,}\) while points \(w\) and \(z\) are for strategy \(D\text{.}\)</p>
+<p id="p-469">Now we can see that if Player 2 plays only \(D\text{,}\) then Player 1 does best by playing only \(B\text{.}\) Again, you can use this Sage cell to plot both Player 2's pure strategies. Points \(u\) and \(v\) are for strategy \(C\text{,}\) while points \(w\) and \(z\) are for strategy \(D\text{.}\)</p>
 </dd>
 </dl>
-<p id="p-465">As we saw in <a href="S_MixStratGraph.html" class="xref" alt="Section 3.2 Mixed Strategies: Graphical Solution" title="Section 3.2 Mixed Strategies: Graphical Solution">Section 3.2</a>, for each choice of \(p\text{,}\) the top line represents the highest expected value for Player 1; the bottom line represents the lowest expected value for Player 1; the area between the lines represents the possible expected values for Player 1. Thus,  Player 1 wants to maximize the minimum expected value, which means she wants to find the maximin strategy. And, as we saw in <a href="S_MixStratGraph.html" class="xref" alt="Section 3.2 Mixed Strategies: Graphical Solution" title="Section 3.2 Mixed Strategies: Graphical Solution">Section 3.2</a>, the maximin strategy occurs at the intersection of the two lines.</p>
-<dl id="dl-6" class="description-list">
+<p id="p-470">As we saw in <a href="S_MixStratGraph.html" class="xref" title="Section 3.2: Mixed Strategies: Graphical Solution">Section 3.2</a>, for each choice of \(p\text{,}\) the top line represents the highest expected value for Player 1; the bottom line represents the lowest expected value for Player 1; the area between the lines represents the possible expected values for Player 1. Thus,  Player 1 wants to maximize the minimum expected value, which means she wants to find the maximin strategy. And, as we saw in <a href="S_MixStratGraph.html" class="xref" title="Section 3.2: Mixed Strategies: Graphical Solution">Section 3.2</a>, the maximin strategy occurs at the intersection of the two lines.</p>
+<dl class="description-list">
 <dt id="li-130">Step 3.</dt>
-<dd><p id="p-466">Find the intersection of the two lines.</p></dd>
+<dd><p id="p-471">Find the intersection of the two lines.</p></dd>
 <dt id="li-131">Step 3a.</dt>
-<dd><p id="p-467">Find the equation for Line C. This is the line passing through the points \((0, 1)\) and \((1, -1)\text{.}\) It has slope \(-2\) and \(y\)-intercept 1. Thus, it has equation \(m=-2p+1\text{.}\) [Recall the \(x\)-axis represents probability \(p\) and the \(y\)-axis represents expected payoff \(m\text{.}\)]</p></dd>
+<dd><p id="p-472">Find the equation for Line C. This is the line passing through the points \((0, 1)\) and \((1, -1)\text{.}\) It has slope \(-2\) and \(y\)-intercept 1. Thus, it has equation \(m=-2p+1\text{.}\) (Recall the \(x\)-axis represents probability \(p\) and the \(y\)-axis represents expected payoff \(m\text{.}\))</p></dd>
 <dt id="li-132">Step 3b.</dt>
-<dd><p id="p-468">Find the equation for Line D. This is the line passing through the points \((0, 0)\) and \((1, 2)\text{.}\) It has slope \(2\) and \(y\)-intercept 0. Thus, it has equation \(m=2p\text{.}\)</p></dd>
+<dd><p id="p-473">Find the equation for Line D. This is the line passing through the points \((0, 0)\) and \((1, 2)\text{.}\) It has slope \(2\) and \(y\)-intercept 0. Thus, it has equation \(m=2p\text{.}\)</p></dd>
 <dt id="li-133">Step 3c.</dt>
-<dd><p id="p-469">Now we can use technology to help us solve the equations. <div class="sagecell-sage" id="sage-3"><script type="text/x-sage">p, m = var('p, m')
+<dd>
+<p id="p-474">Now we can use technology to help us solve the equations.</p>
+<div class="sagecell-sage" id="sage-3"><script type="text/x-sage">p, m = var('p, m')
 S=solve([m==-2*p+1, m==2*p], p, m)[0]
 pretty_print(html("The solution for Player 1 is $%s$, $%s$."%(latex(S[0]),latex(S[1]))))
-</script></div> We can use this Sage cell to solve for \(p\) and \(m\) by editing the equations \(m==-2*p+1, m==2*p\text{.}\)</p></dd>
+</script></div>
+<p id="p-476">We can use this Sage cell to solve for \(p\) and \(m\) by editing the equations \(m==-2*p+1, m==2*p\text{.}\)</p>
+</dd>
 <dt id="li-136">Step 4.</dt>
-<dd><p id="p-471">Determine Player 1's maximin mixed strategy. Recalling that \(p\) is the probability that Player 1 plays \(B\text{,}\) we know that Player 1 will play \(B\) with probability 1/4, and thus, play A with probability 3/4. The expected payoff for Player 1, \(m\text{,}\) is 1/2. It is important to check the algebraic solution with where the intersection point appears on the graph. Although we are using technology to help us graph and solve for the intersection point, we need to be able to catch any errors we make entering the information into Sage.</p></dd>
+<dd><p id="p-477">Determine Player 1's maximin mixed strategy. Recalling that \(p\) is the probability that Player 1 plays \(B\text{,}\) we know that Player 1 will play \(B\) with probability 1/4, and thus, play A with probability 3/4. The expected payoff for Player 1, \(m\text{,}\) is 1/2. It is important to check the algebraic solution with where the intersection point appears on the graph. Although we are using technology to help us graph and solve for the intersection point, we need to be able to catch any errors we make entering the information into Sage.</p></dd>
 </dl>
-<p id="p-472">We have seen that we can use the same matrix with Player 1's payoffs to find the strategy for Player 2. Using the same game matrix as above:</p>
+<p id="p-478">We have seen that we can use the same matrix with Player 1's payoffs to find the strategy for Player 2. Using the same game matrix as above:</p>
+<div class="displaymath">
 \begin{equation*}
 \left[\begin{matrix}1\amp 0\\
 -1\amp 2
 \end{matrix} \right],
 \end{equation*}
+</div>
 <p>and continuing to label Player 1's strategies by \(A\) and \(B\text{,}\) and Player 2's strategies by \(C\) and \(D\text{,}\) we can graph lines for Player 1's pure strategies \(A\) and \(B\text{.}\) We now let the \(x\)--axis represent the probability that Player 2 plays \(D\text{.}\) In the Sage applet below, for \(u\) and \(v\) enter the coordinates of two points that determine the line for when Player 1 plays \(A\text{,}\) then the two points for \(w\) and \(z\) that determine the line for when Player 1 plays \(B\text{.}\) We will then have Sage graph the lines. You can enter new values for \(u, v, w, z\) if you would like to draw the graph for a different matrix.</p>
 <div class="sagecell-sage" id="sage-4"><script type="text/x-sage">@interact(layout=dict(top=[['u','v'],['w','z']]))
 def endpoints(u=vector((0,1)), v=vector((1,0)), w=vector((0,-1)), z=vector((1, 2))):
@@ -227,7 +234,7 @@ def endpoints(u=vector((0,1)), v=vector((1,0)), w=vector((0,-1)), z=vector((1, 2
   pretty_print(html("Enter the coordinates of the endpoints for the two lines you'd like to graph. Note that u and v are for one line, w and z for the other."))
   show(L1+L2+P1+P2+P3+P4, figsize=4)
 </script></div>
-<p id="p-473">Now determine and enter the equations of the two lines and have Sage solve for the intersection point.</p>
+<p id="p-479">Now determine and enter the equations of the two lines and have Sage solve for the intersection point.</p>
 <div class="sagecell-sage" id="sage-5"><script type="text/x-sage">p, m = var('p, m')
 @interact
 def intersection(Slope1=-1,Intercept1=3,Slope2=1,Intercept2=-1):
@@ -236,31 +243,31 @@ def intersection(Slope1=-1,Intercept1=3,Slope2=1,Intercept2=-1):
   S = solve([Eq1, Eq2], p, m)[0]
   pretty_print(html("The intersection point is $%s$, $%s$."%(latex(S[0]),latex(S[1]))))
 </script></div>
-<p id="p-475">You can now use these last two Sage cells to solve any 2 \(\times\) 2 game with a mixed strategy equilibrium. You can also take some time to experiment with what happens if the game has a pure strategy equilibrium.</p>
-<p id="p-476">Now use the Sage cells to help you analyze some more games!</p>
+<p id="p-481">You can now use these last two Sage cells to solve any 2 \(\times\) 2 game with a mixed strategy equilibrium. You can also take some time to experiment with what happens if the game has a pure strategy equilibrium.</p>
+<p id="p-482">Now use the Sage cells to help you analyze some more games!</p>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_graph2practiceSage" id="E_graph2practiceSage"><h6 class="heading">
-<span class="type">Exercise</span><span class="codenumber">3.3.2</span>
-</h6></a></article><div id="hk-E_graph2practiceSage" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-477">Consider the zero-sum game \(\left[\begin{matrix}-4\amp 4\\
+<span class="type">Exercise</span> <span class="codenumber">3.3.2</span> <span class="title">Use Sage to find a mixed strategy equilibrium</span>
+</h6></a></article><div id="hk-E_graph2practiceSage" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-483">Consider the zero-sum game \(\left[\begin{matrix}-4\amp 4\\
 2\amp -2
 \end{matrix} \right].\) </p>
-<ol id="ol-25" style="list-style-type: lower-alpha;">
-<li id="li-139"><p id="p-478">Does this game have a pure strategy equilibrium?</p></li>
-<li id="li-140"><p id="p-479">Just by looking at the matrix, do you think this game will be fair? (Would you rather be Player 1 or Player 2?)</p></li>
-<li id="li-141"><p id="p-480">Use Sage to draw the appropriate graph for this game. Which pure strategy does the blue line represent? Which pure strategy does the red line represent?</p></li>
-<li id="li-142"><p id="p-481">Use your graph to determine if there is a mixed strategy equilibrium point. If there is, use Sage to determine how often Player 1 should play each strategy. What is the expected payoff to each player?</p></li>
-<li id="li-143"><p id="p-482">Is this game fair? Explain. Compare your answer to (b).</p></li>
+<ol class="lower-alpha">
+<li id="li-139"><p id="p-484">Does this game have a pure strategy equilibrium?</p></li>
+<li id="li-140"><p id="p-485">Just by looking at the matrix, do you think this game will be fair? (Would you rather be Player 1 or Player 2?)</p></li>
+<li id="li-141"><p id="p-486">Use Sage to draw the appropriate graph for this game. Which pure strategy does the blue line represent? Which pure strategy does the red line represent?</p></li>
+<li id="li-142"><p id="p-487">Use your graph to determine if there is a mixed strategy equilibrium point. If there is, use Sage to determine how often Player 1 should play each strategy. What is the expected payoff to each player?</p></li>
+<li id="li-143"><p id="p-488">Is this game fair? Explain. Compare your answer to (b).</p></li>
 </ol></article></div>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_graph3practiceSage" id="E_graph3practiceSage"><h6 class="heading">
-<span class="type">Exercise</span><span class="codenumber">3.3.3</span>
-</h6></a></article><div id="hk-E_graph3practiceSage" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-483">Consider the zero-sum game \(\left[\begin{matrix}0\amp 1\\
+<span class="type">Exercise</span> <span class="codenumber">3.3.3</span> <span class="title">More practice with Sage</span>
+</h6></a></article><div id="hk-E_graph3practiceSage" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-489">Consider the zero-sum game \(\left[\begin{matrix}0\amp 1\\
 1\amp -10
 \end{matrix} \right].\) </p>
-<ol id="ol-26" style="list-style-type: lower-alpha;">
-<li id="li-144"><p id="p-484">Does this game have a pure strategy equilibrium?</p></li>
-<li id="li-145"><p id="p-485">Just by looking at the matrix, do you think this game will be fair? (Would you rather be Player 1 or Player 2?)</p></li>
-<li id="li-146"><p id="p-486">Use Sage to draw the appropriate graph for this game. Which pure strategy does the blue line represent? Which pure strategy does the red line represent?</p></li>
-<li id="li-147"><p id="p-487">Use your graph to determine if there is a mixed strategy equilibrium point. If there is, use Sage to determine how often Player 1 should play each strategy. What is the expected payoff to each player?</p></li>
-<li id="li-148"><p id="p-488">Is this game fair? Explain. Compare your answer to (b).</p></li>
+<ol class="lower-alpha">
+<li id="li-144"><p id="p-490">Does this game have a pure strategy equilibrium?</p></li>
+<li id="li-145"><p id="p-491">Just by looking at the matrix, do you think this game will be fair? (Would you rather be Player 1 or Player 2?)</p></li>
+<li id="li-146"><p id="p-492">Use Sage to draw the appropriate graph for this game. Which pure strategy does the blue line represent? Which pure strategy does the red line represent?</p></li>
+<li id="li-147"><p id="p-493">Use your graph to determine if there is a mixed strategy equilibrium point. If there is, use Sage to determine how often Player 1 should play each strategy. What is the expected payoff to each player?</p></li>
+<li id="li-148"><p id="p-494">Is this game fair? Explain. Compare your answer to (b).</p></li>
 </ol></article></div></section></div></main>
 </div>
 </body>
