@@ -2,7 +2,7 @@
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
 <!--*                                    *-->
-<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
 <!--**************************************-->
 <html lang="en-US">
@@ -11,13 +11,19 @@
 <title>Probability and Expected Value</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
-        inlineMath: [['\\(','\\)']],
+        inlineMath: [['\\(','\\)']]
     },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -34,13 +40,27 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
-<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.13;
+</script>
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\MyTikzmark}[2]{
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{\MyTikzmark}[2]{
      \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
 \newcommand{\DrawVLine}[3][]{
   \begin{tikzpicture}[overlay,remember picture]
@@ -58,7 +78,7 @@ MathJax.Hub.Config({
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="" target="_blank"><img src="images/image-1.svg" alt="Logo image"></a><div class="title-container">
-<h1 class="heading"><a href="index.html"><span class="title">Introduction to Game Theory: a Discovery Approach</span></a></h1>
+<h1 class="heading"><a href="book-1.html"><span class="title">Introduction to Game Theory:</span> <span class="subtitle">a Discovery Approach</span></a></h1>
 <p class="byline">Jennifer Firkins Nordstrom</p>
 </div>
 </div></div>
@@ -67,25 +87,27 @@ MathJax.Hub.Config({
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
 <a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_DominatedStrategies.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-2.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_OneCardStud.html" title="Next">Next</a></span>
 </div>
-<button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
 <button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_DominatedStrategies.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-2.html" title="Up">Up</a><a class="next-button button toolbar-item" href="S_OneCardStud.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
-<ul>
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
 </ul>
-<h2 class="link"><a href="chapter-1.html" data-scroll="chapter-1"><span class="codenumber">1</span> <span class="title punctuated">What is Game Theory?</span></a></h2>
-<ul>
+</li>
+<li class="link">
+<a href="chapter-1.html" data-scroll="chapter-1"><span class="codenumber">1</span> <span class="title">What is Game Theory?</span></a><ul>
 <li><a href="S_intro.html" data-scroll="S_intro">Players and Strategies</a></li>
 <li><a href="S_IntroMatrices.html" data-scroll="S_IntroMatrices">Game Matrices and Payoff Vectors</a></li>
 </ul>
-<h2 class="link"><a href="chapter-2.html" data-scroll="chapter-2"><span class="codenumber">2</span> <span class="title">Two-Person Zero-Sum Games</span></a></h2>
-<ul>
+</li>
+<li class="link">
+<a href="chapter-2.html" data-scroll="chapter-2"><span class="codenumber">2</span> <span class="title">Two-Person Zero-Sum Games</span></a><ul>
 <li><a href="S_IntroZeroSum.html" data-scroll="S_IntroZeroSum">Introduction to Two-Person Zero-Sum Games</a></li>
 <li><a href="S_DominatedStrategies.html" data-scroll="S_DominatedStrategies">Dominated Strategies</a></li>
 <li><a href="S_Probability.html" data-scroll="S_Probability" class="active">Probability and Expected Value</a></li>
@@ -94,8 +116,9 @@ MathJax.Hub.Config({
 <li><a href="S_ZeroSumStrategySummary.html" data-scroll="S_ZeroSumStrategySummary">Strategies for Zero-Sum Games and Equilibrium Points</a></li>
 <li><a href="S_PopRationality.html" data-scroll="S_PopRationality">Popular Culture: Rationality and Perfect Information</a></li>
 </ul>
-<h2 class="link"><a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span> <span class="title">Repeated Two-Person Zero-sum Games</span></a></h2>
-<ul>
+</li>
+<li class="link">
+<a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span> <span class="title">Repeated Two-Person Zero-sum Games</span></a><ul>
 <li><a href="S_IntroRepeated.html" data-scroll="S_IntroRepeated">Introduction to Repeated Games</a></li>
 <li><a href="S_MixStratGraph.html" data-scroll="S_MixStratGraph">Mixed Strategies: Graphical Solution</a></li>
 <li><a href="S_solvingeq.html" data-scroll="S_solvingeq">Using Sage to Graph Lines and Solve Equations</a></li>
@@ -104,8 +127,9 @@ MathJax.Hub.Config({
 <li><a href="S_AugMatrices.html" data-scroll="S_AugMatrices">Augmented Matrices</a></li>
 <li><a href="S_Undercut.html" data-scroll="S_Undercut">Undercut</a></li>
 </ul>
-<h2 class="link"><a href="chapter-4.html" data-scroll="chapter-4"><span class="codenumber">4</span> <span class="title">Non-Zero-Sum Games</span></a></h2>
-<ul>
+</li>
+<li class="link">
+<a href="chapter-4.html" data-scroll="chapter-4"><span class="codenumber">4</span> <span class="title">Non-Zero-Sum Games</span></a><ul>
 <li><a href="Intrononzero.html" data-scroll="Intrononzero">Introduction to Two-Player Non-Zero-Sum Games</a></li>
 <li><a href="pdandchicken.html" data-scroll="pdandchicken">Prisoner's Dilemma and Chicken</a></li>
 <li><a href="S_CWPD.html" data-scroll="S_CWPD">A Class-Wide Experiment</a></li>
@@ -115,14 +139,14 @@ MathJax.Hub.Config({
 <li><a href="S_RepeatPD.html" data-scroll="S_RepeatPD">Repeated Prisoner's Dilemma</a></li>
 <li><a href="S_PopPD.html" data-scroll="S_PopPD">Popular Culture: Prisoner's Dilemma and Chicken</a></li>
 </ul>
-<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
-<ul>
-<li><a href="references-1.html" data-scroll="references-1">References</a></li>
-<li><a href="index-1.html" data-scroll="index-1">Index</a></li>
-<li><a href="colophon-2.html" data-scroll="colophon-2">Colophon</a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</li>
+<li class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">References</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="mathbook-content"><section class="section" id="S_Probability"><h2 class="heading hide-type">
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="S_Probability"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.3</span> <span class="title">Probability and Expected Value</span>
 </h2>
 <a href="S_Probability.html" class="permalink">¶</a><section class="introduction" id="introduction-6"><p id="p-198">Many games have an element of chance. In order to model such games and determine strategies, we should understand how mathematicians use probability to represent chance.</p></section><section class="subsection" id="subsection-7"><h3 class="heading hide-type">
@@ -139,12 +163,12 @@ P(E)=\frac{\mbox{number of different outcomes resulting in \(E\)} }{\mbox{total 
 </div>
 <p id="p-203">Notice that the probability of \(E\) will always be a number between 0 and 1. An impossible event will have probability 0; an event that always occurs will have probability 1.</p>
 <p id="p-204">Thus, the probability of drawing a red card is \(\frac{1}{2}\text{,}\) not 50%. Although we can convert between probability and percent (since \(0.5\) converted to percent is \(50\%\)), it is important to answer a question about probability with a probability, not a percent.</p>
-<article class="example-like" id="E_drawheart"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">2.3.1</span> <span class="title">Drawing a Particular Suit</span>
+<article class="example example-like" id="E_drawheart"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Drawing a Particular Suit.</span>
 </h6>
 <p id="p-205">Given a standard deck of playing cards, what is the probability of drawing a heart?</p>
-<p id="p-206"><em class="emphasis">Answer:</em> You might say since there are four suits, and one of the suits is hearts, you have a probability of \(\frac{1}{4}\text{.}\) You'd be correct, but be careful with this reasoning. This works because each suit has the same number of cards, so each suit is <em class="emphasis">equally likely</em>. Another way the calculate the probability is to count the number of hearts (13) divided by the number of cards (52). Thus, we get a probability of \(\frac{13}{52}=\frac{1}{4}=0.25\text{.}\)</p></article><article class="example-like" id="E_takeawayspade"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">2.3.2</span> <span class="title">A Card is Missing</span>
+<p id="p-206"><em class="emphasis">Answer:</em> You might say since there are four suits, and one of the suits is hearts, you have a probability of \(\frac{1}{4}\text{.}\) You'd be correct, but be careful with this reasoning. This works because each suit has the same number of cards, so each suit is <em class="emphasis">equally likely</em>. Another way the calculate the probability is to count the number of hearts (13) divided by the number of cards (52). Thus, we get a probability of \(\frac{13}{52}=\frac{1}{4}=0.25\text{.}\)</p></article><article class="example example-like" id="E_takeawayspade"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">A Card is Missing.</span>
 </h6>
 <p id="p-207">Now suppose the ace of spades is missing from the deck. What is the probability of drawing a heart?</p>
 <p id="p-208"><em class="emphasis">Answer:</em> As before, there are still four suits in the deck, so it might be tempting to say the probability is still \(\frac{1}{4}\text{.}\) But we'd be wrong! Each suit is no longer equally likely since, it is slightly <em class="emphasis">less</em> likely that we draw a spade. Each individual card is still equally likely, though. So now</p>
@@ -154,12 +178,12 @@ P(\mbox{drawing a heart} )= \frac{\mbox{number of hearts} }{\mbox{number of card
 \end{equation*}
 </div>
 <p id="p-209">As you can see, it is now slightly more likely that we draw a heart if the ace of spades is removed from the deck.</p></article><p id="p-210">Now try to compute some probabilities on your own.</p>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-35" id="exercise-35"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">2.3.3</span> <span class="title">Probability with a single die</span>
-</h6></a></article><div id="hk-exercise-35" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-211">Consider rolling a single die. List the possible outcomes. Assuming that it is a fair die, are all the outcomes equally likely? What is the probability of rolling a 2? What is the probability of rolling an even number?</p></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_redgreendice" id="E_redgreendice"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">2.3.4</span> <span class="title">Probability with red and green dice</span>
-</h6></a></article><div id="hk-E_redgreendice" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-212">Now consider rolling two fair dice, say a red die and a green die. </p>
+<article class="exercise exercise-like" id="exercise-35"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-35"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Probability with a single die.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-35"><article class="exercise exercise-like"><p id="p-211">Consider rolling a single die. List the possible outcomes. Assuming that it is a fair die, are all the outcomes equally likely? What is the probability of rolling a 2? What is the probability of rolling an even number?</p></article></div>
+<article class="exercise exercise-like" id="E_redgreendice"><a data-knowl="" class="id-ref original" data-refid="hk-E_redgreendice"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Probability with red and green dice.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_redgreendice"><article class="exercise exercise-like"><p id="p-212">Now consider rolling two fair dice, say a red die and a green die.</p>
 <ol class="lower-alpha">
 <li id="li-67"><p id="p-213">How many equally likely outcomes are there? List them.</p></li>
 <li id="li-68"><p id="p-214">What is the probability that you get a two on the red die and a four on the green die?</p></li>
@@ -168,31 +192,31 @@ P(\mbox{drawing a heart} )= \frac{\mbox{number of hearts} }{\mbox{number of card
 <li id="li-71"><p id="p-217">What is the probability  that you roll a three?</p></li>
 <li id="li-72"><p id="p-218">Compare your answers in (b) and (c) with your answers in (d) and (e). Are they the same or different? Explain.</p></li>
 </ol></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_twodice" id="E_twodice"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">2.3.5</span> <span class="title">Probability with two of the same dice</span>
-</h6></a></article><div id="hk-E_twodice" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-219">Again consider rolling two fair dice, but now we don't care what color they are. </p>
+<article class="exercise exercise-like" id="E_twodice"><a data-knowl="" class="id-ref original" data-refid="hk-E_twodice"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Probability with two of the same dice.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_twodice"><article class="exercise exercise-like"><p id="p-219">Again consider rolling two fair dice, but now we don't care what color they are.</p>
 <ol class="lower-alpha">
-<li id="li-73"><p id="p-220">Does this change the number of equally likely outcomes from <a knowl="./knowl/E_redgreendice.html" title="Exercise 2.3.4: Probability with red and green dice">Exercise 2.3.4</a>? Why or why not? It may be helpful to list the possible outcomes.</p></li>
+<li id="li-73"><p id="p-220">Does this change the number of equally likely outcomes from <a class="xref" data-knowl="./knowl/E_redgreendice.html" title="Exercise 2.3.4: Probability with red and green dice">Exercise 2.3.4</a>? Why or why not? It may be helpful to list the possible outcomes.</p></li>
 <li id="li-74"><p id="p-221">What is the probability that you get snake eyes (two ones)?</p></li>
 <li id="li-75"><p id="p-222">What is the probability that you roll a two and a four?</p></li>
 <li id="li-76"><p id="p-223">What is the probability  that you roll a three?</p></li>
 <li id="li-77"><p id="p-224">What is the probability that you roll a two OR a four?</p></li>
 </ol></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_sumdice" id="E_sumdice"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">2.3.6</span> <span class="title">Sums of dice</span>
-</h6></a></article><div id="hk-E_sumdice" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-225">Suppose we roll two dice and add them. </p>
+<article class="exercise exercise-like" id="E_sumdice"><a data-knowl="" class="id-ref original" data-refid="hk-E_sumdice"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">Sums of dice.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_sumdice"><article class="exercise exercise-like"><p id="p-225">Suppose we roll two dice and add them.</p>
 <ol class="lower-alpha">
 <li id="li-78"><p id="p-226">List the possible sums.</p></li>
 <li id="li-79"><p id="p-227">What is the probability that you get a total of seven on the two dice?</p></li>
 <li id="li-80"><p id="p-228">What is the probability that you get a total of four when you roll two dice?</p></li>
 <li id="li-81"><p id="p-229">Are the events of getting a total of seven and getting a total of four equally likely? Explain.</p></li>
 </ol></article></div>
-<p id="p-230">It is important to note that just because you can list all of the possible outcomes, they may not be equally likely. As we see from <a knowl="./knowl/E_sumdice.html" title="Exercise 2.3.6: Sums of dice">Exercise 2.3.6</a>, although there are 11 possible sums, the probability of getting any particular sum (such as seven) is <em class="emphasis">not</em> \(\frac{1}{11}\text{.}\)</p></section><section class="subsection" id="subsection-8"><h3 class="heading hide-type">
+<p id="p-230">It is important to note that just because you can list all of the possible outcomes, they may not be equally likely. As we see from <a class="xref" data-knowl="./knowl/E_sumdice.html" title="Exercise 2.3.6: Sums of dice">Exercise 2.3.6</a>, although there are 11 possible sums, the probability of getting any particular sum (such as seven) is <em class="emphasis">not</em> \(\frac{1}{11}\text{.}\)</p></section><section class="subsection" id="subsection-8"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.3.2</span> <span class="title">Expected Value</span>
 </h3>
 <p id="p-231"></p>
-<article class="definition-like" id="D_expectedvalue"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">2.3.7</span>
+<article class="definition definition-like" id="D_expectedvalue"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.7</span><span class="period">.</span>
 </h6>
 <p id="p-232">The <dfn class="terminology">expected value</dfn> of a game of chance is the average net gain or loss that we would expect per game if we played the game many times. We compute the expected value by multiplying the value of each outcome by its probability of occurring and then add up all of the products.</p></article><p id="p-233">For example, suppose you toss a fair coin: Heads, you win 25 cents, Tails, you lose 25 cents. The probability of getting Heads is \(1/2\text{,}\) as is the probability of getting Tails. The expected value of the game is</p>
 <div class="displaymath">
@@ -201,36 +225,46 @@ P(\mbox{drawing a heart} )= \frac{\mbox{number of hearts} }{\mbox{number of card
 \end{equation*}
 </div>
 <p id="p-234">Thus, you would expect an average payoff of $0, if you were to play the game several times. Note, the expected value is not necessarily the actual value of playing the game.</p>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_Toss2coins" id="E_Toss2coins"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">2.3.8</span> <span class="title">Expected value and a two-coin game</span>
-</h6></a></article><div id="hk-E_Toss2coins" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-235">Consider a game where you toss two coins. If you get two Heads, you win $2. If you get a Head and a Tail, you win $1, if you get two Tails, you lose $4. Find the expected value of the game. (Caution: first you need to find the probability of each event– think about “equally likely” events.)</p></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-40" id="exercise-40"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">2.3.9</span> <span class="title">Play the two-coin game</span>
-</h6></a></article><div id="hk-exercise-40" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-236">Now play the game in <a knowl="./knowl/E_Toss2coins.html" title="Exercise 2.3.8: Expected value and a two-coin game">Exercise 2.3.8</a> the indicated number of times. Give your actual payoff and compare it to the expected value. </p>
+<article class="exercise exercise-like" id="E_Toss2coins"><a data-knowl="" class="id-ref original" data-refid="hk-E_Toss2coins"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.3.8</span><span class="period">.</span><span class="space"> </span><span class="title">Expected value and a two-coin game.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_Toss2coins"><article class="exercise exercise-like"><p id="p-235">Consider a game where you toss two coins. If you get two Heads, you win $2. If you get a Head and a Tail, you win $1, if you get two Tails, you lose $4. Find the expected value of the game. (Caution: first you need to find the probability of each event– think about “equally likely” events.)</p></article></div>
+<article class="exercise exercise-like" id="exercise-40"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-40"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.3.9</span><span class="period">.</span><span class="space"> </span><span class="title">Play the two-coin game.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-40"><article class="exercise exercise-like"><p id="p-236">Now play the game in <a class="xref" data-knowl="./knowl/E_Toss2coins.html" title="Exercise 2.3.8: Expected value and a two-coin game">Exercise 2.3.8</a> the indicated number of times. Give your actual payoff and compare it to the expected value.</p>
 <ol class="lower-alpha">
 <li id="li-82"><p id="p-237">One time.</p></li>
 <li id="li-83"><p id="p-238">Ten times.</p></li>
 <li id="li-84"><p id="p-239">Twenty-five times.</p></li>
 <li id="li-85"><p id="p-240">Is there a single possible outcome where you would actually win or lose the exact amount computed for the expected value? If not, why do we call it the expected value?</p></li>
 </ol></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-41" id="exercise-41"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">2.3.10</span> <span class="title">Expected value of roulette</span>
-</h6></a></article><div id="hk-exercise-41" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-241">A standard roulette wheel has 38 numbered slots for a small ball to land in: 36 are marked from 1 to 36, with half of those black and half red; two green slots are numbered 0 and 00. An allowable bet is to bet on either red of black. This bet is an even money bet, which means if you win you receive twice what you bet. Many people think that betting black or red is a fair game. What is the expected value of betting $1000 on red? Is this a fair game? Explain.</p></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-42" id="exercise-42"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">2.3.11</span> <span class="title">Another roulette example</span>
-</h6></a></article><div id="hk-exercise-42" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-242">Considering again the roulette wheel, if you bet $100 on a particular number and the ball lands on that number, you win $3600. What is the expected value of betting $100 on Red 4?</p></article></div>
+<article class="exercise exercise-like" id="exercise-41"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-41"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.3.10</span><span class="period">.</span><span class="space"> </span><span class="title">Expected value of roulette.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-41"><article class="exercise exercise-like"><p id="p-241">A standard roulette wheel has 38 numbered slots for a small ball to land in: 36 are marked from 1 to 36, with half of those black and half red; two green slots are numbered 0 and 00. An allowable bet is to bet on either red of black. This bet is an even money bet, which means if you win you receive twice what you bet. Many people think that betting black or red is a fair game. What is the expected value of betting $1000 on red? Is this a fair game? Explain.</p></article></div>
+<article class="exercise exercise-like" id="exercise-42"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-42"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.3.11</span><span class="period">.</span><span class="space"> </span><span class="title">Another roulette example.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-42"><article class="exercise exercise-like"><p id="p-242">Considering again the roulette wheel, if you bet $100 on a particular number and the ball lands on that number, you win $3600. What is the expected value of betting $100 on Red 4?</p></article></div>
 <p id="p-243">After finding the expected value of the games in the above exercises, what do you think the expected value can tell us about a game? Can you use it to decide whether you should play that game of chance or not? When will a game be advantageous for the player? We often care whether a game is “fair.” Can the expected value help you determine if a game is fair?</p>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-43" id="exercise-43"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">2.3.12</span> <span class="title">Expected value and fairness</span>
-</h6></a></article><div id="hk-exercise-43" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-244">Use the idea of expected value to explain “fairness” in a game of chance.</p></article></div>
+<article class="exercise exercise-like" id="exercise-43"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-43"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.3.12</span><span class="period">.</span><span class="space"> </span><span class="title">Expected value and fairness.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-43"><article class="exercise exercise-like"><p id="p-244">Use the idea of expected value to explain “fairness” in a game of chance.</p></article></div>
 <p id="p-245">The last exercise is a good challenge for exploring expected value.</p>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-44" id="exercise-44"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">2.3.13</span> <span class="title">A betting game with two dice</span>
-</h6></a></article><div id="hk-exercise-44" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-246">You place a bet and roll two fair dice. If you roll a 7 or an 11, you receive your bet back (you break even). If you roll a 2, a 3, or a 12, then you lose your bet. If you roll anything else, you receive half of the sum you rolled in dollars. How much should you bet to make this a fair game?</p>
+<article class="exercise exercise-like" id="exercise-44"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-44"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.3.13</span><span class="period">.</span><span class="space"> </span><span class="title">A betting game with two dice.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-44"><article class="exercise exercise-like"><p id="p-246">You place a bet and roll two fair dice. If you roll a 7 or an 11, you receive your bet back (you break even). If you roll a 2, a 3, or a 12, then you lose your bet. If you roll anything else, you receive half of the sum you rolled in dollars. How much should you bet to make this a fair game?</p>
 <div class="solutions">
-<a knowl="" class="id-ref" refid="hk-hint-1" id="hint-1"><span class="type">Hint</span></a><div id="hk-hint-1" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-247">It might be helpful to begin with a table showing the possible sums, their probability, and the payoff for each.</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-1" id="hint-1"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><p id="p-247">It might be helpful to begin with a table showing the possible sums, their probability, and the payoff for each.</p></div></div>
 </div></article></div>
 <p id="p-248">In the next section we use the ideas of probability and expected value to understand how set up a payoff matrix for a game of chance.</p></section></section></div></main>
 </div>
+<!--Start: StatCounter code--><script>
+var sc_project=11588994;
+var sc_invisible=1;
+var sc_security="ed2110b7";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/11588994/0/ed2110b7/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.13/login.js"></script>
 </body>
 </html>

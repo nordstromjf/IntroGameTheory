@@ -2,7 +2,7 @@
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
 <!--*                                    *-->
-<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
 <!--**************************************-->
 <html lang="en-US">
@@ -11,13 +11,19 @@
 <title>Undercut</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
-        inlineMath: [['\\(','\\)']],
+        inlineMath: [['\\(','\\)']]
     },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -34,13 +40,27 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
-<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.13;
+</script>
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\MyTikzmark}[2]{
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{\MyTikzmark}[2]{
      \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
 \newcommand{\DrawVLine}[3][]{
   \begin{tikzpicture}[overlay,remember picture]
@@ -58,7 +78,7 @@ MathJax.Hub.Config({
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="" target="_blank"><img src="images/image-1.svg" alt="Logo image"></a><div class="title-container">
-<h1 class="heading"><a href="index.html"><span class="title">Introduction to Game Theory: a Discovery Approach</span></a></h1>
+<h1 class="heading"><a href="book-1.html"><span class="title">Introduction to Game Theory:</span> <span class="subtitle">a Discovery Approach</span></a></h1>
 <p class="byline">Jennifer Firkins Nordstrom</p>
 </div>
 </div></div>
@@ -67,25 +87,27 @@ MathJax.Hub.Config({
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
 <a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_AugMatrices.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-3.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="chapter-4.html" title="Next">Next</a></span>
 </div>
-<button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
 <button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_AugMatrices.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-3.html" title="Up">Up</a><a class="next-button button toolbar-item" href="chapter-4.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
-<ul>
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
 </ul>
-<h2 class="link"><a href="chapter-1.html" data-scroll="chapter-1"><span class="codenumber">1</span> <span class="title punctuated">What is Game Theory?</span></a></h2>
-<ul>
+</li>
+<li class="link">
+<a href="chapter-1.html" data-scroll="chapter-1"><span class="codenumber">1</span> <span class="title">What is Game Theory?</span></a><ul>
 <li><a href="S_intro.html" data-scroll="S_intro">Players and Strategies</a></li>
 <li><a href="S_IntroMatrices.html" data-scroll="S_IntroMatrices">Game Matrices and Payoff Vectors</a></li>
 </ul>
-<h2 class="link"><a href="chapter-2.html" data-scroll="chapter-2"><span class="codenumber">2</span> <span class="title">Two-Person Zero-Sum Games</span></a></h2>
-<ul>
+</li>
+<li class="link">
+<a href="chapter-2.html" data-scroll="chapter-2"><span class="codenumber">2</span> <span class="title">Two-Person Zero-Sum Games</span></a><ul>
 <li><a href="S_IntroZeroSum.html" data-scroll="S_IntroZeroSum">Introduction to Two-Person Zero-Sum Games</a></li>
 <li><a href="S_DominatedStrategies.html" data-scroll="S_DominatedStrategies">Dominated Strategies</a></li>
 <li><a href="S_Probability.html" data-scroll="S_Probability">Probability and Expected Value</a></li>
@@ -94,8 +116,9 @@ MathJax.Hub.Config({
 <li><a href="S_ZeroSumStrategySummary.html" data-scroll="S_ZeroSumStrategySummary">Strategies for Zero-Sum Games and Equilibrium Points</a></li>
 <li><a href="S_PopRationality.html" data-scroll="S_PopRationality">Popular Culture: Rationality and Perfect Information</a></li>
 </ul>
-<h2 class="link"><a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span> <span class="title">Repeated Two-Person Zero-sum Games</span></a></h2>
-<ul>
+</li>
+<li class="link">
+<a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span> <span class="title">Repeated Two-Person Zero-sum Games</span></a><ul>
 <li><a href="S_IntroRepeated.html" data-scroll="S_IntroRepeated">Introduction to Repeated Games</a></li>
 <li><a href="S_MixStratGraph.html" data-scroll="S_MixStratGraph">Mixed Strategies: Graphical Solution</a></li>
 <li><a href="S_solvingeq.html" data-scroll="S_solvingeq">Using Sage to Graph Lines and Solve Equations</a></li>
@@ -104,8 +127,9 @@ MathJax.Hub.Config({
 <li><a href="S_AugMatrices.html" data-scroll="S_AugMatrices">Augmented Matrices</a></li>
 <li><a href="S_Undercut.html" data-scroll="S_Undercut" class="active">Undercut</a></li>
 </ul>
-<h2 class="link"><a href="chapter-4.html" data-scroll="chapter-4"><span class="codenumber">4</span> <span class="title">Non-Zero-Sum Games</span></a></h2>
-<ul>
+</li>
+<li class="link">
+<a href="chapter-4.html" data-scroll="chapter-4"><span class="codenumber">4</span> <span class="title">Non-Zero-Sum Games</span></a><ul>
 <li><a href="Intrononzero.html" data-scroll="Intrononzero">Introduction to Two-Player Non-Zero-Sum Games</a></li>
 <li><a href="pdandchicken.html" data-scroll="pdandchicken">Prisoner's Dilemma and Chicken</a></li>
 <li><a href="S_CWPD.html" data-scroll="S_CWPD">A Class-Wide Experiment</a></li>
@@ -115,89 +139,99 @@ MathJax.Hub.Config({
 <li><a href="S_RepeatPD.html" data-scroll="S_RepeatPD">Repeated Prisoner's Dilemma</a></li>
 <li><a href="S_PopPD.html" data-scroll="S_PopPD">Popular Culture: Prisoner's Dilemma and Chicken</a></li>
 </ul>
-<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
-<ul>
-<li><a href="references-1.html" data-scroll="references-1">References</a></li>
-<li><a href="index-1.html" data-scroll="index-1">Index</a></li>
-<li><a href="colophon-2.html" data-scroll="colophon-2">Colophon</a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</li>
+<li class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">References</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="mathbook-content"><section class="section" id="S_Undercut"><h2 class="heading hide-type">
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="S_Undercut"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.7</span> <span class="title">Undercut</span>
 </h2>
-<a href="S_Undercut.html" class="permalink">¶</a><p id="p-602">This section requires you to be able to solve “large” systems of equations. You will be using the matrix techniques from <a href="S_AugMatrices.html" class="xref" title="Section 3.6: Augmented Matrices">Section 3.6</a>. You are encouraged to use technology such as a graphing calculator or Sage.</p>
-<p id="p-603">As we saw in <a href="S_LiarsPoker.html" class="xref" title="Section 3.5: Liar's Poker">Section 3.5</a>, an important part of game theory is the process of translating a game to a form that we can analyze.</p>
-<article class="example-like" id="Undercut"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">3.7.1</span> <span class="title">Undercut</span>
+<a href="S_Undercut.html" class="permalink">¶</a><p id="p-601">This section requires you to be able to solve “large” systems of equations. You will be using the matrix techniques from <a href="S_AugMatrices.html" class="internal" title="Section 3.6: Augmented Matrices">Section 3.6</a>. You are encouraged to use technology such as a graphing calculator or Sage.</p>
+<p id="p-602">As we saw in <a href="S_LiarsPoker.html" class="internal" title="Section 3.5: Liar's Poker">Section 3.5</a>, an important part of game theory is the process of translating a game to a form that we can analyze.</p>
+<article class="example example-like" id="Undercut"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.7.1</span><span class="period">.</span><span class="space"> </span><span class="title">Undercut.</span>
 </h6>
-<p id="p-604">Each player chooses a number 1-5. If the two numbers don't differ by 1, then each player adds their own number to their score. If the two numbers differ by 1, then the player with the <em class="emphasis">lower</em> number adds <em class="emphasis">both</em> numbers to his or her score; the player with the higher number gets nothing. (From Douglas Hofstadter's <span class="booktitle">Metamagical Themas</span>.)</p>
-<p id="p-605">For example, suppose in round one Player 1 chooses 4; Player 2 chooses 4. Each player keeps their own number. The score is now 4-4. In the next round, Player 1 chooses 2, Player 2 chooses 5. The score would now be 6-9. In the third round Player 1 chooses 4, Player 2 chooses 5. Now Player 1 gets both numbers, making the score 15-9.</p></article><article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_Uplay" id="E_Uplay"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">3.7.2</span> <span class="title">Play Undercut</span>
-</h6></a></article><div id="hk-E_Uplay" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-606">Choose an opponent and play Undercut several times. Keep track of the outcomes.</p></article></div>
-<p id="p-607">After playing Undercut with an opponent, try to devise a good strategy.</p>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_Uguessstrat" id="E_Uguessstrat"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">3.7.3</span> <span class="title">Conjecture a strategy</span>
-</h6></a></article><div id="hk-E_Uguessstrat" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-608">Just from playing Undercut several times, can you suggest a strategy for Player 1? What about for Player 2? For example, what number(s) should you play most often/ least often, or does it matter? Are there numbers you should never play? Does this game seem fair, or does one of the players seem to have an advantage? Explain your answers.</p></article></div>
-<p id="p-609">As we've seen before, a payoff matrix can help with analyzing a game.</p>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_Upayoff" id="E_Upayoff"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">3.7.4</span> <span class="title">Payoff matrix</span>
-</h6></a></article><div id="hk-E_Upayoff" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-610">Create a payoff matrix for Undercut. Note that your payoffs should have a score for each player.</p></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_Unotzerosum" id="E_Unotzerosum"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">3.7.5</span> <span class="title">Zero-sum</span>
-</h6></a></article><div id="hk-E_Unotzerosum" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-611">Is this a zero-sum game? Explain.</p></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_Upureeq" id="E_Upureeq"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">3.7.6</span> <span class="title">Pure strategy equilibrium</span>
-</h6></a></article><div id="hk-E_Upureeq" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-612">Does there appear to be a pure strategy equilibrium for this game? Explain.</p></article></div>
-<p id="p-613">Let's assume we are going to play Undercut repeatedly. By the time you and your opponent are done playing, what should it mean to win the game?</p>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_Uwinner" id="E_Uwinner"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">3.7.7</span> <span class="title">Long-run winner</span>
-</h6></a></article><div id="hk-E_Uwinner" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-614">How might we determine a “winner” for Undercut after playing several times?</p></article></div>
-<p id="p-615">Most likely, you said that someone will win the game if they have the most points. In fact, we probably don't care if the final score is 10-12 or 110-112. In either case, Player 2 wins. Since we will play this game several times, we do care about the point difference. For example, a score of 5-1 would be better for Player 1 than 5-3. So let's think about the game in terms of the point difference between the players in a given game. This is called the <em class="emphasis">net gain</em>. For example, with score of 5-1, Player 1 would have a net gain of 4.</p>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_Unetgainex" id="E_Unetgainex"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">3.7.8</span> <span class="title">Net gain</span>
-</h6></a></article><div id="hk-E_Unetgainex" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-616">Calculate the net gain for Player 1 for each of the three rounds in <a knowl="./knowl/Undercut.html" title="Example 3.7.1: Undercut">Example 3.7.1</a> in the beginning of this section.</p></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_Unetmatrix" id="E_Unetmatrix"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">3.7.9</span> <span class="title">Net gain payoff matrix</span>
-</h6></a></article><div id="hk-E_Unetmatrix" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-617">Create a new payoff matrix for Undercut which uses the players' net gain for the payoff vectors.</p></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_Uzerosum" id="E_Uzerosum"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">3.7.10</span> <span class="title">Zero-sum</span>
-</h6></a></article><div id="hk-E_Uzerosum" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-618">Is this now a zero-sum game? Explain.</p></article></div>
-<p id="p-619">The method of using net gain to describe the payoffs to each player should be familiar from some of the really early examples where we turned constant-sum payoff vectors into zero-sum vectors. But note that the original form of this game wasn't even a constant-sum game! What we are really doing here is thinking about our payoffs not as points, but a win or loss relative to our opponent. Now that we have reframed Undercut as a zero-sum game, we can apply our methods for solving the game that we have seen in this chapter.</p>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_Unetpureeq" id="E_Unetpureeq"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">3.7.11</span> <span class="title">Pure strategy equilibrium</span>
-</h6></a></article><div id="hk-E_Unetpureeq" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-620">Is there a pure strategy equilibrium for this game? Explain.</p>
+<p id="p-603">Each player chooses a number 1-5. If the two numbers don't differ by 1, then each player adds their own number to their score. If the two numbers differ by 1, then the player with the <em class="emphasis">lower</em> number adds <em class="emphasis">both</em> numbers to his or her score; the player with the higher number gets nothing. (From Douglas Hofstadter's <span class="booktitle">Metamagical Themas</span>.)</p>
+<p id="p-604">For example, suppose in round one Player 1 chooses 4; Player 2 chooses 4. Each player keeps their own number. The score is now 4-4. In the next round, Player 1 chooses 2, Player 2 chooses 5. The score would now be 6-9. In the third round Player 1 chooses 4, Player 2 chooses 5. Now Player 1 gets both numbers, making the score 15-9.</p></article><article class="exercise exercise-like" id="E_Uplay"><a data-knowl="" class="id-ref original" data-refid="hk-E_Uplay"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3.7.2</span><span class="period">.</span><span class="space"> </span><span class="title">Play Undercut.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_Uplay"><article class="exercise exercise-like"><p id="p-605">Choose an opponent and play Undercut several times. Keep track of the outcomes.</p></article></div>
+<p id="p-606">After playing Undercut with an opponent, try to devise a good strategy.</p>
+<article class="exercise exercise-like" id="E_Uguessstrat"><a data-knowl="" class="id-ref original" data-refid="hk-E_Uguessstrat"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3.7.3</span><span class="period">.</span><span class="space"> </span><span class="title">Conjecture a strategy.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_Uguessstrat"><article class="exercise exercise-like"><p id="p-607">Just from playing Undercut several times, can you suggest a strategy for Player 1? What about for Player 2? For example, what number(s) should you play most often/ least often, or does it matter? Are there numbers you should never play? Does this game seem fair, or does one of the players seem to have an advantage? Explain your answers.</p></article></div>
+<p id="p-608">As we've seen before, a payoff matrix can help with analyzing a game.</p>
+<article class="exercise exercise-like" id="E_Upayoff"><a data-knowl="" class="id-ref original" data-refid="hk-E_Upayoff"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3.7.4</span><span class="period">.</span><span class="space"> </span><span class="title">Payoff matrix.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_Upayoff"><article class="exercise exercise-like"><p id="p-609">Create a payoff matrix for Undercut. Note that your payoffs should have a score for each player.</p></article></div>
+<article class="exercise exercise-like" id="E_Unotzerosum"><a data-knowl="" class="id-ref original" data-refid="hk-E_Unotzerosum"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3.7.5</span><span class="period">.</span><span class="space"> </span><span class="title">Zero-sum.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_Unotzerosum"><article class="exercise exercise-like"><p id="p-610">Is this a zero-sum game? Explain.</p></article></div>
+<article class="exercise exercise-like" id="E_Upureeq"><a data-knowl="" class="id-ref original" data-refid="hk-E_Upureeq"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3.7.6</span><span class="period">.</span><span class="space"> </span><span class="title">Pure strategy equilibrium.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_Upureeq"><article class="exercise exercise-like"><p id="p-611">Does there appear to be a pure strategy equilibrium for this game? Explain.</p></article></div>
+<p id="p-612">Let's assume we are going to play Undercut repeatedly. By the time you and your opponent are done playing, what should it mean to win the game?</p>
+<article class="exercise exercise-like" id="E_Uwinner"><a data-knowl="" class="id-ref original" data-refid="hk-E_Uwinner"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3.7.7</span><span class="period">.</span><span class="space"> </span><span class="title">Long-run winner.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_Uwinner"><article class="exercise exercise-like"><p id="p-613">How might we determine a “winner” for Undercut after playing several times?</p></article></div>
+<p id="p-614">Most likely, you said that someone will win the game if they have the most points. In fact, we probably don't care if the final score is 10-12 or 110-112. In either case, Player 2 wins. Since we will play this game several times, we do care about the point difference. For example, a score of 5-1 would be better for Player 1 than 5-3. So let's think about the game in terms of the point difference between the players in a given game. This is called the <em class="emphasis">net gain</em>. For example, with score of 5-1, Player 1 would have a net gain of 4.</p>
+<article class="exercise exercise-like" id="E_Unetgainex"><a data-knowl="" class="id-ref original" data-refid="hk-E_Unetgainex"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3.7.8</span><span class="period">.</span><span class="space"> </span><span class="title">Net gain.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_Unetgainex"><article class="exercise exercise-like"><p id="p-615">Calculate the net gain for Player 1 for each of the three rounds in <a class="xref" data-knowl="./knowl/Undercut.html" title="Example 3.7.1: Undercut">Example 3.7.1</a> in the beginning of this section.</p></article></div>
+<article class="exercise exercise-like" id="E_Unetmatrix"><a data-knowl="" class="id-ref original" data-refid="hk-E_Unetmatrix"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3.7.9</span><span class="period">.</span><span class="space"> </span><span class="title">Net gain payoff matrix.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_Unetmatrix"><article class="exercise exercise-like"><p id="p-616">Create a new payoff matrix for Undercut which uses the players' net gain for the payoff vectors.</p></article></div>
+<article class="exercise exercise-like" id="E_Uzerosum"><a data-knowl="" class="id-ref original" data-refid="hk-E_Uzerosum"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3.7.10</span><span class="period">.</span><span class="space"> </span><span class="title">Zero-sum.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_Uzerosum"><article class="exercise exercise-like"><p id="p-617">Is this now a zero-sum game? Explain.</p></article></div>
+<p id="p-618">The method of using net gain to describe the payoffs to each player should be familiar from some of the really early examples where we turned constant-sum payoff vectors into zero-sum vectors. But note that the original form of this game wasn't even a constant-sum game! What we are really doing here is thinking about our payoffs not as points, but a win or loss relative to our opponent. Now that we have reframed Undercut as a zero-sum game, we can apply our methods for solving the game that we have seen in this chapter.</p>
+<article class="exercise exercise-like" id="E_Unetpureeq"><a data-knowl="" class="id-ref original" data-refid="hk-E_Unetpureeq"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3.7.11</span><span class="period">.</span><span class="space"> </span><span class="title">Pure strategy equilibrium.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_Unetpureeq"><article class="exercise exercise-like"><p id="p-619">Is there a pure strategy equilibrium for this game? Explain.</p>
 <div class="solutions">
-<a knowl="" class="id-ref" refid="hk-hint-10" id="hint-10"><span class="type">Hint</span></a><div id="hk-hint-10" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-621">Rather than looking at each option, you could compare the values for the pure maximin/ minimax strategies.</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-10" id="hint-10"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-10"><div class="hint solution-like"><p id="p-620">Rather than looking at each option, you could compare the values for the pure maximin/ minimax strategies.</p></div></div>
 </div></article></div>
-<p id="p-622">This game has one additional property that will help simplify our analysis. This game is <em class="emphasis">symmetric</em>, meaning the game looks the same to Players 1 and 2.</p>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_Usymmetric" id="E_Usymmetric"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">3.7.12</span> <span class="title">Symmetric games</span>
-</h6></a></article><div id="hk-E_Usymmetric" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-623">Give an example of another game which is symmetric. Give an example of a game which is <em class="emphasis">not</em> symmetric.</p></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_symmetricpayoff" id="E_symmetricpayoff"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">3.7.13</span> <span class="title">Expected payoff for a symmetric game</span>
-</h6></a></article><div id="hk-E_symmetricpayoff" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-624">What is the expected payoff for a symmetric game? Explain your answer.</p>
+<p id="p-621">This game has one additional property that will help simplify our analysis. This game is <em class="emphasis">symmetric</em>, meaning the game looks the same to Players 1 and 2.</p>
+<article class="exercise exercise-like" id="E_Usymmetric"><a data-knowl="" class="id-ref original" data-refid="hk-E_Usymmetric"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3.7.12</span><span class="period">.</span><span class="space"> </span><span class="title">Symmetric games.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_Usymmetric"><article class="exercise exercise-like"><p id="p-622">Give an example of another game which is symmetric. Give an example of a game which is <em class="emphasis">not</em> symmetric.</p></article></div>
+<article class="exercise exercise-like" id="E_symmetricpayoff"><a data-knowl="" class="id-ref original" data-refid="hk-E_symmetricpayoff"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3.7.13</span><span class="period">.</span><span class="space"> </span><span class="title">Expected payoff for a symmetric game.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_symmetricpayoff"><article class="exercise exercise-like"><p id="p-623">What is the expected payoff for a symmetric game? Explain your answer.</p>
 <div class="solutions">
-<a knowl="" class="id-ref" refid="hk-hint-11" id="hint-11"><span class="type">Hint</span></a><div id="hk-hint-11" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-625">You might think about whether it is possible for a player to have an advantage in a symmetric game.</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-11" id="hint-11"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-11"><div class="hint solution-like"><p id="p-624">You might think about whether it is possible for a player to have an advantage in a symmetric game.</p></div></div>
 </div></article></div>
-<p id="p-626">Hopefully, you determined that there is not a pure strategy equilibrium for Undercut. Thus, we would like to find a mixed strategy equilibrium. Since this is a \(5 \times 5\) game, we cannot use our graphical solution. We will need to rely on our expected value solution. We want to decide with what probability we should play each number. Let \(a, b, c, d, e\) be the probabilities with which Player 2 plays 1-5, respectively. For example, if Player 1 plays a pure strategy of 2, then the expected value for Player 1, \(E_1(2)\text{,}\) is \(-3a+0b+5c-2d-3e\text{.}\)</p>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_Uequations" id="E_Uequations"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">3.7.14</span> <span class="title">Equations for Player 1's expected value</span>
-</h6></a></article><div id="hk-E_Uequations" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-627">Write down the five equations that give Player 1's expected value for each of Player 1's pure strategies.</p></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_Uevzero" id="E_Uevzero"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">3.7.15</span> <span class="title">Expected value of a symmetric game</span>
-</h6></a></article><div id="hk-E_Uevzero" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-628">In <a knowl="./knowl/E_symmetricpayoff.html" title="Exercise 3.7.13: Expected payoff for a symmetric game">Exercise 3.7.13</a>, you should have determined that since this is a symmetric game, the expected value for each Player should be 0. Modify your equations to include this piece of information. It is important to recognize that this step greatly simplifies our work for the expected value method since we don't need to set the expected values equal to each other. HOWEVER, we can ONLY do this since we know the game is symmetric!</p></article></div>
-<p id="p-629">If we use that the game is symmetric, and hence the expected value of the game for each player must be 0 since neither player can have an advantage over the other, we do not need to set the equations equal to each other. We could not use this method earlier since we had no way of knowing the expected value of a general game.</p>
-<p id="p-630">We now have five equations and five unknowns. There is a sixth equation: we know that the probabilities must add up to 1. We can now solve for the equilibrium strategy!</p>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_Usolve" id="E_Usolve"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">3.7.16</span> <span class="title">Solve the system of equations</span>
-</h6></a></article><div id="hk-E_Usolve" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-631">Use matrices to solve the resulting system of six equations. Give the mixed strategy equilibrium for Player 2. What is the mixed strategy for Player 1?</p>
+<p id="p-625">Hopefully, you determined that there is not a pure strategy equilibrium for Undercut. Thus, we would like to find a mixed strategy equilibrium. Since this is a \(5 \times 5\) game, we cannot use our graphical solution. We will need to rely on our expected value solution. We want to decide with what probability we should play each number. Let \(a, b, c, d, e\) be the probabilities with which Player 2 plays 1-5, respectively. For example, if Player 1 plays a pure strategy of 2, then the expected value for Player 1, \(E_1(2)\text{,}\) is \(-3a+0b+5c-2d-3e\text{.}\)</p>
+<article class="exercise exercise-like" id="E_Uequations"><a data-knowl="" class="id-ref original" data-refid="hk-E_Uequations"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3.7.14</span><span class="period">.</span><span class="space"> </span><span class="title">Equations for Player 1's expected value.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_Uequations"><article class="exercise exercise-like"><p id="p-626">Write down the five equations that give Player 1's expected value for each of Player 1's pure strategies.</p></article></div>
+<article class="exercise exercise-like" id="E_Uevzero"><a data-knowl="" class="id-ref original" data-refid="hk-E_Uevzero"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3.7.15</span><span class="period">.</span><span class="space"> </span><span class="title">Expected value of a symmetric game.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_Uevzero"><article class="exercise exercise-like"><p id="p-627">In <a class="xref" data-knowl="./knowl/E_symmetricpayoff.html" title="Exercise 3.7.13: Expected payoff for a symmetric game">Exercise 3.7.13</a>, you should have determined that since this is a symmetric game, the expected value for each Player should be 0. Modify your equations to include this piece of information. It is important to recognize that this step greatly simplifies our work for the expected value method since we don't need to set the expected values equal to each other. HOWEVER, we can ONLY do this since we know the game is symmetric!</p></article></div>
+<p id="p-628">If we use that the game is symmetric, and hence the expected value of the game for each player must be 0 since neither player can have an advantage over the other, we do not need to set the equations equal to each other. We could not use this method earlier since we had no way of knowing the expected value of a general game.</p>
+<p id="p-629">We now have five equations and five unknowns. There is a sixth equation: we know that the probabilities must add up to 1. We can now solve for the equilibrium strategy!</p>
+<article class="exercise exercise-like" id="E_Usolve"><a data-knowl="" class="id-ref original" data-refid="hk-E_Usolve"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3.7.16</span><span class="period">.</span><span class="space"> </span><span class="title">Solve the system of equations.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_Usolve"><article class="exercise exercise-like"><p id="p-630">Use matrices to solve the resulting system of six equations. Give the mixed strategy equilibrium for Player 2. What is the mixed strategy for Player 1?</p>
 <div class="solutions">
-<a knowl="" class="id-ref" refid="hk-hint-12" id="hint-12"><span class="type">Hint</span></a><div id="hk-hint-12" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-632">Should it be different than the strategy for Player 2?</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-12" id="hint-12"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-12"><div class="hint solution-like"><p id="p-631">Should it be different than the strategy for Player 2?</p></div></div>
 </div></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_Usummary" id="E_Usummary"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">3.7.17</span> <span class="title">Summary</span>
-</h6></a></article><div id="hk-E_Usummary" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-633">Based on your answer to <a knowl="./knowl/E_Usolve.html" title="Exercise 3.7.16: Solve the system of equations">Exercise 3.7.16</a>, which number(s) should you play the most often? Which should you play the least? Are there any numbers that you should never play? Compare the mathematical solution to your conjectured solution for <a knowl="./knowl/E_Uguessstrat.html" title="Exercise 3.7.3: Conjecture a strategy">Exercise 3.7.3</a>. Is there an advantage to knowing the mathematical solution?</p></article></div>
-<p id="p-634">You have now solved a rather complex two-person game. Try playing it with your friends and family. It may be difficult (or even impossible) to play randomly with the exact probabilties. It is also unlikely that your opponent will also be playing the equilibrium strategy, but can you use the solution to assure an advantage, or at least assure that your opponent doensn't have an advantage? Can you see the difference between an exact theoretical solution to a game, and a practical strategy for playing the game? In the next chapter we will see even more differences between theoretical and practical solutions to a game.</p></section></div></main>
+<article class="exercise exercise-like" id="E_Usummary"><a data-knowl="" class="id-ref original" data-refid="hk-E_Usummary"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3.7.17</span><span class="period">.</span><span class="space"> </span><span class="title">Summary.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_Usummary"><article class="exercise exercise-like"><p id="p-632">Based on your answer to <a class="xref" data-knowl="./knowl/E_Usolve.html" title="Exercise 3.7.16: Solve the system of equations">Exercise 3.7.16</a>, which number(s) should you play the most often? Which should you play the least? Are there any numbers that you should never play? Compare the mathematical solution to your conjectured solution for <a class="xref" data-knowl="./knowl/E_Uguessstrat.html" title="Exercise 3.7.3: Conjecture a strategy">Exercise 3.7.3</a>. Is there an advantage to knowing the mathematical solution?</p></article></div>
+<p id="p-633">You have now solved a rather complex two-person game. Try playing it with your friends and family. It may be difficult (or even impossible) to play randomly with the exact probabilties. It is also unlikely that your opponent will also be playing the equilibrium strategy, but can you use the solution to assure an advantage, or at least assure that your opponent doensn't have an advantage? Can you see the difference between an exact theoretical solution to a game, and a practical strategy for playing the game? In the next chapter we will see even more differences between theoretical and practical solutions to a game.</p></section></div></main>
 </div>
+<!--Start: StatCounter code--><script>
+var sc_project=11588994;
+var sc_invisible=1;
+var sc_security="ed2110b7";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/11588994/0/ed2110b7/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.13/login.js"></script>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
 <!--*                                    *-->
-<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
 <!--**************************************-->
 <html lang="en-US">
@@ -11,13 +11,19 @@
 <title>Prisoner's Dilemma and Chicken</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
-        inlineMath: [['\\(','\\)']],
+        inlineMath: [['\\(','\\)']]
     },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -34,13 +40,27 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
-<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.13;
+</script>
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\MyTikzmark}[2]{
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{\MyTikzmark}[2]{
      \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
 \newcommand{\DrawVLine}[3][]{
   \begin{tikzpicture}[overlay,remember picture]
@@ -58,7 +78,7 @@ MathJax.Hub.Config({
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="" target="_blank"><img src="images/image-1.svg" alt="Logo image"></a><div class="title-container">
-<h1 class="heading"><a href="index.html"><span class="title">Introduction to Game Theory: a Discovery Approach</span></a></h1>
+<h1 class="heading"><a href="book-1.html"><span class="title">Introduction to Game Theory:</span> <span class="subtitle">a Discovery Approach</span></a></h1>
 <p class="byline">Jennifer Firkins Nordstrom</p>
 </div>
 </div></div>
@@ -67,25 +87,27 @@ MathJax.Hub.Config({
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
 <a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Intrononzero.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-4.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_CWPD.html" title="Next">Next</a></span>
 </div>
-<button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
 <button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Intrononzero.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-4.html" title="Up">Up</a><a class="next-button button toolbar-item" href="S_CWPD.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
-<ul>
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
 </ul>
-<h2 class="link"><a href="chapter-1.html" data-scroll="chapter-1"><span class="codenumber">1</span> <span class="title punctuated">What is Game Theory?</span></a></h2>
-<ul>
+</li>
+<li class="link">
+<a href="chapter-1.html" data-scroll="chapter-1"><span class="codenumber">1</span> <span class="title">What is Game Theory?</span></a><ul>
 <li><a href="S_intro.html" data-scroll="S_intro">Players and Strategies</a></li>
 <li><a href="S_IntroMatrices.html" data-scroll="S_IntroMatrices">Game Matrices and Payoff Vectors</a></li>
 </ul>
-<h2 class="link"><a href="chapter-2.html" data-scroll="chapter-2"><span class="codenumber">2</span> <span class="title">Two-Person Zero-Sum Games</span></a></h2>
-<ul>
+</li>
+<li class="link">
+<a href="chapter-2.html" data-scroll="chapter-2"><span class="codenumber">2</span> <span class="title">Two-Person Zero-Sum Games</span></a><ul>
 <li><a href="S_IntroZeroSum.html" data-scroll="S_IntroZeroSum">Introduction to Two-Person Zero-Sum Games</a></li>
 <li><a href="S_DominatedStrategies.html" data-scroll="S_DominatedStrategies">Dominated Strategies</a></li>
 <li><a href="S_Probability.html" data-scroll="S_Probability">Probability and Expected Value</a></li>
@@ -94,8 +116,9 @@ MathJax.Hub.Config({
 <li><a href="S_ZeroSumStrategySummary.html" data-scroll="S_ZeroSumStrategySummary">Strategies for Zero-Sum Games and Equilibrium Points</a></li>
 <li><a href="S_PopRationality.html" data-scroll="S_PopRationality">Popular Culture: Rationality and Perfect Information</a></li>
 </ul>
-<h2 class="link"><a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span> <span class="title">Repeated Two-Person Zero-sum Games</span></a></h2>
-<ul>
+</li>
+<li class="link">
+<a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span> <span class="title">Repeated Two-Person Zero-sum Games</span></a><ul>
 <li><a href="S_IntroRepeated.html" data-scroll="S_IntroRepeated">Introduction to Repeated Games</a></li>
 <li><a href="S_MixStratGraph.html" data-scroll="S_MixStratGraph">Mixed Strategies: Graphical Solution</a></li>
 <li><a href="S_solvingeq.html" data-scroll="S_solvingeq">Using Sage to Graph Lines and Solve Equations</a></li>
@@ -104,8 +127,9 @@ MathJax.Hub.Config({
 <li><a href="S_AugMatrices.html" data-scroll="S_AugMatrices">Augmented Matrices</a></li>
 <li><a href="S_Undercut.html" data-scroll="S_Undercut">Undercut</a></li>
 </ul>
-<h2 class="link"><a href="chapter-4.html" data-scroll="chapter-4"><span class="codenumber">4</span> <span class="title">Non-Zero-Sum Games</span></a></h2>
-<ul>
+</li>
+<li class="link">
+<a href="chapter-4.html" data-scroll="chapter-4"><span class="codenumber">4</span> <span class="title">Non-Zero-Sum Games</span></a><ul>
 <li><a href="Intrononzero.html" data-scroll="Intrononzero">Introduction to Two-Player Non-Zero-Sum Games</a></li>
 <li><a href="pdandchicken.html" data-scroll="pdandchicken" class="active">Prisoner's Dilemma and Chicken</a></li>
 <li><a href="S_CWPD.html" data-scroll="S_CWPD">A Class-Wide Experiment</a></li>
@@ -115,29 +139,29 @@ MathJax.Hub.Config({
 <li><a href="S_RepeatPD.html" data-scroll="S_RepeatPD">Repeated Prisoner's Dilemma</a></li>
 <li><a href="S_PopPD.html" data-scroll="S_PopPD">Popular Culture: Prisoner's Dilemma and Chicken</a></li>
 </ul>
-<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
-<ul>
-<li><a href="references-1.html" data-scroll="references-1">References</a></li>
-<li><a href="index-1.html" data-scroll="index-1">Index</a></li>
-<li><a href="colophon-2.html" data-scroll="colophon-2">Colophon</a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</li>
+<li class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">References</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="mathbook-content"><section class="section" id="pdandchicken"><h2 class="heading hide-type">
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="pdandchicken"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.2</span> <span class="title">Prisoner's Dilemma and Chicken</span>
 </h2>
-<a href="pdandchicken.html" class="permalink">¶</a><p id="p-673">Before getting any further into non-zero-sum games, let's recall some key ideas about zero-sum games. </p>
+<a href="pdandchicken.html" class="permalink">¶</a><p id="p-672">Before getting any further into non-zero-sum games, let's recall some key ideas about zero-sum games.</p>
 <ul class="disc">
-<li id="li-162"><p id="p-674">If a zero-sum game has an equilibrium point, then repeating the game does not affect how the players will play.</p></li>
-<li id="li-163"><p id="p-675">If a zero-sum game has more that one equilibrium point then the values of the equilibrium points are the same.</p></li>
-<li id="li-164"><p id="p-676">In a zero-sum game, we can find mixed strategy equilibrium points using the graphical method or the expected value method.</p></li>
-<li id="li-165"><p id="p-677">In a zero-sum game, a player never benefits from communicating her strategy to her opponent.</p></li>
+<li id="li-160"><p id="p-673">If a zero-sum game has an equilibrium point, then repeating the game does not affect how the players will play.</p></li>
+<li id="li-161"><p id="p-674">If a zero-sum game has more that one equilibrium point then the values of the equilibrium points are the same.</p></li>
+<li id="li-162"><p id="p-675">In a zero-sum game, we can find mixed strategy equilibrium points using the graphical method or the expected value method.</p></li>
+<li id="li-163"><p id="p-676">In a zero-sum game, a player never benefits from communicating her strategy to her opponent.</p></li>
 </ul>
-<p id="p-678">Hopefully, in the last section you saw that non-zero-sum games can differ on all of the above!</p>
-<article class="example-like" id="E_simplenonzero"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">4.2.1</span> <span class="title">A \(2\times 2\) Non-Zero Sum Game</span>
+<p id="p-677">Hopefully, in the last section you saw that non-zero-sum games can differ on all of the above!</p>
+<article class="example example-like" id="E_simplenonzero"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">A \(2\times 2\) Non-Zero Sum Game.</span>
 </h6>
-<p id="p-679">Let's consider the game given by <a knowl="./knowl/T_simplenonzero.html" title="Table 4.2.2">Table 4.2.2</a>.</p>
-<figure class="figure-like" id="T_simplenonzero"><table>
+<p id="p-678">Let's consider the game given by <a class="xref" data-knowl="./knowl/T_simplenonzero.html" title="Table 4.2.2: A non-zero sum example">Table 4.2.2</a>.</p>
+<figure class="table figure-like" id="T_simplenonzero"><table>
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines"><em class="emphasis">C</em></td>
@@ -154,31 +178,31 @@ MathJax.Hub.Config({
 <td class="c m b0 r0 l0 t0 lines">(0, 0)</td>
 </tr>
 </table>
-<figcaption><span class="type">Table</span> <span class="codenumber">4.2.2</span> A non-zero sum example</figcaption></figure></article><article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_simplenzero" id="E_simplenzero"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">4.2.3</span> <span class="title">Not zero-sum</span>
-</h6></a></article><div id="hk-E_simplenzero" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-680">Check that this is NOT a zero-sum game.</p></article></div>
-<p id="p-681">Even with non-zero-sum games, it is helpful to start by finding any equilibrium points.</p>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_simplefindequil" id="E_simplefindequil"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">4.2.4</span> <span class="title">Equilibrium points</span>
-</h6></a></article><div id="hk-E_simplefindequil" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-682">Using the “guess and check” method for finding equilibria, you should be able to determine that <a knowl="./knowl/T_simplenonzero.html" title="Table 4.2.2">Table 4.2.2</a> has two equilibrium points. What are they?</p></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_simpleprefer" id="E_simpleprefer"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">4.2.5</span> <span class="title">Preference between equilibria</span>
-</h6></a></article><div id="hk-E_simpleprefer" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-683">As we saw in <a href="Intrononzero.html" class="xref" title="Section 4.1: Introduction to Two-Player Non-Zero-Sum Games">Section 4.1</a>, the equilibrium points in non-zero-sum games need not have the same values. Does Player 1 prefer one of the equilibria from <a knowl="./knowl/E_simplefindequil.html" title="Exercise 4.2.4: Equilibrium points">Exercise 4.2.4</a> over the other?</p></article></div>
-<p id="p-684">Since it is now possible for BOTH players to benefit at the same time, it might be a good idea for players to communicate with each other. For example, if Player 1 says that she will choose A no matter what, then it is in Player 2's best interest to choose D. If communication is allowed in the game, then we say the non-zero-sum game is <em class="emphasis">cooperative</em>. If no communication is allowed, we say it is <em class="emphasis">non-cooperative</em>.</p>
-<p id="p-685">We saw in <a href="Intrononzero.html" class="xref" title="Section 4.1: Introduction to Two-Player Non-Zero-Sum Games">Section 4.1</a>, that our methods for analyzing zero-sum games do not work very well on non-zero-sum games. Let's look a little closer at this.</p>
-<p id="p-686">If we apply the graphical method for Player 1 to the above game, we get that Player 1 should play a (1/3, 2/3) mixed strategy for an expected payoff of 10/3. Similarly we can determine that Player 2 should play a (2/3, 1/3) mixed strategy for an expected payoff of 10/3. Recall we developed this strategy as a “super defensive” strategy. But are our players motivated to play as defensively in a non-zero-sum game? Not necessarily! It is no longer true that Player 2 needs to keep Player 1 from gaining!</p>
-<p id="p-687">Now suppose, Player 1 plays the (1/3, 2/3) strategy. Then the expected payoff to Player 2 for playing pure strategy C, \(E_2(C)\text{,}\) is 20/3; and the expected payoff to Player 2 for playing pure strategy D, \(E_2(D)\text{,}\) is 5/3. Thus Player 2 prefers C over D. But if Player 2 plays only C, then Player 1 should abandon her (1/3, 2/3) strategy and just play B! This results in the payoff vector (5, 10). Notice, that now the expected value for Player 1 is 5, which is better than 10/3! Again, since Player 2 is not trying to keep Player 1 from gaining, there is no reason to apply the maximin strategy to non-zero-sum games. Similarly, we don't want to apply the expected value solution since Player 1 does not care if Player 2's expected values are equal. Each player only cares about his or her own payoff, not the payoff of the other player.</p>
-<p id="p-688">OK, so now, how do we analyze these games?</p>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_conjgeneralstrat" id="E_conjgeneralstrat"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">4.2.6</span> <span class="title">Conjecture a strategy</span>
-</h6></a></article><div id="hk-E_conjgeneralstrat" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-689">What are some possible strategies for each player? Might some strategies depend on what a player knows about her opponent?</p></article></div>
-<p id="p-690">Can you see that some of the analysis might be better understood with psychology than with mathematics?</p>
-<p id="p-691">In order to better understand non-zero-sum games we look at two classic games.</p>
-<article class="example-like" id="E_PrisonersDilemma"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">4.2.7</span> <span class="title">Prisoner's Dilemma</span>
+<figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.2.2<span class="period">.</span></span><span class="space"> </span>A non-zero sum example</figcaption></figure></article><article class="exercise exercise-like" id="E_simplenzero"><a data-knowl="" class="id-ref original" data-refid="hk-E_simplenzero"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">4.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Not zero-sum.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_simplenzero"><article class="exercise exercise-like"><p id="p-679">Check that this is NOT a zero-sum game.</p></article></div>
+<p id="p-680">Even with non-zero-sum games, it is helpful to start by finding any equilibrium points.</p>
+<article class="exercise exercise-like" id="E_simplefindequil"><a data-knowl="" class="id-ref original" data-refid="hk-E_simplefindequil"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">4.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Equilibrium points.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_simplefindequil"><article class="exercise exercise-like"><p id="p-681">Using the “guess and check” method for finding equilibria, you should be able to determine that <a class="xref" data-knowl="./knowl/T_simplenonzero.html" title="Table 4.2.2: A non-zero sum example">Table 4.2.2</a> has two equilibrium points. What are they?</p></article></div>
+<article class="exercise exercise-like" id="E_simpleprefer"><a data-knowl="" class="id-ref original" data-refid="hk-E_simpleprefer"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">4.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Preference between equilibria.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_simpleprefer"><article class="exercise exercise-like"><p id="p-682">As we saw in <a href="Intrononzero.html" class="internal" title="Section 4.1: Introduction to Two-Player Non-Zero-Sum Games">Section 4.1</a>, the equilibrium points in non-zero-sum games need not have the same values. Does Player 1 prefer one of the equilibria from <a class="xref" data-knowl="./knowl/E_simplefindequil.html" title="Exercise 4.2.4: Equilibrium points">Exercise 4.2.4</a> over the other?</p></article></div>
+<p id="p-683">Since it is now possible for BOTH players to benefit at the same time, it might be a good idea for players to communicate with each other. For example, if Player 1 says that she will choose A no matter what, then it is in Player 2's best interest to choose D. If communication is allowed in the game, then we say the non-zero-sum game is <em class="emphasis">cooperative</em>. If no communication is allowed, we say it is <em class="emphasis">non-cooperative</em>.</p>
+<p id="p-684">We saw in <a href="Intrononzero.html" class="internal" title="Section 4.1: Introduction to Two-Player Non-Zero-Sum Games">Section 4.1</a>, that our methods for analyzing zero-sum games do not work very well on non-zero-sum games. Let's look a little closer at this.</p>
+<p id="p-685">If we apply the graphical method for Player 1 to the above game, we get that Player 1 should play a (1/3, 2/3) mixed strategy for an expected payoff of 10/3. Similarly we can determine that Player 2 should play a (2/3, 1/3) mixed strategy for an expected payoff of 10/3. Recall we developed this strategy as a “super defensive” strategy. But are our players motivated to play as defensively in a non-zero-sum game? Not necessarily! It is no longer true that Player 2 needs to keep Player 1 from gaining!</p>
+<p id="p-686">Now suppose, Player 1 plays the (1/3, 2/3) strategy. Then the expected payoff to Player 2 for playing pure strategy C, \(E_2(C)\text{,}\) is 20/3; and the expected payoff to Player 2 for playing pure strategy D, \(E_2(D)\text{,}\) is 5/3. Thus Player 2 prefers C over D. But if Player 2 plays only C, then Player 1 should abandon her (1/3, 2/3) strategy and just play B! This results in the payoff vector (5, 10). Notice, that now the expected value for Player 1 is 5, which is better than 10/3! Again, since Player 2 is not trying to keep Player 1 from gaining, there is no reason to apply the maximin strategy to non-zero-sum games. Similarly, we don't want to apply the expected value solution since Player 1 does not care if Player 2's expected values are equal. Each player only cares about his or her own payoff, not the payoff of the other player.</p>
+<p id="p-687">OK, so now, how do we analyze these games?</p>
+<article class="exercise exercise-like" id="E_conjgeneralstrat"><a data-knowl="" class="id-ref original" data-refid="hk-E_conjgeneralstrat"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">4.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">Conjecture a strategy.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_conjgeneralstrat"><article class="exercise exercise-like"><p id="p-688">What are some possible strategies for each player? Might some strategies depend on what a player knows about her opponent?</p></article></div>
+<p id="p-689">Can you see that some of the analysis might be better understood with psychology than with mathematics?</p>
+<p id="p-690">In order to better understand non-zero-sum games we look at two classic games.</p>
+<article class="example example-like" id="E_PrisonersDilemma"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">Prisoner's Dilemma.</span>
 </h6>
-<p id="p-692">Two partners in crime are arrested for burglary and sent to separate rooms. They are each offered a deal: if they confess and rat on their partner, they will receive a reduced sentence. So if one confesses and the other doesn't, the confessor only gets 3 months in prison, while the partner serves 10 years. If both confess, then they each get 8 years. However, if neither confess, there isn't enough evidence, and each gets just one year. We can represent the situation with the matrix in <a knowl="./knowl/T_PrisonersDilemma.html" title="Table 4.2.8">Table 4.2.8</a>.</p>
-<figure class="figure-like" id="T_PrisonersDilemma"><table>
+<p id="p-691">Two partners in crime are arrested for burglary and sent to separate rooms. They are each offered a deal: if they confess and rat on their partner, they will receive a reduced sentence. So if one confesses and the other doesn't, the confessor only gets 3 months in prison, while the partner serves 10 years. If both confess, then they each get 8 years. However, if neither confess, there isn't enough evidence, and each gets just one year. We can represent the situation with the matrix in <a class="xref" data-knowl="./knowl/T_PrisonersDilemma.html" title="Table 4.2.8: The Prisoner's Dilemma (years in prison).">Table 4.2.8</a>.</p>
+<figure class="table figure-like" id="T_PrisonersDilemma"><table>
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
@@ -203,36 +227,36 @@ MathJax.Hub.Config({
 <td class="c m b1 r1 l0 t0 lines">\((1, 1)\)</td>
 </tr>
 </table>
-<figcaption><span class="type">Table</span> <span class="codenumber">4.2.8</span> The Prisoner's Dilemma (years in prison).</figcaption></figure></article><p id="p-693">Since this game, as presented, is probably only playerd once, we can begin by looking for dominated strategies and equilibrium points.</p>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_PDdomstrat" id="E_PDdomstrat"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">4.2.9</span> <span class="title">Dominated strategies</span>
-</h6></a></article><div id="hk-E_PDdomstrat" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-694">Does the matrix in <a knowl="./knowl/T_PrisonersDilemma.html" title="Table 4.2.8">Table 4.2.8</a> have any dominated strategies for Player 1? Does it have any dominated strategies for Player 2? Keep in mind that a prisoner prefers smaller numbers since prison time is bad.</p></article></div>
-<p id="p-695">If you were to be one of the prisoners, what would you do? Do you think everyone would do that, too? What would our perfectly rational player do? Would your strategy change if you are allowed to communicate? We examine some of these questions in the next few exercises.</p>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_PDbeststrat" id="E_PDbeststrat"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">4.2.10</span> <span class="title">A prisoner's strategy</span>
-</h6></a></article><div id="hk-E_PDbeststrat" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-696">Suppose you are Prisoner 1. What should you do? Why? Suppose you are Prisoner 2. What should you do? Why? Does your choice of strategies result in an equilibrium pair?</p></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_PDbestforall" id="E_PDbestforall"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">4.2.11</span> <span class="title">The best outcome</span>
-</h6></a></article><div id="hk-E_PDbestforall" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-697">Looking at the game as an outsider, what strategy pair is the best option for both prisoners.</p></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_PDsamedecision" id="E_PDsamedecision"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">4.2.12</span> <span class="title">Two rational prisoners</span>
-</h6></a></article><div id="hk-E_PDsamedecision" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-698">Now suppose both prisoners are perfectly rational, so that any decision Prisoner 1 makes would also be the decision Prisoner 2 makes. Further, suppose both prisoners know that their opponent is perfectly rational. What should each prisoner do?</p></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_PDrandomP2" id="E_PDrandomP2"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">4.2.13</span> <span class="title">A crazy prisoner</span>
-</h6></a></article><div id="hk-E_PDrandomP2" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-699">Suppose Prisoner 2 is crazy and is likely to confess with 50/50 chance. What should Prisoner 1 do? Does it change if he confesses with a 75% chance? What if he confesses with a 25% chance.</p></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_PDcommunicate" id="E_PDcommunicate"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">4.2.14</span> <span class="title">Communication between prisoners</span>
-</h6></a></article><div id="hk-E_PDcommunicate" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-700">Suppose the prisoners are able to communicate about their strategy. How might this affect what they choose to do?</p></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_PDdilemma" id="E_PDdilemma"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">4.2.15</span> <span class="title">The dilemma</span>
-</h6></a></article><div id="hk-E_PDdilemma" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-701">Explain why this is a “dilemma” for the prisoners. Is it likely they will chose a strategy which leads to the best outcome for both? You might want to consider whether there are dominated strategies.</p></article></div>
-<p id="p-702">You should now have some idea about why we call this game a dilemma, since the players may in fact have difficulty deciding on whether to confess or not. Even two perfectly rational players may not be able to get the best payoff.</p>
-<p id="p-703">We now turn to another classic example. We can ask similar qustions about Chicken that we ask about Prisoner's Dilemma.</p>
-<article class="example-like" id="E_Chicken"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">4.2.16</span> <span class="title">Chicken</span>
+<figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.2.8<span class="period">.</span></span><span class="space"> </span>The Prisoner's Dilemma (years in prison).</figcaption></figure></article><p id="p-692">Since this game, as presented, is probably only playerd once, we can begin by looking for dominated strategies and equilibrium points.</p>
+<article class="exercise exercise-like" id="E_PDdomstrat"><a data-knowl="" class="id-ref original" data-refid="hk-E_PDdomstrat"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">4.2.9</span><span class="period">.</span><span class="space"> </span><span class="title">Dominated strategies.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_PDdomstrat"><article class="exercise exercise-like"><p id="p-693">Does the matrix in <a class="xref" data-knowl="./knowl/T_PrisonersDilemma.html" title="Table 4.2.8: The Prisoner's Dilemma (years in prison).">Table 4.2.8</a> have any dominated strategies for Player 1? Does it have any dominated strategies for Player 2? Keep in mind that a prisoner prefers smaller numbers since prison time is bad.</p></article></div>
+<p id="p-694">If you were to be one of the prisoners, what would you do? Do you think everyone would do that, too? What would our perfectly rational player do? Would your strategy change if you are allowed to communicate? We examine some of these questions in the next few exercises.</p>
+<article class="exercise exercise-like" id="E_PDbeststrat"><a data-knowl="" class="id-ref original" data-refid="hk-E_PDbeststrat"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">4.2.10</span><span class="period">.</span><span class="space"> </span><span class="title">A prisoner's strategy.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_PDbeststrat"><article class="exercise exercise-like"><p id="p-695">Suppose you are Prisoner 1. What should you do? Why? Suppose you are Prisoner 2. What should you do? Why? Does your choice of strategies result in an equilibrium pair?</p></article></div>
+<article class="exercise exercise-like" id="E_PDbestforall"><a data-knowl="" class="id-ref original" data-refid="hk-E_PDbestforall"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">4.2.11</span><span class="period">.</span><span class="space"> </span><span class="title">The best outcome.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_PDbestforall"><article class="exercise exercise-like"><p id="p-696">Looking at the game as an outsider, what strategy pair is the best option for both prisoners.</p></article></div>
+<article class="exercise exercise-like" id="E_PDsamedecision"><a data-knowl="" class="id-ref original" data-refid="hk-E_PDsamedecision"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">4.2.12</span><span class="period">.</span><span class="space"> </span><span class="title">Two rational prisoners.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_PDsamedecision"><article class="exercise exercise-like"><p id="p-697">Now suppose both prisoners are perfectly rational, so that any decision Prisoner 1 makes would also be the decision Prisoner 2 makes. Further, suppose both prisoners know that their opponent is perfectly rational. What should each prisoner do?</p></article></div>
+<article class="exercise exercise-like" id="E_PDrandomP2"><a data-knowl="" class="id-ref original" data-refid="hk-E_PDrandomP2"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">4.2.13</span><span class="period">.</span><span class="space"> </span><span class="title">A crazy prisoner.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_PDrandomP2"><article class="exercise exercise-like"><p id="p-698">Suppose Prisoner 2 is crazy and is likely to confess with 50/50 chance. What should Prisoner 1 do? Does it change if he confesses with a 75% chance? What if he confesses with a 25% chance.</p></article></div>
+<article class="exercise exercise-like" id="E_PDcommunicate"><a data-knowl="" class="id-ref original" data-refid="hk-E_PDcommunicate"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">4.2.14</span><span class="period">.</span><span class="space"> </span><span class="title">Communication between prisoners.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_PDcommunicate"><article class="exercise exercise-like"><p id="p-699">Suppose the prisoners are able to communicate about their strategy. How might this affect what they choose to do?</p></article></div>
+<article class="exercise exercise-like" id="E_PDdilemma"><a data-knowl="" class="id-ref original" data-refid="hk-E_PDdilemma"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">4.2.15</span><span class="period">.</span><span class="space"> </span><span class="title">The dilemma.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_PDdilemma"><article class="exercise exercise-like"><p id="p-700">Explain why this is a “dilemma” for the prisoners. Is it likely they will chose a strategy which leads to the best outcome for both? You might want to consider whether there are dominated strategies.</p></article></div>
+<p id="p-701">You should now have some idea about why we call this game a dilemma, since the players may in fact have difficulty deciding on whether to confess or not. Even two perfectly rational players may not be able to get the best payoff.</p>
+<p id="p-702">We now turn to another classic example. We can ask similar qustions about Chicken that we ask about Prisoner's Dilemma.</p>
+<article class="example example-like" id="E_Chicken"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.16</span><span class="period">.</span><span class="space"> </span><span class="title">Chicken.</span>
 </h6>
-<p id="p-704">Two drivers drive towards each other. If one driver swerves, he is considered a “chicken.” If a driver doesn't swerve (drives straight), he is considered the winner. Of course if neither swerves, they crash and neither wins. A possible payoff matrix for this game is given in <a knowl="./knowl/T_chicken.html" title="Table 4.2.17">Table 4.2.17</a>.</p>
-<figure class="figure-like" id="T_chicken"><table>
+<p id="p-703">Two drivers drive towards each other. If one driver swerves, he is considered a “chicken.” If a driver doesn't swerve (drives straight), he is considered the winner. Of course if neither swerves, they crash and neither wins. A possible payoff matrix for this game is given in <a class="xref" data-knowl="./knowl/T_chicken.html" title="Table 4.2.17: The game of Chicken.">Table 4.2.17</a>.</p>
+<figure class="table figure-like" id="T_chicken"><table>
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
@@ -257,33 +281,43 @@ MathJax.Hub.Config({
 <td class="c m b1 r1 l0 t0 lines">\((-100, -100)\)</td>
 </tr>
 </table>
-<figcaption><span class="type">Table</span> <span class="codenumber">4.2.17</span> The game of Chicken.</figcaption></figure></article><p id="p-705">Again, since this game as presented is probably only playerd once, we can begin by looking for dominated strategies and equilibrium points.</p>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_Cdomstrat" id="E_Cdomstrat"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">4.2.18</span> <span class="title">Dominated strategies</span>
-</h6></a></article><div id="hk-E_Cdomstrat" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-706">Does the Chicken game in <a knowl="./knowl/T_chicken.html" title="Table 4.2.17">Table 4.2.17</a> have any dominated strategies?</p></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_Cbestoutcome" id="E_Cbestoutcome"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">4.2.19</span> <span class="title">The best outcome</span>
-</h6></a></article><div id="hk-E_Cbestoutcome" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-707">What strategy results in the best outcome for Driver 1? What strategy results in the best outcome for Driver 2? What happens if they both choose that strategy?</p></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_Cequilpairs" id="E_Cequilpairs"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">4.2.20</span> <span class="title">Equilibrium points</span>
-</h6></a></article><div id="hk-E_Cequilpairs" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-708">Consider the strategy pair with outcome \((-1, 10)\text{.}\) Does Driver 1 have any regrets about his choice? What about Driver 2? Is this an equilibrium point? Are there any other points in which neither driver would regret his or her choice?</p></article></div>
-<p id="p-709">If you were to be one of the drivers, what would you do? Do you think everyone would do that, too? What would our perfectly rational player do? Would your strategy change if you are allowed to communicate? We examine some of these questions in the next few exercises.</p>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_Cbeststrat" id="E_Cbeststrat"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">4.2.21</span> <span class="title">A driver's strategy</span>
-</h6></a></article><div id="hk-E_Cbeststrat" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-710">Can you determine what each driver should do in Chicken? If so, does this result in an equilibrium pair?</p></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_Csamestrat" id="E_Csamestrat"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">4.2.22</span> <span class="title">Two rational drivers</span>
-</h6></a></article><div id="hk-E_Csamestrat" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-711">Now suppose both drivers in the game of Chicken are perfectly rational, so that any decision Driver 1 makes would also be the decision Driver 2 makes. Further, suppose both drivers know that their opponent is perfectly rational. What should each driver do?</p></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_Crandom" id="E_Crandom"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">4.2.23</span> <span class="title">A remote control driver</span>
-</h6></a></article><div id="hk-E_Crandom" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-712">Suppose Driver 2 is a remote control dummy and will swerve or drive straight with a 50/50 chance. What should Driver 1 do? Does it change if the remote contro dummy swerves with 75% chance?</p></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_Ccommunicate" id="E_Ccommunicate"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">4.2.24</span> <span class="title">Communication between drivers</span>
-</h6></a></article><div id="hk-E_Ccommunicate" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-713">Can it benefit drivers in the game of Chicken to communicate about their strategy? Explain.</p></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_comparePDC" id="E_comparePDC"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">4.2.25</span> <span class="title">Compare games</span>
-</h6></a></article><div id="hk-E_comparePDC" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-714">Compare Prisoner's Dilemma and Chicken. Are there dominated strategies in both games? Are there equilibrium pairs? Are players likely to reach the optimal payoff for one player, both players, or neither player? Does a player's choice depend on what he knows about his opponent (perfectly rational or perfectly random)?</p></article></div>
-<p id="p-715">Both Prisoner's Dilemma and Chicken are models of games where we describe the choice of strategy as “Cooperate” and “Defect”. In Prisoner's Dilemma, we think of “cooperating” as cooperating with the other player, and “defecting” as turning against the other player. So if both players cooperate (with each other, not the police), they will get the higher payoff of only one year in prison. They defect by ratting on each other. In Chicken, players cooperate by swerving and defect by driving straight. Using the examples of Prisoner's Dilemma and Chicken, think about how these games can model other everyday interactions where you could describe your choices as cooperating and defecting. The remainder of the chapter looks more closely at situations where players can cooperate or defect.</p></section></div></main>
+<figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.2.17<span class="period">.</span></span><span class="space"> </span>The game of Chicken.</figcaption></figure></article><p id="p-704">Again, since this game as presented is probably only playerd once, we can begin by looking for dominated strategies and equilibrium points.</p>
+<article class="exercise exercise-like" id="E_Cdomstrat"><a data-knowl="" class="id-ref original" data-refid="hk-E_Cdomstrat"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">4.2.18</span><span class="period">.</span><span class="space"> </span><span class="title">Dominated strategies.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_Cdomstrat"><article class="exercise exercise-like"><p id="p-705">Does the Chicken game in <a class="xref" data-knowl="./knowl/T_chicken.html" title="Table 4.2.17: The game of Chicken.">Table 4.2.17</a> have any dominated strategies?</p></article></div>
+<article class="exercise exercise-like" id="E_Cbestoutcome"><a data-knowl="" class="id-ref original" data-refid="hk-E_Cbestoutcome"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">4.2.19</span><span class="period">.</span><span class="space"> </span><span class="title">The best outcome.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_Cbestoutcome"><article class="exercise exercise-like"><p id="p-706">What strategy results in the best outcome for Driver 1? What strategy results in the best outcome for Driver 2? What happens if they both choose that strategy?</p></article></div>
+<article class="exercise exercise-like" id="E_Cequilpairs"><a data-knowl="" class="id-ref original" data-refid="hk-E_Cequilpairs"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">4.2.20</span><span class="period">.</span><span class="space"> </span><span class="title">Equilibrium points.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_Cequilpairs"><article class="exercise exercise-like"><p id="p-707">Consider the strategy pair with outcome \((-1, 10)\text{.}\) Does Driver 1 have any regrets about his choice? What about Driver 2? Is this an equilibrium point? Are there any other points in which neither driver would regret his or her choice?</p></article></div>
+<p id="p-708">If you were to be one of the drivers, what would you do? Do you think everyone would do that, too? What would our perfectly rational player do? Would your strategy change if you are allowed to communicate? We examine some of these questions in the next few exercises.</p>
+<article class="exercise exercise-like" id="E_Cbeststrat"><a data-knowl="" class="id-ref original" data-refid="hk-E_Cbeststrat"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">4.2.21</span><span class="period">.</span><span class="space"> </span><span class="title">A driver's strategy.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_Cbeststrat"><article class="exercise exercise-like"><p id="p-709">Can you determine what each driver should do in Chicken? If so, does this result in an equilibrium pair?</p></article></div>
+<article class="exercise exercise-like" id="E_Csamestrat"><a data-knowl="" class="id-ref original" data-refid="hk-E_Csamestrat"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">4.2.22</span><span class="period">.</span><span class="space"> </span><span class="title">Two rational drivers.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_Csamestrat"><article class="exercise exercise-like"><p id="p-710">Now suppose both drivers in the game of Chicken are perfectly rational, so that any decision Driver 1 makes would also be the decision Driver 2 makes. Further, suppose both drivers know that their opponent is perfectly rational. What should each driver do?</p></article></div>
+<article class="exercise exercise-like" id="E_Crandom"><a data-knowl="" class="id-ref original" data-refid="hk-E_Crandom"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">4.2.23</span><span class="period">.</span><span class="space"> </span><span class="title">A remote control driver.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_Crandom"><article class="exercise exercise-like"><p id="p-711">Suppose Driver 2 is a remote control dummy and will swerve or drive straight with a 50/50 chance. What should Driver 1 do? Does it change if the remote contro dummy swerves with 75% chance?</p></article></div>
+<article class="exercise exercise-like" id="E_Ccommunicate"><a data-knowl="" class="id-ref original" data-refid="hk-E_Ccommunicate"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">4.2.24</span><span class="period">.</span><span class="space"> </span><span class="title">Communication between drivers.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_Ccommunicate"><article class="exercise exercise-like"><p id="p-712">Can it benefit drivers in the game of Chicken to communicate about their strategy? Explain.</p></article></div>
+<article class="exercise exercise-like" id="E_comparePDC"><a data-knowl="" class="id-ref original" data-refid="hk-E_comparePDC"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">4.2.25</span><span class="period">.</span><span class="space"> </span><span class="title">Compare games.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_comparePDC"><article class="exercise exercise-like"><p id="p-713">Compare Prisoner's Dilemma and Chicken. Are there dominated strategies in both games? Are there equilibrium pairs? Are players likely to reach the optimal payoff for one player, both players, or neither player? Does a player's choice depend on what he knows about his opponent (perfectly rational or perfectly random)?</p></article></div>
+<p id="p-714">Both Prisoner's Dilemma and Chicken are models of games where we describe the choice of strategy as “Cooperate” and “Defect”. In Prisoner's Dilemma, we think of “cooperating” as cooperating with the other player, and “defecting” as turning against the other player. So if both players cooperate (with each other, not the police), they will get the higher payoff of only one year in prison. They defect by ratting on each other. In Chicken, players cooperate by swerving and defect by driving straight. Using the examples of Prisoner's Dilemma and Chicken, think about how these games can model other everyday interactions where you could describe your choices as cooperating and defecting. The remainder of the chapter looks more closely at situations where players can cooperate or defect.</p></section></div></main>
 </div>
+<!--Start: StatCounter code--><script>
+var sc_project=11588994;
+var sc_invisible=1;
+var sc_security="ed2110b7";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/11588994/0/ed2110b7/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.13/login.js"></script>
 </body>
 </html>

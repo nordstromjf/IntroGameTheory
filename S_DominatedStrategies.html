@@ -2,7 +2,7 @@
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
 <!--*                                    *-->
-<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
 <!--**************************************-->
 <html lang="en-US">
@@ -11,13 +11,19 @@
 <title>Dominated Strategies</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
-        inlineMath: [['\\(','\\)']],
+        inlineMath: [['\\(','\\)']]
     },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -34,13 +40,27 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
-<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.13;
+</script>
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\MyTikzmark}[2]{
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{\MyTikzmark}[2]{
      \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
 \newcommand{\DrawVLine}[3][]{
   \begin{tikzpicture}[overlay,remember picture]
@@ -58,7 +78,7 @@ MathJax.Hub.Config({
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="" target="_blank"><img src="images/image-1.svg" alt="Logo image"></a><div class="title-container">
-<h1 class="heading"><a href="index.html"><span class="title">Introduction to Game Theory: a Discovery Approach</span></a></h1>
+<h1 class="heading"><a href="book-1.html"><span class="title">Introduction to Game Theory:</span> <span class="subtitle">a Discovery Approach</span></a></h1>
 <p class="byline">Jennifer Firkins Nordstrom</p>
 </div>
 </div></div>
@@ -67,25 +87,27 @@ MathJax.Hub.Config({
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
 <a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_IntroZeroSum.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-2.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_Probability.html" title="Next">Next</a></span>
 </div>
-<button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
 <button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_IntroZeroSum.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-2.html" title="Up">Up</a><a class="next-button button toolbar-item" href="S_Probability.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
-<ul>
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
 </ul>
-<h2 class="link"><a href="chapter-1.html" data-scroll="chapter-1"><span class="codenumber">1</span> <span class="title punctuated">What is Game Theory?</span></a></h2>
-<ul>
+</li>
+<li class="link">
+<a href="chapter-1.html" data-scroll="chapter-1"><span class="codenumber">1</span> <span class="title">What is Game Theory?</span></a><ul>
 <li><a href="S_intro.html" data-scroll="S_intro">Players and Strategies</a></li>
 <li><a href="S_IntroMatrices.html" data-scroll="S_IntroMatrices">Game Matrices and Payoff Vectors</a></li>
 </ul>
-<h2 class="link"><a href="chapter-2.html" data-scroll="chapter-2"><span class="codenumber">2</span> <span class="title">Two-Person Zero-Sum Games</span></a></h2>
-<ul>
+</li>
+<li class="link">
+<a href="chapter-2.html" data-scroll="chapter-2"><span class="codenumber">2</span> <span class="title">Two-Person Zero-Sum Games</span></a><ul>
 <li><a href="S_IntroZeroSum.html" data-scroll="S_IntroZeroSum">Introduction to Two-Person Zero-Sum Games</a></li>
 <li><a href="S_DominatedStrategies.html" data-scroll="S_DominatedStrategies" class="active">Dominated Strategies</a></li>
 <li><a href="S_Probability.html" data-scroll="S_Probability">Probability and Expected Value</a></li>
@@ -94,8 +116,9 @@ MathJax.Hub.Config({
 <li><a href="S_ZeroSumStrategySummary.html" data-scroll="S_ZeroSumStrategySummary">Strategies for Zero-Sum Games and Equilibrium Points</a></li>
 <li><a href="S_PopRationality.html" data-scroll="S_PopRationality">Popular Culture: Rationality and Perfect Information</a></li>
 </ul>
-<h2 class="link"><a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span> <span class="title">Repeated Two-Person Zero-sum Games</span></a></h2>
-<ul>
+</li>
+<li class="link">
+<a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span> <span class="title">Repeated Two-Person Zero-sum Games</span></a><ul>
 <li><a href="S_IntroRepeated.html" data-scroll="S_IntroRepeated">Introduction to Repeated Games</a></li>
 <li><a href="S_MixStratGraph.html" data-scroll="S_MixStratGraph">Mixed Strategies: Graphical Solution</a></li>
 <li><a href="S_solvingeq.html" data-scroll="S_solvingeq">Using Sage to Graph Lines and Solve Equations</a></li>
@@ -104,8 +127,9 @@ MathJax.Hub.Config({
 <li><a href="S_AugMatrices.html" data-scroll="S_AugMatrices">Augmented Matrices</a></li>
 <li><a href="S_Undercut.html" data-scroll="S_Undercut">Undercut</a></li>
 </ul>
-<h2 class="link"><a href="chapter-4.html" data-scroll="chapter-4"><span class="codenumber">4</span> <span class="title">Non-Zero-Sum Games</span></a></h2>
-<ul>
+</li>
+<li class="link">
+<a href="chapter-4.html" data-scroll="chapter-4"><span class="codenumber">4</span> <span class="title">Non-Zero-Sum Games</span></a><ul>
 <li><a href="Intrononzero.html" data-scroll="Intrononzero">Introduction to Two-Player Non-Zero-Sum Games</a></li>
 <li><a href="pdandchicken.html" data-scroll="pdandchicken">Prisoner's Dilemma and Chicken</a></li>
 <li><a href="S_CWPD.html" data-scroll="S_CWPD">A Class-Wide Experiment</a></li>
@@ -115,22 +139,22 @@ MathJax.Hub.Config({
 <li><a href="S_RepeatPD.html" data-scroll="S_RepeatPD">Repeated Prisoner's Dilemma</a></li>
 <li><a href="S_PopPD.html" data-scroll="S_PopPD">Popular Culture: Prisoner's Dilemma and Chicken</a></li>
 </ul>
-<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
-<ul>
-<li><a href="references-1.html" data-scroll="references-1">References</a></li>
-<li><a href="index-1.html" data-scroll="index-1">Index</a></li>
-<li><a href="colophon-2.html" data-scroll="colophon-2">Colophon</a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</li>
+<li class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">References</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="mathbook-content"><section class="section" id="S_DominatedStrategies"><h2 class="heading hide-type">
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="S_DominatedStrategies"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.2</span> <span class="title">Dominated Strategies</span>
 </h2>
 <a href="S_DominatedStrategies.html" class="permalink">¶</a><p id="p-150">Recall that in a zero-sum game, we know that one player's win is the other player's loss. Furthermore, we know we can rewrite any zero-sum game so that the player's payoffs are in the form \((a, -a)\text{.}\) Note, this works even if \(a\) is negative; in which case, \(-a\) is positive.</p>
-<article class="example-like" id="E_domstrat1"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">2.2.1</span> <span class="title">A Simpler Payoff Matrix</span>
+<article class="example example-like" id="E_domstrat1"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">A Simpler Payoff Matrix.</span>
 </h6>
-<p id="p-151">Consider the zero-sum game with payoff matrix in <a knowl="./knowl/T_smallexample.html" title="Table 2.2.2">Table 2.2.2</a>. Note that for simplicity our payoff matrix contains only the payoffs and not the strategy names; but Player 1 still chooses a row and Player 2 still chooses a column.</p>
-<figure class="figure-like" id="T_smallexample"><table>
+<p id="p-151">Consider the zero-sum game with payoff matrix in <a class="xref" data-knowl="./knowl/T_smallexample.html" title="Table 2.2.2: The payoff matrix for Example 2.2.1.">Table 2.2.2</a>. Note that for simplicity our payoff matrix contains only the payoffs and not the strategy names; but Player 1 still chooses a row and Player 2 still chooses a column.</p>
+<figure class="table figure-like" id="T_smallexample"><table>
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="c m b1 r0 l0 t0 lines" colspan="2">Player 2</td>
@@ -146,8 +170,8 @@ MathJax.Hub.Config({
 <td class="l m b1 r1 l0 t0 lines">\((-2, 2)\)</td>
 </tr>
 </table>
-<figcaption><span class="type">Table</span> <span class="codenumber">2.2.2</span> The payoff matrix for <a knowl="./knowl/E_domstrat1.html" title="Example 2.2.1: A Simpler Payoff Matrix">Example 2.2.1</a>.</figcaption></figure><p id="p-152">If we know we are playing a zero-sum game, then the use of ordered pairs seems somewhat redundant: If Player 1 wins 1, then we know that Player 2 must lose 1 (win \(-1\)). Thus, if we KNOW we are playing a zero-sum game, we can simplify our notation by just using Player 1's payoffs. The above matrix in <a knowl="./knowl/T_smallexample.html" title="Table 2.2.2">Table 2.2.2</a> can be simplified as in <a knowl="./knowl/T_smallexampleP1.html" title="Table 2.2.3">Table 2.2.3</a>.</p>
-<figure class="figure-like" id="T_smallexampleP1"><table>
+<figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.2<span class="period">.</span></span><span class="space"> </span>The payoff matrix for Example 2.2.1.</figcaption></figure><p id="p-152">If we know we are playing a zero-sum game, then the use of ordered pairs seems somewhat redundant: If Player 1 wins 1, then we know that Player 2 must lose 1 (win \(-1\)). Thus, if we KNOW we are playing a zero-sum game, we can simplify our notation by just using Player 1's payoffs. The above matrix in <a class="xref" data-knowl="./knowl/T_smallexample.html" title="Table 2.2.2: The payoff matrix for Example 2.2.1.">Table 2.2.2</a> can be simplified as in <a class="xref" data-knowl="./knowl/T_smallexampleP1.html" title="Table 2.2.3: The payoff matrix for Example 2.2.1 using only Player 1's payoffs.">Table 2.2.3</a>.</p>
+<figure class="table figure-like" id="T_smallexampleP1"><table>
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="c m b1 r0 l0 t0 lines" colspan="2">Player 2</td>
@@ -163,11 +187,11 @@ MathJax.Hub.Config({
 <td class="c m b1 r1 l0 t0 lines">-2</td>
 </tr>
 </table>
-<figcaption><span class="type">Table</span> <span class="codenumber">2.2.3</span> The payoff matrix for <a knowl="./knowl/E_domstrat1.html" title="Example 2.2.1: A Simpler Payoff Matrix">Example 2.2.1</a> using only Player 1's payoffs.</figcaption></figure></article><p id="p-153">When simplifying, keep a few things in mind: </p>
+<figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.3<span class="period">.</span></span><span class="space"> </span>The payoff matrix for Example 2.2.1 using only Player 1's payoffs.</figcaption></figure></article><p id="p-153">When simplifying, keep a few things in mind:</p>
 <ol class="decimal">
 <li id="li-63"><p id="p-154">You MUST know that the game is zero-sum.</p></li>
 <li id="li-64"><p id="p-155">If it is not otherwise specified, the payoffs represent Player 1's payoffs.</p></li>
-<li id="li-65"><p id="p-156">You can always give a similar matrix representing Player 2's payoffs. However, due to (2), you should indicate that the matrix is for Player 2. For example, Player 2's payoff matrix would be given by <a knowl="./knowl/T_smallexampleP2.html" title="Table 2.2.4">Table 2.2.4</a>. <figure class="figure-like" id="T_smallexampleP2"><table>
+<li id="li-65"><p id="p-156">You can always give a similar matrix representing Player 2's payoffs. However, due to (2), you should indicate that the matrix is for Player 2. For example, Player 2's payoff matrix would be given by <a class="xref" data-knowl="./knowl/T_smallexampleP2.html" title="Table 2.2.4: The payoff matrix for Example 2.2.1 using only Player 2's payoffs.">Table 2.2.4</a>. <figure class="table figure-like" id="T_smallexampleP2"><table>
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="c m b1 r0 l0 t0 lines" colspan="2">Player 2</td>
@@ -183,8 +207,8 @@ MathJax.Hub.Config({
 <td class="c m b1 r1 l0 t0 lines">2</td>
 </tr>
 </table>
-<figcaption><span class="type">Table</span> <span class="codenumber">2.2.4</span> The payoff matrix for <a knowl="./knowl/E_domstrat1.html" title="Example 2.2.1: A Simpler Payoff Matrix">Example 2.2.1</a> using only Player 2's payoffs.</figcaption></figure></p></li>
-<li id="li-66"><p id="p-157">Both players can make strategy decisions by considering only Player 1's payoff matrix. (Why?) Just to test this out, by looking only at the matrix in <a knowl="./knowl/T_smallexampleP1.html" title="Table 2.2.3">Table 2.2.3</a> determine which strategy each player should choose. <figure class="figure-like" id="table-17"><table>
+<figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.4<span class="period">.</span></span><span class="space"> </span>The payoff matrix for Example 2.2.1 using only Player 2's payoffs.</figcaption></figure></p></li>
+<li id="li-66"><p id="p-157">Both players can make strategy decisions by considering only Player 1's payoff matrix. (Why?) Just to test this out, by looking only at the matrix in <a class="xref" data-knowl="./knowl/T_smallexampleP1.html" title="Table 2.2.3: The payoff matrix for Example 2.2.1 using only Player 1's payoffs.">Table 2.2.3</a> determine which strategy each player should choose. <figure class="table figure-like" id="table-17"><table>
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="c m b1 r0 l0 t0 lines" colspan="2">Player 2</td>
@@ -200,15 +224,15 @@ MathJax.Hub.Config({
 <td class="c m b1 r1 l0 t0 lines">-2</td>
 </tr>
 </table>
-<figcaption><span class="type">Table</span> <span class="codenumber">2.2.5</span> Player 1's payoffs in <a knowl="./knowl/E_domstrat1.html" title="Example 2.2.1: A Simpler Payoff Matrix">Example 2.2.1</a>.</figcaption></figure></p></li>
+<figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.5<span class="period">.</span></span><span class="space"> </span>Player 1's payoffs in Example 2.2.1.</figcaption></figure></p></li>
 </ol>
 <p id="p-158">In this last example, it should be clear that Player 1 is looking for rows which give her the largest payoff. This is nothing new. However, Player 2 is now looking for columns which give Player 1 the SMALLEST payoff. (Why?)</p>
 <p id="p-159">Now that we have simplified our notation for zero-sum games, let's try to find a way to determine the best strategy for each player.</p>
-<article class="example-like" id="E_domstrat2"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">2.2.6</span> <span class="title">A \(2\times 3\) Game</span>
+<article class="example example-like" id="E_domstrat2"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">A \(2\times 3\) Game.</span>
 </h6>
-<p id="p-160">Consider the zero-sum game given in <a knowl="./knowl/T_biggerexampleP1.html" title="Table 2.2.7">Table 2.2.7</a>.</p>
-<figure class="figure-like" id="T_biggerexampleP1"><table>
+<p id="p-160">Consider the zero-sum game given in <a class="xref" data-knowl="./knowl/T_biggerexampleP1.html" title="Table 2.2.7: Payoff matrix for Example 2.2.6.">Table 2.2.7</a>.</p>
+<figure class="table figure-like" id="T_biggerexampleP1"><table>
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="c m b1 r0 l0 t0 lines" colspan="3">Player 2</td>
@@ -226,11 +250,11 @@ MathJax.Hub.Config({
 <td class="c m b1 r1 l0 t0 lines">2</td>
 </tr>
 </table>
-<figcaption><span class="type">Table</span> <span class="codenumber">2.2.7</span> Payoff matrix for <a knowl="./knowl/E_domstrat2.html" title="Example 2.2.6: A \(2\times 3\) Game">Example 2.2.6</a>.</figcaption></figure><p id="p-161">Determine which row Player 1 should choose. Is there any situation in which Player 1 would choose the other row?</p></article><article class="example-like" id="E_domstrat3"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">2.2.8</span> <span class="title">Another \(2 \times 3\) Game</span>
+<figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.7<span class="period">.</span></span><span class="space"> </span>Payoff matrix for Example 2.2.6.</figcaption></figure><p id="p-161">Determine which row Player 1 should choose. Is there any situation in which Player 1 would choose the other row?</p></article><article class="example example-like" id="E_domstrat3"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Another \(2 \times 3\) Game.</span>
 </h6>
-<p id="p-162">Consider the zero-sum game given in <a knowl="./knowl/T_biggerexample2.html" title="Table 2.2.9">Table 2.2.9</a>.</p>
-<figure class="figure-like" id="T_biggerexample2"><table>
+<p id="p-162">Consider the zero-sum game given in <a class="xref" data-knowl="./knowl/T_biggerexample2.html" title="Table 2.2.9: Payoff matrix for Example 2.2.8.">Table 2.2.9</a>.</p>
+<figure class="table figure-like" id="T_biggerexample2"><table>
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="c m b1 r0 l0 t0 lines" colspan="3">Player 2</td>
@@ -248,30 +272,33 @@ MathJax.Hub.Config({
 <td class="l m b1 r1 l0 t0 lines">3</td>
 </tr>
 </table>
-<figcaption><span class="type">Table</span> <span class="codenumber">2.2.9</span> Payoff matrix for <a knowl="./knowl/E_domstrat3.html" title="Example 2.2.8: Another \(2 \times 3\) Game">Example 2.2.8</a>.</figcaption></figure><p id="p-163">Determine which row Player 1 should choose. Is there any situation in which Player 1 would choose the other row?</p></article><p id="p-164">In <a knowl="./knowl/E_domstrat2.html" title="Example 2.2.6: A \(2\times 3\) Game">Example 2.2.6</a>, no matter what Player 2 does, Player 1 would always choose Row 1, since every payoff in Row 1 is greater than or equal to the corresponding payoff in Row 2 (\(1\ge -1\text{,}\) \(0\ge -2\text{,}\) \(2\ge 2\)). In <a knowl="./knowl/E_domstrat3.html" title="Example 2.2.8: Another \(2 \times 3\) Game">Example 2.2.8</a>, this is not the case: if Player 2 were to choose Column 3, then Player 1 would prefer Row 2. In <a knowl="./knowl/E_domstrat2.html" title="Example 2.2.6: A \(2\times 3\) Game">Example 2.2.6</a> we would say that Row 1 <em class="emphasis">dominates</em> Row 2.</p>
-<article class="definition-like" id="definition-5"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">2.2.10</span>
+<figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.9<span class="period">.</span></span><span class="space"> </span>Payoff matrix for Example 2.2.8.</figcaption></figure><p id="p-163">Determine which row Player 1 should choose. Is there any situation in which Player 1 would choose the other row?</p></article><p id="p-164">In <a class="xref" data-knowl="./knowl/E_domstrat2.html" title="Example 2.2.6: A \(2\times 3\) Game">Example 2.2.6</a>, no matter what Player 2 does, Player 1 would always choose Row 1, since every payoff in Row 1 is greater than or equal to the corresponding payoff in Row 2 (\(1\ge -1\text{,}\) \(0\ge -2\text{,}\) \(2\ge 2\)). In <a class="xref" data-knowl="./knowl/E_domstrat3.html" title="Example 2.2.8: Another \(2 \times 3\) Game">Example 2.2.8</a>, this is not the case: if Player 2 were to choose Column 3, then Player 1 would prefer Row 2. In <a class="xref" data-knowl="./knowl/E_domstrat2.html" title="Example 2.2.6: A \(2\times 3\) Game">Example 2.2.6</a> we would say that Row 1 <em class="emphasis">dominates</em> Row 2.</p>
+<article class="definition definition-like" id="definition-5"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.10</span><span class="period">.</span>
 </h6>
 <p id="p-165">A strategy \(X\) <dfn class="terminology">dominates</dfn> a strategy \(Y\) if every entry for \(X\) is greater than or equal to the corresponding entry for \(Y\text{.}\) In this case, we say \(Y\) is <dfn class="terminology">dominated by</dfn> \(X\text{.}\)</p>
 <p id="p-166">If strategy \(X\) dominates stratgy \(Y\text{,}\) we can write \(X\succ Y\text{.}\)</p></article><p id="p-167">In mathematical notation, let \(a_{ik}\) be the value in the \(i^{ th}\) row and \(k^{ th}\) column. Similarly,  \(a_{jk}\) is the value in the \(j^{ th}\) row and \(k^{ th}\) column. The \(i^{ th}\) row dominates the \(j^{ th}\) row if \(a_{ik}\ge a_{jk}\) for all \(k\text{,}\) and \(a_{ik}&gt; a_{jk}\) for at least one \(k\text{.}\)</p>
 <p id="p-168">This definition can also be used for Player 2: we consider columns instead of rows. If we are looking at Player 1's payoffs, then Player 2 prefers smaller payoffs. Thus one column \(X\) dominates another column \(Y\) if all the entries in \(X\) are <em class="emphasis">smaller than or equal</em> to the corresponding entries in \(Y\text{.}\)</p>
-<p id="p-169">Here is the great thing: we can always eliminate dominated strategies! (Why?) Thus, in <a knowl="./knowl/E_domstrat2.html" title="Example 2.2.6: A \(2\times 3\) Game">Example 2.2.6</a>, we can eliminate Row 2, as in <a knowl="./knowl/F_strikerow2Ex2.html" title="Figure 2.2.11">Figure 2.2.11</a>.</p>
-<figure class="figure-like" id="F_strikerow2Ex2"><img src="images/image-3.svg" width="30%" style="display: block; margin: 0 auto;" alt=""><figcaption><span class="type">Figure</span> <span class="codenumber">2.2.11</span> Row 2 is dominated by Row 1.</figcaption></figure><p id="p-170">Now it is easy to see what Player 2 should do.</p>
-<p id="p-171">In <a knowl="./knowl/E_domstrat3.html" title="Example 2.2.8: Another \(2 \times 3\) Game">Example 2.2.8</a>, we cannot eliminate Row 2 since it is not dominated by Row 1. However, it should be clear that Column 2 dominates Column 3 (remember, Player 2 prefers SMALLER values). Thus we can eliminate Column 3 as in <a knowl="./knowl/F_strikecol3Ex3.html" title="Figure 2.2.12">Figure 2.2.12</a>.</p>
-<figure class="figure-like" id="F_strikecol3Ex3"><img src="images/image-4.svg" width="30%" style="display: block; margin: 0 auto;" alt=""><figcaption><span class="type">Figure</span> <span class="codenumber">2.2.12</span> Column 3 is dominated by Column 2.</figcaption></figure><p id="p-172">AFTER eliminating Column 3, Row 1 dominates Row 2. Now, in <a knowl="./knowl/F_strikerow2Ex3.html" title="Figure 2.2.13">Figure 2.2.13</a> we can eliminate Row 2.</p>
-<figure class="figure-like" id="F_strikerow2Ex3"><img src="images/image-5.svg" width="30%" style="display: block; margin: 0 auto;" alt=""><figcaption><span class="type">Figure</span> <span class="codenumber">2.2.13</span> After eliminating Column 3, Row 2 is dominated by Row 1.</figcaption></figure><p id="p-173">Again, now it is easy to determine what each player should do.</p>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-19" id="exercise-19"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">2.2.14</span> <span class="title">Check equilibrium pairs</span>
-</h6></a></article><div id="hk-exercise-19" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-174">Check that the strategy pairs we determined in <a knowl="./knowl/E_domstrat2.html" title="Example 2.2.6: A \(2\times 3\) Game">Example 2.2.6</a> and <a knowl="./knowl/E_domstrat3.html" title="Example 2.2.8: Another \(2 \times 3\) Game">Example 2.2.8</a> are, in fact, equilibrium pairs.</p></article></div>
-<p id="p-175">Now, look back at the election examples from <a href="S_IntroZeroSum.html#Ex_election" class="xref" title="Subsection 2.1.1: Example: An Election Campaign Game">Subsection 2.1.1</a> and apply the process of eliminating dominated strategies.</p>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-20" id="exercise-20"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">2.2.15</span> <span class="title">Eliminating dominated strategies</span>
-</h6></a></article><div id="hk-exercise-20" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-176">Use the idea of eliminating dominated strategies to determine what each player should do in the Arnold/ Bainbridge examples in <a knowl="./knowl/T_election1.html" title="Table 2.1.10">Table 2.1.10</a>, <a knowl="./knowl/T_election2.html" title="Table 2.1.13">Table 2.1.13</a>, and <a knowl="./knowl/T_election3.html" title="Table 2.1.16">Table 2.1.16</a>. Do you get the same strategy pairs as you determined in the related exercises (<a knowl="./knowl/E_election1.html" title="Exercise 2.1.11: Anaylsis of the election game">Exercise 2.1.11</a>, <a knowl="./knowl/E_election2.html" title="Exercise 2.1.14: Anaysis of the second scenario">Exercise 2.1.14</a>, <a knowl="./knowl/E_election3.html" title="Exercise 2.1.17: Analyis of the third scenario">Exercise 2.1.17</a>)?</p></article></div>
+<p id="p-169">Here is the great thing: we can always eliminate dominated strategies! (Why?) Thus, in <a class="xref" data-knowl="./knowl/E_domstrat2.html" title="Example 2.2.6: A \(2\times 3\) Game">Example 2.2.6</a>, we can eliminate Row 2, as in <a class="xref" data-knowl="./knowl/F_strikerow2Ex2.html" title="Figure 2.2.11">Figure 2.2.11</a>.</p>
+<figure class="figure figure-like" id="F_strikerow2Ex2"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/image-3.svg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.11<span class="period">.</span></span><span class="space"> </span>Row 2 is dominated by Row 1.</figcaption></figure><p id="p-170">Now it is easy to see what Player 2 should do.</p>
+<p id="p-171">In <a class="xref" data-knowl="./knowl/E_domstrat3.html" title="Example 2.2.8: Another \(2 \times 3\) Game">Example 2.2.8</a>, we cannot eliminate Row 2 since it is not dominated by Row 1. However, it should be clear that Column 2 dominates Column 3 (remember, Player 2 prefers SMALLER values). Thus we can eliminate Column 3 as in <a class="xref" data-knowl="./knowl/F_strikecol3Ex3.html" title="Figure 2.2.12">Figure 2.2.12</a>.</p>
+<figure class="figure figure-like" id="F_strikecol3Ex3"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/image-4.svg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.12<span class="period">.</span></span><span class="space"> </span>Column 3 is dominated by Column 2.</figcaption></figure><p id="p-172">AFTER eliminating Column 3, Row 1 dominates Row 2. Now, in <a class="xref" data-knowl="./knowl/F_strikerow2Ex3.html" title="Figure 2.2.13">Figure 2.2.13</a> we can eliminate Row 2.</p>
+<figure class="figure figure-like" id="F_strikerow2Ex3"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/image-5.svg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.13<span class="period">.</span></span><span class="space"> </span>After eliminating Column 3, Row 2 is dominated by Row 1.</figcaption></figure><p id="p-173">Again, now it is easy to determine what each player should do.</p>
+<article class="exercise exercise-like" id="exercise-19"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-19"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.2.14</span><span class="period">.</span><span class="space"> </span><span class="title">Check equilibrium pairs.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-19"><article class="exercise exercise-like"><p id="p-174">Check that the strategy pairs we determined in <a class="xref" data-knowl="./knowl/E_domstrat2.html" title="Example 2.2.6: A \(2\times 3\) Game">Example 2.2.6</a> and <a class="xref" data-knowl="./knowl/E_domstrat3.html" title="Example 2.2.8: Another \(2 \times 3\) Game">Example 2.2.8</a> are, in fact, equilibrium pairs.</p></article></div>
+<p id="p-175">Now, look back at the election examples from <a href="S_IntroZeroSum.html#Ex_election" class="internal" title="Subsection 2.1.1: Example: An Election Campaign Game">Subsection 2.1.1</a> and apply the process of eliminating dominated strategies.</p>
+<article class="exercise exercise-like" id="exercise-20"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-20"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.2.15</span><span class="period">.</span><span class="space"> </span><span class="title">Eliminating dominated strategies.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-20"><article class="exercise exercise-like"><p id="p-176">Use the idea of eliminating dominated strategies to determine what each player should do in the Arnold/ Bainbridge examples in <a class="xref" data-knowl="./knowl/T_election1.html" title="Table 2.1.10: Percentage of the vote for Example 2.1.9.">Table 2.1.10</a>, <a class="xref" data-knowl="./knowl/T_election2.html" title="Table 2.1.13: Percentage of the vote for Example 2.1.12.">Table 2.1.13</a>, and <a class="xref" data-knowl="./knowl/T_election3.html" title="Table 2.1.16: Percentage of the vote for Example 2.1.15.">Table 2.1.16</a>. Do you get the same strategy pairs as you determined in the related exercises (<a class="xref" data-knowl="./knowl/E_election1.html" title="Exercise 2.1.11: Anaylsis of the election game">Exercise 2.1.11</a>, <a class="xref" data-knowl="./knowl/E_election2.html" title="Exercise 2.1.14: Anaysis of the second scenario">Exercise 2.1.14</a>, <a class="xref" data-knowl="./knowl/E_election3.html" title="Exercise 2.1.17: Analyis of the third scenario">Exercise 2.1.17</a>)?</p></article></div>
 <p id="p-177">The next three exercises provide more practice in using dominated strategies to find equilibrium pairs.</p>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_domstratpractice1" id="E_domstratpractice1"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">2.2.16</span> <span class="title">More practice with dominated strategies</span>
-</h6></a></article><div id="hk-E_domstratpractice1" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-178">Use the idea of eliminating dominated strategies to determine any equilibrium pairs in the zero-sum game given in <a knowl="./knowl/T_domstratpractice1.html" title="Table 2.2.17">Table 2.2.17</a>. Note, since it is a zero-sum game we need only show Player 1's payoffs. Explain all the steps in your solution. If you are unable to find an equilibrium pair, explain what goes wrong.</p>
-<figure class="figure-like" id="T_domstratpractice1"><table>
+<article class="exercise exercise-like" id="E_domstratpractice1"><a data-knowl="" class="id-ref original" data-refid="hk-E_domstratpractice1"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.2.16</span><span class="period">.</span><span class="space"> </span><span class="title">More practice with dominated strategies.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_domstratpractice1"><article class="exercise exercise-like"><p id="p-178">Use the idea of eliminating dominated strategies to determine any equilibrium pairs in the zero-sum game given in <a class="xref" data-knowl="./knowl/T_domstratpractice1.html" title="Table 2.2.17: Payoff matrix for Exercise 2.2.16.">Table 2.2.17</a>. Note, since it is a zero-sum game we need only show Player 1's payoffs. Explain all the steps in your solution. If you are unable to find an equilibrium pair, explain what goes wrong.</p>
+<figure class="table figure-like" id="T_domstratpractice1"><table>
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines"></td>
@@ -291,7 +318,7 @@ MathJax.Hub.Config({
 <td class="c m b1 r1 l0 t0 lines">1</td>
 <td class="c m b1 r1 l0 t0 lines">0</td>
 <td class="c m b1 r1 l0 t0 lines">0</td>
-<td class="c m b1 r1 l0 t0 lines">0</td>
+<td class="c m b1 r1 l0 t0 lines">10</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines">Player 1</td>
@@ -318,11 +345,11 @@ MathJax.Hub.Config({
 <td class="c m b1 r1 l0 t0 lines">7</td>
 </tr>
 </table>
-<figcaption><span class="type">Table</span> <span class="codenumber">2.2.17</span> Payoff matrix for <a knowl="./knowl/E_domstratpractice1.html" title="Exercise 2.2.16: More practice with dominated strategies">Exercise 2.2.16</a>.</figcaption></figure></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_domstratpractice2" id="E_domstratpractice2"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">2.2.18</span> <span class="title">Determine equilibrium pairs</span>
-</h6></a></article><div id="hk-E_domstratpractice2" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-179">Determine any equilibrium pairs in the zero-sum game given in <a knowl="./knowl/T_domstratpractice2.html" title="Table 2.2.19">Table 2.2.19</a>. Explain all the steps in your solution. If you are unable to find an equilibrium pair, explain what goes wrong.</p>
-<figure class="figure-like" id="T_domstratpractice2"><table>
+<figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.17<span class="period">.</span></span><span class="space"> </span>Payoff matrix for Exercise 2.2.16.</figcaption></figure></article></div>
+<article class="exercise exercise-like" id="E_domstratpractice2"><a data-knowl="" class="id-ref original" data-refid="hk-E_domstratpractice2"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.2.18</span><span class="period">.</span><span class="space"> </span><span class="title">Determine equilibrium pairs.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_domstratpractice2"><article class="exercise exercise-like"><p id="p-179">Determine any equilibrium pairs in the zero-sum game given in <a class="xref" data-knowl="./knowl/T_domstratpractice2.html" title="Table 2.2.19: Payoff matrix for Exercise 2.2.18.">Table 2.2.19</a>. Explain all the steps in your solution. If you are unable to find an equilibrium pair, explain what goes wrong.</p>
+<figure class="table figure-like" id="T_domstratpractice2"><table>
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines"></td>
@@ -369,11 +396,11 @@ MathJax.Hub.Config({
 <td class="c m b1 r1 l0 t0 lines">1</td>
 </tr>
 </table>
-<figcaption><span class="type">Table</span> <span class="codenumber">2.2.19</span> Payoff matrix for <a knowl="./knowl/E_domstratpractice2.html" title="Exercise 2.2.18: Determine equilibrium pairs">Exercise 2.2.18</a>.</figcaption></figure></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_domstratpractice3" id="E_domstratpractice3"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">2.2.20</span> <span class="title">Practice finding equilibrium pairs</span>
-</h6></a></article><div id="hk-E_domstratpractice3" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-180">Determine any equilibrium pairs in the zero-sum game given in <a knowl="./knowl/T_domstratpractice3.html" title="Table 2.2.21">Table 2.2.21</a>. Explain all the steps in your solution. If you are unable to find an equilibrium pair, explain what goes wrong.</p>
-<figure class="figure-like" id="T_domstratpractice3"><table>
+<figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.19<span class="period">.</span></span><span class="space"> </span>Payoff matrix for Exercise 2.2.18.</figcaption></figure></article></div>
+<article class="exercise exercise-like" id="E_domstratpractice3"><a data-knowl="" class="id-ref original" data-refid="hk-E_domstratpractice3"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.2.20</span><span class="period">.</span><span class="space"> </span><span class="title">Practice finding equilibrium pairs.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_domstratpractice3"><article class="exercise exercise-like"><p id="p-180">Determine any equilibrium pairs in the zero-sum game given in <a class="xref" data-knowl="./knowl/T_domstratpractice3.html" title="Table 2.2.21: Payoff matrix for Exercise 2.2.20.">Table 2.2.21</a>. Explain all the steps in your solution. If you are unable to find an equilibrium pair, explain what goes wrong.</p>
+<figure class="table figure-like" id="T_domstratpractice3"><table>
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines"></td>
@@ -420,11 +447,11 @@ MathJax.Hub.Config({
 <td class="c m b1 r1 l0 t0 lines">15</td>
 </tr>
 </table>
-<figcaption><span class="type">Table</span> <span class="codenumber">2.2.21</span> Payoff matrix for <a knowl="./knowl/E_domstratpractice3.html" title="Exercise 2.2.20: Practice finding equilibrium pairs">Exercise 2.2.20</a>.</figcaption></figure></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_domstratpractice4" id="E_domstratpractice4"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">2.2.22</span> <span class="title">A more challenging example</span>
-</h6></a></article><div id="hk-E_domstratpractice4" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-181">Determine any equilibrium pairs in the zero-sum game given in <a knowl="./knowl/T_domstratpractice4.html" title="Table 2.2.23">Table 2.2.23</a>. Explain all the steps in your solution. If you are unable to find an equilibrium pair, explain what goes wrong.</p>
-<figure class="figure-like" id="T_domstratpractice4"><table>
+<figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.21<span class="period">.</span></span><span class="space"> </span>Payoff matrix for Exercise 2.2.20.</figcaption></figure></article></div>
+<article class="exercise exercise-like" id="E_domstratpractice4"><a data-knowl="" class="id-ref original" data-refid="hk-E_domstratpractice4"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.2.22</span><span class="period">.</span><span class="space"> </span><span class="title">A more challenging example.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_domstratpractice4"><article class="exercise exercise-like"><p id="p-181">Determine any equilibrium pairs in the zero-sum game given in <a class="xref" data-knowl="./knowl/T_domstratpractice4.html" title="Table 2.2.23: Payoff matrix for Exercise 2.2.22.">Table 2.2.23</a>. Explain all the steps in your solution. If you are unable to find an equilibrium pair, explain what goes wrong.</p>
+<figure class="table figure-like" id="T_domstratpractice4"><table>
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines"></td>
@@ -471,33 +498,33 @@ MathJax.Hub.Config({
 <td class="c m b1 r1 l0 t0 lines">8</td>
 </tr>
 </table>
-<figcaption><span class="type">Table</span> <span class="codenumber">2.2.23</span> Payoff matrix for <a knowl="./knowl/E_domstratpractice4.html" title="Exercise 2.2.22: A more challenging example">Exercise 2.2.22</a>.</figcaption></figure></article></div>
-<p id="p-182">Chances are you had trouble determining an equilibrium pair for the game in <a knowl="./knowl/E_domstratpractice4.html" title="Exercise 2.2.22: A more challenging example">Exercise 2.2.22</a>. Does this mean there isn't an equilibrium pair? Not necessarily, but we are stuck if we try to use only the idea of eliminating dominated strategies. So we need a new method.</p>
+<figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.23<span class="period">.</span></span><span class="space"> </span>Payoff matrix for Exercise 2.2.22.</figcaption></figure></article></div>
+<p id="p-182">Chances are you had trouble determining an equilibrium pair for the game in <a class="xref" data-knowl="./knowl/E_domstratpractice4.html" title="Exercise 2.2.22: A more challenging example">Exercise 2.2.22</a>. Does this mean there isn't an equilibrium pair? Not necessarily, but we are stuck if we try to use only the idea of eliminating dominated strategies. So we need a new method.</p>
 <p id="p-183">We might think of our next method as the “worst case scenario,” or “extremely defensive play.” The idea is that we want to assume our opponent is the best player to ever live. In fact, we might assume our opponent is telepathic. So no matter what we do, our opponent will always guess what we are going to choose.</p>
-<article class="example-like" id="E_intromaxmin"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">2.2.24</span> <span class="title">Playing Against the Best</span>
+<article class="example example-like" id="E_intromaxmin"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.24</span><span class="period">.</span><span class="space"> </span><span class="title">Playing Against the Best.</span>
 </h6>
-<p id="p-184">Assume you are Player 1, and you are playing against this “infinitely smart” Player 2. Consider the game in <a knowl="./knowl/T_domstratpractice1.html" title="Table 2.2.17">Table 2.2.17</a>. If you pick row A, what will Player 2 do? Player 2 will pick column X or Y. Try this for each of the rows. Which row is your best choice? If you pick A, you will get \(0\text{;}\) if you pick B, you will get \(-2\text{;}\) if you pick C, you will get \(1\text{;}\) and if you pick D you will get \(-2\text{.}\) Thus, your best choice is to choose C and get \(1\text{.}\) Now assume you are Player 2, and Player 1 is “infinitely smart.” Which column is your best choice? If you pick W, Player 1 will get \(1\) (you will get \(-1\)); if you pick X, Player 1 will get \(1\text{;}\) if you pick Y, Player 1 will get \(1\text{;}\) and if you pick Z, you will get \(10\text{.}\) Thus, you can choose W, X, or Y (since you want Player 1 to win the least) and get \(-1\text{.}\)</p></article><article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-25" id="exercise-25"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">2.2.25</span> <span class="title">A new method</span>
-</h6></a></article><div id="hk-exercise-25" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-185">Using the method described in <a knowl="./knowl/E_intromaxmin.html" title="Example 2.2.24: Playing Against the Best">Example 2.2.24</a>, determine what each player should do in the game in <a knowl="./knowl/T_domstratpractice2.html" title="Table 2.2.19">Table 2.2.19</a>.</p></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-26" id="exercise-26"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">2.2.26</span> <span class="title">More practice with the new method</span>
-</h6></a></article><div id="hk-exercise-26" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-186">Using the method described in <a knowl="./knowl/E_intromaxmin.html" title="Example 2.2.24: Playing Against the Best">Example 2.2.24</a>, determine what each player should do in the game in <a knowl="./knowl/T_domstratpractice3.html" title="Table 2.2.21">Table 2.2.21</a>.</p></article></div>
-<p id="p-187">After working through a few examples can you describe more generally the process used in <a knowl="./knowl/E_intromaxmin.html" title="Example 2.2.24: Playing Against the Best">Example 2.2.24</a>? What is Player 1 looking for in each row? Then how does she choose which row to play? What is Player 2 looking for in each column? How does he choose which column to play?</p>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-27" id="exercise-27"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">2.2.27</span> <span class="title">Generalizing the new method</span>
-</h6></a></article><div id="hk-exercise-27" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-188">Generalize the method described in <a knowl="./knowl/E_intromaxmin.html" title="Example 2.2.24: Playing Against the Best">Example 2.2.24</a>. In other words, give a general rule for how Player 1 should determine his or her best move. Do the same for Player 2.</p></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-28" id="exercise-28"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">2.2.28</span> <span class="title">The new method and equlibrium points</span>
-</h6></a></article><div id="hk-exercise-28" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-189">What do you notice about using this method on the games in <a knowl="./knowl/T_domstratpractice1.html" title="Table 2.2.17">Tables 2.2.17</a>, <a knowl="./knowl/T_domstratpractice2.html" title="Table 2.2.19">Table 2.2.19</a>, and <a knowl="./knowl/T_domstratpractice3.html" title="Table 2.2.21">Table 2.2.21</a>? Is the solution an equilibrium pair?</p></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-29" id="exercise-29"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">2.2.29</span> <span class="title">The new method on the challenging example</span>
-</h6></a></article><div id="hk-exercise-29" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-190">Now try this method on the elusive payoff matrix in <a knowl="./knowl/T_domstratpractice4.html" title="Table 2.2.23">Table 2.2.23</a>. What should each player do? Do you think we get an equilibrium pair? Explain.</p></article></div>
+<p id="p-184">Assume you are Player 1, and you are playing against this “infinitely smart” Player 2. Consider the game in <a class="xref" data-knowl="./knowl/T_domstratpractice1.html" title="Table 2.2.17: Payoff matrix for Exercise 2.2.16.">Table 2.2.17</a>. If you pick row A, what will Player 2 do? Player 2 will pick column X or Y. Try this for each of the rows. Which row is your best choice? If you pick A, you will get \(0\text{;}\) if you pick B, you will get \(-2\text{;}\) if you pick C, you will get \(1\text{;}\) and if you pick D you will get \(-2\text{.}\) Thus, your best choice is to choose C and get \(1\text{.}\) Now assume you are Player 2, and Player 1 is “infinitely smart.” Which column is your best choice? If you pick W, Player 1 will get \(1\) (you will get \(-1\)); if you pick X, Player 1 will get \(1\text{;}\) if you pick Y, Player 1 will get \(1\text{;}\) and if you pick Z, you will get \(10\text{.}\) Thus, you can choose W, X, or Y (since you want Player 1 to win the least) and get \(-1\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-25"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-25"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.2.25</span><span class="period">.</span><span class="space"> </span><span class="title">A new method.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-25"><article class="exercise exercise-like"><p id="p-185">Using the method described in <a class="xref" data-knowl="./knowl/E_intromaxmin.html" title="Example 2.2.24: Playing Against the Best">Example 2.2.24</a>, determine what each player should do in the game in <a class="xref" data-knowl="./knowl/T_domstratpractice2.html" title="Table 2.2.19: Payoff matrix for Exercise 2.2.18.">Table 2.2.19</a>.</p></article></div>
+<article class="exercise exercise-like" id="exercise-26"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-26"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.2.26</span><span class="period">.</span><span class="space"> </span><span class="title">More practice with the new method.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-26"><article class="exercise exercise-like"><p id="p-186">Using the method described in <a class="xref" data-knowl="./knowl/E_intromaxmin.html" title="Example 2.2.24: Playing Against the Best">Example 2.2.24</a>, determine what each player should do in the game in <a class="xref" data-knowl="./knowl/T_domstratpractice3.html" title="Table 2.2.21: Payoff matrix for Exercise 2.2.20.">Table 2.2.21</a>.</p></article></div>
+<p id="p-187">After working through a few examples can you describe more generally the process used in <a class="xref" data-knowl="./knowl/E_intromaxmin.html" title="Example 2.2.24: Playing Against the Best">Example 2.2.24</a>? What is Player 1 looking for in each row? Then how does she choose which row to play? What is Player 2 looking for in each column? How does he choose which column to play?</p>
+<article class="exercise exercise-like" id="exercise-27"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-27"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.2.27</span><span class="period">.</span><span class="space"> </span><span class="title">Generalizing the new method.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-27"><article class="exercise exercise-like"><p id="p-188">Generalize the method described in <a class="xref" data-knowl="./knowl/E_intromaxmin.html" title="Example 2.2.24: Playing Against the Best">Example 2.2.24</a>. In other words, give a general rule for how Player 1 should determine his or her best move. Do the same for Player 2.</p></article></div>
+<article class="exercise exercise-like" id="exercise-28"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-28"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.2.28</span><span class="period">.</span><span class="space"> </span><span class="title">The new method and equlibrium points.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-28"><article class="exercise exercise-like"><p id="p-189">What do you notice about using this method on the games in <a class="xref" data-knowl="./knowl/T_domstratpractice1.html" title="Table 2.2.17: Payoff matrix for Exercise 2.2.16.">Tables 2.2.17</a>, <a class="xref" data-knowl="./knowl/T_domstratpractice2.html" title="Table 2.2.19: Payoff matrix for Exercise 2.2.18.">Table 2.2.19</a>, and <a class="xref" data-knowl="./knowl/T_domstratpractice3.html" title="Table 2.2.21: Payoff matrix for Exercise 2.2.20.">Table 2.2.21</a>? Is the solution an equilibrium pair?</p></article></div>
+<article class="exercise exercise-like" id="exercise-29"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-29"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.2.29</span><span class="period">.</span><span class="space"> </span><span class="title">The new method on the challenging example.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-29"><article class="exercise exercise-like"><p id="p-190">Now try this method on the elusive payoff matrix in <a class="xref" data-knowl="./knowl/T_domstratpractice4.html" title="Table 2.2.23: Payoff matrix for Exercise 2.2.22.">Table 2.2.23</a>. What should each player do? Do you think we get an equilibrium pair? Explain.</p></article></div>
 <p id="p-191">The strategies we found using the above method have a more official name. Player 1's strategy is called the <em class="emphasis">maximin</em> strategy. Player 1 is maximizing the minimum values from each row. Player 2's strategy is called the <em class="emphasis">minimax</em> strategy. Player 2 is minimizing the maximum values from each column. Notice, we can find the maximin and minimax strategies for any zero-sum game. But do our players always want to use these strategies? Will they always result in an equilibrium pair? The next five exercises explore these questions.</p>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_domstratpractice5" id="E_domstratpractice5"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">2.2.30</span> <span class="title">Look for dominated strategies</span>
-</h6></a></article><div id="hk-E_domstratpractice5" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-192">Let's consider another game matrix, given in <a knowl="./knowl/T_domstratpractice5.html" title="Table 2.2.31">Table 2.2.31</a>. Explain why you cannot use dominated strategies to find an equilibrium pair. Do you think there is an equilibrium pair for this game (why or why not)?</p>
-<figure class="figure-like" id="T_domstratpractice5"><table>
+<article class="exercise exercise-like" id="E_domstratpractice5"><a data-knowl="" class="id-ref original" data-refid="hk-E_domstratpractice5"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.2.30</span><span class="period">.</span><span class="space"> </span><span class="title">Look for dominated strategies.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_domstratpractice5"><article class="exercise exercise-like"><p id="p-192">Let's consider another game matrix, given in <a class="xref" data-knowl="./knowl/T_domstratpractice5.html" title="Table 2.2.31: Payoff matrix for Exercise 2.2.30.">Table 2.2.31</a>. Explain why you cannot use dominated strategies to find an equilibrium pair. Do you think there is an equilibrium pair for this game (why or why not)?</p>
+<figure class="table figure-like" id="T_domstratpractice5"><table>
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines"></td>
@@ -544,20 +571,30 @@ MathJax.Hub.Config({
 <td class="c m b1 r1 l0 t0 lines">15</td>
 </tr>
 </table>
-<figcaption><span class="type">Table</span> <span class="codenumber">2.2.31</span> Payoff matrix for <a knowl="./knowl/E_domstratpractice5.html" title="Exercise 2.2.30: Look for dominated strategies">Exercise 2.2.30</a>.</figcaption></figure></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-31" id="exercise-31"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">2.2.32</span> <span class="title">Find the maximin/minimax strategy</span>
-</h6></a></article><div id="hk-exercise-31" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-193">If both players use the maximin/ minimax strategy, what is the outcome of the game in <a knowl="./knowl/T_domstratpractice5.html" title="Table 2.2.31">Table 2.2.31</a>?</p></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-32" id="exercise-32"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">2.2.33</span> <span class="title">Predicting a maximin strategy</span>
-</h6></a></article><div id="hk-exercise-32" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-194">In the game in <a knowl="./knowl/T_domstratpractice5.html" title="Table 2.2.31">Table 2.2.31</a>, if Player 1's opponent can guess that Player 1 will choose to use a maximin strategy, is Player 1 better off <em class="emphasis">not</em> using the maximin strategy?</p></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_iterate5" id="E_iterate5"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">2.2.34</span> <span class="title">Deviating from the maxinmin/minimax strategy</span>
-</h6></a></article><div id="hk-E_iterate5" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-195">Suppose both players initially decide to use the minimax/ maximin strategy in the game in <a knowl="./knowl/T_domstratpractice5.html" title="Table 2.2.31">Table 2.2.31</a>. Is Player 1 better off choosing a different strategy? If Player 2 guesses a change, is Player 2 better off changing strategies? Continue this line of reasoning for several iterations. What strategies do each of the players choose? Is at least one player always better off switching strategies? Can we conclude that the maximin/ minimax strategy does not lead to an equilibrium pair?</p></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-34" id="exercise-34"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">2.2.35</span> <span class="title">Comparing examples</span>
-</h6></a></article><div id="hk-exercise-34" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-196">Compare your answers in <a knowl="./knowl/E_iterate5.html" title="Exercise 2.2.34: Deviating from the maxinmin/minimax strategy">Exercise 2.2.34</a> to what happens in <a knowl="./knowl/E_domstratpractice1.html" title="Exercise 2.2.16: More practice with dominated strategies">Exercise 2.2.16</a>, <a knowl="./knowl/E_domstratpractice2.html" title="Exercise 2.2.18: Determine equilibrium pairs">Exercise 2.2.18</a>, and <a knowl="./knowl/E_domstratpractice3.html" title="Exercise 2.2.20: Practice finding equilibrium pairs">Exercise 2.2.20</a>. Can you identify any key differences between the games in <a knowl="./knowl/E_iterate5.html" title="Exercise 2.2.34: Deviating from the maxinmin/minimax strategy">Exercise 2.2.34</a> and <a knowl="./knowl/E_domstratpractice1.html" title="Exercise 2.2.16: More practice with dominated strategies">Exercise 2.2.16</a>, <a knowl="./knowl/E_domstratpractice2.html" title="Exercise 2.2.18: Determine equilibrium pairs">Exercise 2.2.18</a>, and <a knowl="./knowl/E_domstratpractice3.html" title="Exercise 2.2.20: Practice finding equilibrium pairs">Exercise 2.2.20</a>?</p></article></div>
+<figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.31<span class="period">.</span></span><span class="space"> </span>Payoff matrix for Exercise 2.2.30.</figcaption></figure></article></div>
+<article class="exercise exercise-like" id="exercise-31"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-31"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.2.32</span><span class="period">.</span><span class="space"> </span><span class="title">Find the maximin/minimax strategy.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-31"><article class="exercise exercise-like"><p id="p-193">If both players use the maximin/ minimax strategy, what is the outcome of the game in <a class="xref" data-knowl="./knowl/T_domstratpractice5.html" title="Table 2.2.31: Payoff matrix for Exercise 2.2.30.">Table 2.2.31</a>?</p></article></div>
+<article class="exercise exercise-like" id="exercise-32"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-32"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.2.33</span><span class="period">.</span><span class="space"> </span><span class="title">Predicting a maximin strategy.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-32"><article class="exercise exercise-like"><p id="p-194">In the game in <a class="xref" data-knowl="./knowl/T_domstratpractice5.html" title="Table 2.2.31: Payoff matrix for Exercise 2.2.30.">Table 2.2.31</a>, if Player 1's opponent can guess that Player 1 will choose to use a maximin strategy, is Player 1 better off <em class="emphasis">not</em> using the maximin strategy?</p></article></div>
+<article class="exercise exercise-like" id="E_iterate5"><a data-knowl="" class="id-ref original" data-refid="hk-E_iterate5"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.2.34</span><span class="period">.</span><span class="space"> </span><span class="title">Deviating from the maxinmin/minimax strategy.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_iterate5"><article class="exercise exercise-like"><p id="p-195">Suppose both players initially decide to use the minimax/ maximin strategy in the game in <a class="xref" data-knowl="./knowl/T_domstratpractice5.html" title="Table 2.2.31: Payoff matrix for Exercise 2.2.30.">Table 2.2.31</a>. Is Player 1 better off choosing a different strategy? If Player 2 guesses a change, is Player 2 better off changing strategies? Continue this line of reasoning for several iterations. What strategies do each of the players choose? Is at least one player always better off switching strategies? Can we conclude that the maximin/ minimax strategy does not lead to an equilibrium pair?</p></article></div>
+<article class="exercise exercise-like" id="exercise-34"><a data-knowl="" class="id-ref original" data-refid="hk-exercise-34"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2.2.35</span><span class="period">.</span><span class="space"> </span><span class="title">Comparing examples.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-34"><article class="exercise exercise-like"><p id="p-196">Compare your answers in <a class="xref" data-knowl="./knowl/E_iterate5.html" title="Exercise 2.2.34: Deviating from the maxinmin/minimax strategy">Exercise 2.2.34</a> to what happens in <a class="xref" data-knowl="./knowl/E_domstratpractice1.html" title="Exercise 2.2.16: More practice with dominated strategies">Exercise 2.2.16</a>, <a class="xref" data-knowl="./knowl/E_domstratpractice2.html" title="Exercise 2.2.18: Determine equilibrium pairs">Exercise 2.2.18</a>, and <a class="xref" data-knowl="./knowl/E_domstratpractice3.html" title="Exercise 2.2.20: Practice finding equilibrium pairs">Exercise 2.2.20</a>. Can you identify any key differences between the games in <a class="xref" data-knowl="./knowl/E_iterate5.html" title="Exercise 2.2.34: Deviating from the maxinmin/minimax strategy">Exercise 2.2.34</a> and <a class="xref" data-knowl="./knowl/E_domstratpractice1.html" title="Exercise 2.2.16: More practice with dominated strategies">Exercise 2.2.16</a>, <a class="xref" data-knowl="./knowl/E_domstratpractice2.html" title="Exercise 2.2.18: Determine equilibrium pairs">Exercise 2.2.18</a>, and <a class="xref" data-knowl="./knowl/E_domstratpractice3.html" title="Exercise 2.2.20: Practice finding equilibrium pairs">Exercise 2.2.20</a>?</p></article></div>
 <p id="p-197">Given a zero-sum matrix game, we can find equilibruim pairs (if they exist) by the “guess and check” method, by eliminating dominated strategies, and by looking for the minimax/maximin strategies. You should be able to apply all three methods and think about which method might be the most appropriate for a given matrix game. For example, although “guess and check” should always find an equilibrium point if it exists, it may be very tedious to apply to a really large matrix. The maximin/minimax method might be much faster.</p></section></div></main>
 </div>
+<!--Start: StatCounter code--><script>
+var sc_project=11588994;
+var sc_invisible=1;
+var sc_security="ed2110b7";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/11588994/0/ed2110b7/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.13/login.js"></script>
 </body>
 </html>

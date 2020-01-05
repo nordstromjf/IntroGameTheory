@@ -2,7 +2,7 @@
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
 <!--*                                    *-->
-<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
 <!--**************************************-->
 <html lang="en-US">
@@ -11,13 +11,19 @@
 <title>Mixed Strategies: Expected Value Solution</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
-        inlineMath: [['\\(','\\)']],
+        inlineMath: [['\\(','\\)']]
     },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -34,13 +40,27 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
-<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.13;
+</script>
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\MyTikzmark}[2]{
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{\MyTikzmark}[2]{
      \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
 \newcommand{\DrawVLine}[3][]{
   \begin{tikzpicture}[overlay,remember picture]
@@ -58,7 +78,7 @@ MathJax.Hub.Config({
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="" target="_blank"><img src="images/image-1.svg" alt="Logo image"></a><div class="title-container">
-<h1 class="heading"><a href="index.html"><span class="title">Introduction to Game Theory: a Discovery Approach</span></a></h1>
+<h1 class="heading"><a href="book-1.html"><span class="title">Introduction to Game Theory:</span> <span class="subtitle">a Discovery Approach</span></a></h1>
 <p class="byline">Jennifer Firkins Nordstrom</p>
 </div>
 </div></div>
@@ -67,25 +87,27 @@ MathJax.Hub.Config({
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
 <a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_solvingeq.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-3.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_LiarsPoker.html" title="Next">Next</a></span>
 </div>
-<button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
 <button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_solvingeq.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-3.html" title="Up">Up</a><a class="next-button button toolbar-item" href="S_LiarsPoker.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
-<ul>
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
 </ul>
-<h2 class="link"><a href="chapter-1.html" data-scroll="chapter-1"><span class="codenumber">1</span> <span class="title punctuated">What is Game Theory?</span></a></h2>
-<ul>
+</li>
+<li class="link">
+<a href="chapter-1.html" data-scroll="chapter-1"><span class="codenumber">1</span> <span class="title">What is Game Theory?</span></a><ul>
 <li><a href="S_intro.html" data-scroll="S_intro">Players and Strategies</a></li>
 <li><a href="S_IntroMatrices.html" data-scroll="S_IntroMatrices">Game Matrices and Payoff Vectors</a></li>
 </ul>
-<h2 class="link"><a href="chapter-2.html" data-scroll="chapter-2"><span class="codenumber">2</span> <span class="title">Two-Person Zero-Sum Games</span></a></h2>
-<ul>
+</li>
+<li class="link">
+<a href="chapter-2.html" data-scroll="chapter-2"><span class="codenumber">2</span> <span class="title">Two-Person Zero-Sum Games</span></a><ul>
 <li><a href="S_IntroZeroSum.html" data-scroll="S_IntroZeroSum">Introduction to Two-Person Zero-Sum Games</a></li>
 <li><a href="S_DominatedStrategies.html" data-scroll="S_DominatedStrategies">Dominated Strategies</a></li>
 <li><a href="S_Probability.html" data-scroll="S_Probability">Probability and Expected Value</a></li>
@@ -94,8 +116,9 @@ MathJax.Hub.Config({
 <li><a href="S_ZeroSumStrategySummary.html" data-scroll="S_ZeroSumStrategySummary">Strategies for Zero-Sum Games and Equilibrium Points</a></li>
 <li><a href="S_PopRationality.html" data-scroll="S_PopRationality">Popular Culture: Rationality and Perfect Information</a></li>
 </ul>
-<h2 class="link"><a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span> <span class="title">Repeated Two-Person Zero-sum Games</span></a></h2>
-<ul>
+</li>
+<li class="link">
+<a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span> <span class="title">Repeated Two-Person Zero-sum Games</span></a><ul>
 <li><a href="S_IntroRepeated.html" data-scroll="S_IntroRepeated">Introduction to Repeated Games</a></li>
 <li><a href="S_MixStratGraph.html" data-scroll="S_MixStratGraph">Mixed Strategies: Graphical Solution</a></li>
 <li><a href="S_solvingeq.html" data-scroll="S_solvingeq">Using Sage to Graph Lines and Solve Equations</a></li>
@@ -104,8 +127,9 @@ MathJax.Hub.Config({
 <li><a href="S_AugMatrices.html" data-scroll="S_AugMatrices">Augmented Matrices</a></li>
 <li><a href="S_Undercut.html" data-scroll="S_Undercut">Undercut</a></li>
 </ul>
-<h2 class="link"><a href="chapter-4.html" data-scroll="chapter-4"><span class="codenumber">4</span> <span class="title">Non-Zero-Sum Games</span></a></h2>
-<ul>
+</li>
+<li class="link">
+<a href="chapter-4.html" data-scroll="chapter-4"><span class="codenumber">4</span> <span class="title">Non-Zero-Sum Games</span></a><ul>
 <li><a href="Intrononzero.html" data-scroll="Intrononzero">Introduction to Two-Player Non-Zero-Sum Games</a></li>
 <li><a href="pdandchicken.html" data-scroll="pdandchicken">Prisoner's Dilemma and Chicken</a></li>
 <li><a href="S_CWPD.html" data-scroll="S_CWPD">A Class-Wide Experiment</a></li>
@@ -115,36 +139,36 @@ MathJax.Hub.Config({
 <li><a href="S_RepeatPD.html" data-scroll="S_RepeatPD">Repeated Prisoner's Dilemma</a></li>
 <li><a href="S_PopPD.html" data-scroll="S_PopPD">Popular Culture: Prisoner's Dilemma and Chicken</a></li>
 </ul>
-<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
-<ul>
-<li><a href="references-1.html" data-scroll="references-1">References</a></li>
-<li><a href="index-1.html" data-scroll="index-1">Index</a></li>
-<li><a href="colophon-2.html" data-scroll="colophon-2">Colophon</a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</li>
+<li class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">References</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="mathbook-content"><section class="section" id="S_MixStratEV"><h2 class="heading hide-type">
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="S_MixStratEV"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.4</span> <span class="title">Mixed Strategies: Expected Value Solution</span>
 </h2>
-<a href="S_MixStratEV.html" class="permalink">¶</a><p id="p-495"></p>
-<p id="p-496">In this section, we will use the idea of expected value to find the equilibrium mixed strategies for repeated two-person zero-sum games.</p>
-<p id="p-497">One of the significant drawbacks of the graphical solution from the previous sections is that it can only solve 2 X 2 matrix games. If each player has 3 options, we would need to graph in three dimensions. Technically this is possible, but rather complicated. If each player has more than 3 options, since we can't graph in four or more dimensions, we are at a complete loss. So we need to think about an alternate way to solve for the mixed strategies. Although we will begin with 2 X 2 games, this method will easily generalize to larger games.</p>
-<article class="example-like" id="G_matching_pennies"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">3.4.1</span> <span class="title">Matching Pennies Game</span>
+<a href="S_MixStratEV.html" class="permalink">¶</a><p id="p-494"></p>
+<p id="p-495">In this section, we will use the idea of expected value to find the equilibrium mixed strategies for repeated two-person zero-sum games.</p>
+<p id="p-496">One of the significant drawbacks of the graphical solution from the previous sections is that it can only solve 2 X 2 matrix games. If each player has 3 options, we would need to graph in three dimensions. Technically this is possible, but rather complicated. If each player has more than 3 options, since we can't graph in four or more dimensions, we are at a complete loss. So we need to think about an alternate way to solve for the mixed strategies. Although we will begin with 2 X 2 games, this method will easily generalize to larger games.</p>
+<article class="example example-like" id="G_matching_pennies"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Matching Pennies Game.</span>
 </h6>
-<p id="p-498">Consider the game in which each player can choose HEADS (H) or TAILS (T); if the two players match, Player 1 wins; if the two players differ, Player 2 wins. What strategy should each player play?</p></article><article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_mpmatrix" id="E_mpmatrix"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">3.4.2</span> <span class="title">Payoff matrix</span>
-</h6></a></article><div id="hk-E_mpmatrix" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-499">Determine the payoff matrix for the Matching Pennies game.</p></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_mpnoequil" id="E_mpnoequil"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">3.4.3</span> <span class="title">Pure strategy equilibria</span>
-</h6></a></article><div id="hk-E_mpnoequil" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-500">Explain why the Matching Pennies game has no pure strategy equilibrium point.</p></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_mpguess" id="E_mpguess"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">3.4.4</span> <span class="title">Conjecture a mixed strategy</span>
-</h6></a></article><div id="hk-E_mpguess" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-501">Since we know that there is no pure strategy equilibrium point, we need to look for a mixed strategy equilibrium point. Just by looking at the payoff matrix for Matching Pennies, what do you think an ideal strategy for each player would be? Explain your choice.</p></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_mpguessev" id="E_mpguessev"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">3.4.5</span> <span class="title">Expected value of conjecture</span>
-</h6></a></article><div id="hk-E_mpguessev" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-502">Suppose both players play your ideal strategy in the Matching Pennies game, what should the expected value of the game be?</p></article></div>
-<p id="p-503">We could use our previous graphical method to determine the expected value of the game (you might quickly try this just to verify your prediction). However, as we have noted, a major drawback of the graphical solution is that if our players have 3 (or more) options, then we would need to graph an equation in 3 (or more!) variables; which, I hope you agree, we don't want to do. Although we will continue to focus on \(2 \times 2\) games, we will develop a new method which can more easily be used to solve to larger games.</p>
-<p id="p-504">We will need a little notation. Let</p>
+<p id="p-497">Consider the game in which each player can choose HEADS (H) or TAILS (T); if the two players match, Player 1 wins; if the two players differ, Player 2 wins. What strategy should each player play?</p></article><article class="exercise exercise-like" id="E_mpmatrix"><a data-knowl="" class="id-ref original" data-refid="hk-E_mpmatrix"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3.4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Payoff matrix.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_mpmatrix"><article class="exercise exercise-like"><p id="p-498">Determine the payoff matrix for the Matching Pennies game.</p></article></div>
+<article class="exercise exercise-like" id="E_mpnoequil"><a data-knowl="" class="id-ref original" data-refid="hk-E_mpnoequil"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Pure strategy equilibria.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_mpnoequil"><article class="exercise exercise-like"><p id="p-499">Explain why the Matching Pennies game has no pure strategy equilibrium point.</p></article></div>
+<article class="exercise exercise-like" id="E_mpguess"><a data-knowl="" class="id-ref original" data-refid="hk-E_mpguess"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3.4.4</span><span class="period">.</span><span class="space"> </span><span class="title">Conjecture a mixed strategy.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_mpguess"><article class="exercise exercise-like"><p id="p-500">Since we know that there is no pure strategy equilibrium point, we need to look for a mixed strategy equilibrium point. Just by looking at the payoff matrix for Matching Pennies, what do you think an ideal strategy for each player would be? Explain your choice.</p></article></div>
+<article class="exercise exercise-like" id="E_mpguessev"><a data-knowl="" class="id-ref original" data-refid="hk-E_mpguessev"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3.4.5</span><span class="period">.</span><span class="space"> </span><span class="title">Expected value of conjecture.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_mpguessev"><article class="exercise exercise-like"><p id="p-501">Suppose both players play your ideal strategy in the Matching Pennies game, what should the expected value of the game be?</p></article></div>
+<p id="p-502">We could use our previous graphical method to determine the expected value of the game (you might quickly try this just to verify your prediction). However, as we have noted, a major drawback of the graphical solution is that if our players have 3 (or more) options, then we would need to graph an equation in 3 (or more!) variables; which, I hope you agree, we don't want to do. Although we will continue to focus on \(2 \times 2\) games, we will develop a new method which can more easily be used to solve to larger games.</p>
+<p id="p-503">We will need a little notation. Let</p>
 <div class="displaymath">
 \begin{align*}
 P_1(H) \amp  = \mbox{ the probability that Player 1 plays H; }\\
@@ -154,61 +178,61 @@ P_2(T) \amp  = \mbox{ the probability that Player 2 plays T.}
 \end{align*}
 </div>
 <p>Also, we will let \(E_1(H)\) be the expected value for Player 1 playing pure strategy H against a given strategy for Player 2. Similarly, \(E_2(H)\) will be Player 2's expected value for playing pure strategy H.</p>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_mpP2_60_40" id="E_mpP2_60_40"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">3.4.6</span> <span class="title">The \((60, 40)\) strategy for Player 2</span>
-</h6></a></article><div id="hk-E_mpP2_60_40" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-505">Suppose Player 2 plays H 60% of the time and T 40% of the time. </p>
+<article class="exercise exercise-like" id="E_mpP2_60_40"><a data-knowl="" class="id-ref original" data-refid="hk-E_mpP2_60_40"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3.4.6</span><span class="period">.</span><span class="space"> </span><span class="title">The \((60, 40)\) strategy for Player 2.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_mpP2_60_40"><article class="exercise exercise-like"><p id="p-504">Suppose Player 2 plays H 60% of the time and T 40% of the time.</p>
 <ol class="lower-alpha">
-<li id="li-149"><p id="p-506">What are \(P_2(H)\) and \(P_2(T)\text{?}\)</p></li>
-<li id="li-150"><p id="p-507">What do you think Player 1 should do? Does this differ from your ideal mixed strategy in <a knowl="./knowl/E_mpguess.html" title="Exercise 3.4.4: Conjecture a mixed strategy">Exercise 3.4.4</a>? Explain.</p></li>
-<li id="li-151"><p id="p-508">We can use expected value to compute what Player 1 should do in response to Player 2's 60/40 strategy. First, consider a pure strategy for Player 1. Compute the expected value for Player 1 if she only plays H while Player 2 plays H with probability .6  and T with probability .4. This expected value is \(E_1(H)\text{,}\) above.</p></li>
-<li id="li-152"><p id="p-509">Similarly, compute the expected value for Player 1 if she plays only T (call it \(E_1(T)\)).</p></li>
-<li id="li-153"><p id="p-510">Which pure strategy has a higher expected value for Player 1? If Player 1 plays this pure strategy, will she do better than your predicted value of the game?</p></li>
+<li id="li-147"><p id="p-505">What are \(P_2(H)\) and \(P_2(T)\text{?}\)</p></li>
+<li id="li-148"><p id="p-506">What do you think Player 1 should do? Does this differ from your ideal mixed strategy in <a class="xref" data-knowl="./knowl/E_mpguess.html" title="Exercise 3.4.4: Conjecture a mixed strategy">Exercise 3.4.4</a>? Explain.</p></li>
+<li id="li-149"><p id="p-507">We can use expected value to compute what Player 1 should do in response to Player 2's 60/40 strategy. First, consider a pure strategy for Player 1. Compute the expected value for Player 1 if she only plays H while Player 2 plays H with probability .6  and T with probability .4. This expected value is \(E_1(H)\text{,}\) above.</p></li>
+<li id="li-150"><p id="p-508">Similarly, compute the expected value for Player 1 if she plays only T (call it \(E_1(T)\)).</p></li>
+<li id="li-151"><p id="p-509">Which pure strategy has a higher expected value for Player 1? If Player 1 plays this pure strategy, will she do better than your predicted value of the game?</p></li>
 </ol></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_mp60_40badP2" id="E_mp60_40badP2"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">3.4.7</span> <span class="title">The \((60, 40)\) strategy is not ideal for Player 2</span>
-</h6></a></article><div id="hk-E_mp60_40badP2" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-511">Hopefully, you concluded that in <a knowl="./knowl/E_mpP2_60_40.html" title="Exercise 3.4.6: The \((60, 40)\) strategy for Player 2">Exercise 3.4.6</a> a pure strategy is good for Player 1. Explain why this means the 60/40 strategy is bad for Player 2.</p></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_mpPlayH" id="E_mpPlayH"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">3.4.8</span> <span class="title">When to play H</span>
-</h6></a></article><div id="hk-E_mpPlayH" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-512">For any particular mixed (or pure) strategy of Player 2, we could find \(E_1(T)\) and \(E_1(H)\text{.}\) Explain why if \(E_1(H) &gt; E_1(T)\text{,}\) Player 1 should always play H.</p></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_mpPlayT" id="E_mpPlayT"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">3.4.9</span> <span class="title">When to play T</span>
-</h6></a></article><div id="hk-E_mpPlayT" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-513">Similarly, explain why if \(E_1(H) \lt  E_1(T)\text{,}\) Player 1 should always play T.</p></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_mpuneqbad" id="E_mpuneqbad"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">3.4.10</span> <span class="title">Player 2 is unhappy when Player 1's expected values are unequal</span>
-</h6></a></article><div id="hk-E_mpuneqbad" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-514">Explain why the situations in <a knowl="./knowl/E_mpPlayH.html" title="Exercise 3.4.8: When to play H">Exercise 3.4.8</a> and <a knowl="./knowl/E_mpPlayT.html" title="Exercise 3.4.9: When to play T">Exercise 3.4.9</a> are bad for Player 2.</p></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_eqgood" id="E_eqgood"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">3.4.11</span> <span class="title">Equal expected values are better</span>
-</h6></a></article><div id="hk-E_eqgood" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-515">Use your answers from <a knowl="./knowl/E_mpPlayH.html" title="Exercise 3.4.8: When to play H">Exercise 3.4.8</a>, <a knowl="./knowl/E_mpPlayT.html" title="Exercise 3.4.9: When to play T">Exercise 3.4.9</a>, and <a knowl="./knowl/E_mpuneqbad.html" title="Exercise 3.4.10: Player 2 is unhappy when Player 1's expected values are unequal">Exercise 3.4.10</a> to explain why the situation in which \(E_1(H)=E_1(T)\) is the best for Player 2.</p></article></div>
-<p id="p-516">From <a knowl="./knowl/E_eqgood.html" title="Exercise 3.4.11: Equal expected values are better">Exercise 3.4.11</a> we now know that Player 2 wants \(E_1(H)=E_1(T)\text{,}\) we can use a little algebra to compute the best defensive strategy for Player 2. Remember, we want to assume that Player 1 will always be able to chose the strategy that will be best for her, and thus Player 2 wants to protect himself. Let's find the probabilities with which Player 2 should play H and T.</p>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_mpequations" id="E_mpequations"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">3.4.12</span> <span class="title">Equations for Player 1's expected values</span>
-</h6></a></article><div id="hk-E_mpequations" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-517">Let \(P_2(H)\) and \(P_2(T)\) be the probabilities that Player 2 plays H and T respectively. Find equations for \(E_1(H)\) and \(E_1(T)\) in terms of \(P_2(H)\) and \(P_2(T)\) for the game of Matching Pennies. Since we want \(E_1(H)=E_1(T)\text{,}\) set your two equations equal to each other. This gives you one equation in terms of \(P_2(H)\) and \(P_2(T)\text{.}\)</p></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_explainprobeq" id="E_explainprobeq"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">3.4.13</span> <span class="title">The sum equation</span>
-</h6></a></article><div id="hk-E_explainprobeq" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-518">Explain why we must also have \(P_2(H)+P_2(T)=1\text{.}\)</p></article></div>
-<p id="p-519">So in general, to solve for Player 2's strategy, we want to write an equation for each of Player 1's pure strategy expected values in terms of Player 2's probabilities. For example, \(E_1(H)\) and \(E_1(T)\) in terms of variables \(P_2(H)\) and \(P_2(T)\text{.}\) We then set the expected values equal to each other. We now have an equation just in terms of Player 2's probabilities.</p>
-<p id="p-520">In order to solve for the probabilities, we also need to use the fact that Player 2's probabilities sum to 1. For example, \(P_2(H)+P_2(T)=1\text{.}\) For a \(2 \times 2\) game, you now have 2 equations with 2 unknowns (\(P_2(H)\) and \(P_2(T)\)). Use an algebraic method such as substitution or elimination to solve the system of equations.</p>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_mpsolve" id="E_mpsolve"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">3.4.14</span> <span class="title">Solve for Player 2's probabilities</span>
-</h6></a></article><div id="hk-E_mpsolve" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-521">Using the equations from <a knowl="./knowl/E_mpequations.html" title="Exercise 3.4.12: Equations for Player 1's expected values">Exercise 3.4.12</a> and <a knowl="./knowl/E_explainprobeq.html" title="Exercise 3.4.13: The sum equation">Exercise 3.4.13</a>, solve for \(P_2(H)\) and \(P_2(T)\text{.}\) You now have the equilibrium mixed strategy for Player 2. Does this match the mixed strategy you determined in <a knowl="./knowl/E_mpguess.html" title="Exercise 3.4.4: Conjecture a mixed strategy">Exercise 3.4.4</a>?</p></article></div>
-<p id="p-522">Now can you use a similar process to find Player 1's strategy? Whose expected values should you use? Whose probabliities?</p>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_mpP1sol" id="E_mpP1sol"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">3.4.15</span> <span class="title">Find Player 1's probabilities</span>
-</h6></a></article><div id="hk-E_mpP1sol" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-523">Set up and solve the analogous equations from <a knowl="./knowl/E_mpequations.html" title="Exercise 3.4.12: Equations for Player 1's expected values">Exercise 3.4.12</a> and <a knowl="./knowl/E_explainprobeq.html" title="Exercise 3.4.13: The sum equation">Exercise 3.4.13</a> for Player 1. Does this match the mixed strategy from <a knowl="./knowl/E_mpguess.html" title="Exercise 3.4.4: Conjecture a mixed strategy">Exercise 3.4.4</a>?</p>
+<article class="exercise exercise-like" id="E_mp60_40badP2"><a data-knowl="" class="id-ref original" data-refid="hk-E_mp60_40badP2"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3.4.7</span><span class="period">.</span><span class="space"> </span><span class="title">The \((60, 40)\) strategy is not ideal for Player 2.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_mp60_40badP2"><article class="exercise exercise-like"><p id="p-510">Hopefully, you concluded that in <a class="xref" data-knowl="./knowl/E_mpP2_60_40.html" title="Exercise 3.4.6: The \((60, 40)\) strategy for Player 2">Exercise 3.4.6</a> a pure strategy is good for Player 1. Explain why this means the 60/40 strategy is bad for Player 2.</p></article></div>
+<article class="exercise exercise-like" id="E_mpPlayH"><a data-knowl="" class="id-ref original" data-refid="hk-E_mpPlayH"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3.4.8</span><span class="period">.</span><span class="space"> </span><span class="title">When to play H.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_mpPlayH"><article class="exercise exercise-like"><p id="p-511">For any particular mixed (or pure) strategy of Player 2, we could find \(E_1(T)\) and \(E_1(H)\text{.}\) Explain why if \(E_1(H) &gt; E_1(T)\text{,}\) Player 1 should always play H.</p></article></div>
+<article class="exercise exercise-like" id="E_mpPlayT"><a data-knowl="" class="id-ref original" data-refid="hk-E_mpPlayT"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3.4.9</span><span class="period">.</span><span class="space"> </span><span class="title">When to play T.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_mpPlayT"><article class="exercise exercise-like"><p id="p-512">Similarly, explain why if \(E_1(H) \lt  E_1(T)\text{,}\) Player 1 should always play T.</p></article></div>
+<article class="exercise exercise-like" id="E_mpuneqbad"><a data-knowl="" class="id-ref original" data-refid="hk-E_mpuneqbad"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3.4.10</span><span class="period">.</span><span class="space"> </span><span class="title">Player 2 is unhappy when Player 1's expected values are unequal.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_mpuneqbad"><article class="exercise exercise-like"><p id="p-513">Explain why the situations in <a class="xref" data-knowl="./knowl/E_mpPlayH.html" title="Exercise 3.4.8: When to play H">Exercise 3.4.8</a> and <a class="xref" data-knowl="./knowl/E_mpPlayT.html" title="Exercise 3.4.9: When to play T">Exercise 3.4.9</a> are bad for Player 2.</p></article></div>
+<article class="exercise exercise-like" id="E_eqgood"><a data-knowl="" class="id-ref original" data-refid="hk-E_eqgood"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3.4.11</span><span class="period">.</span><span class="space"> </span><span class="title">Equal expected values are better.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_eqgood"><article class="exercise exercise-like"><p id="p-514">Use your answers from <a class="xref" data-knowl="./knowl/E_mpPlayH.html" title="Exercise 3.4.8: When to play H">Exercise 3.4.8</a>, <a class="xref" data-knowl="./knowl/E_mpPlayT.html" title="Exercise 3.4.9: When to play T">Exercise 3.4.9</a>, and <a class="xref" data-knowl="./knowl/E_mpuneqbad.html" title="Exercise 3.4.10: Player 2 is unhappy when Player 1's expected values are unequal">Exercise 3.4.10</a> to explain why the situation in which \(E_1(H)=E_1(T)\) is the best for Player 2.</p></article></div>
+<p id="p-515">From <a class="xref" data-knowl="./knowl/E_eqgood.html" title="Exercise 3.4.11: Equal expected values are better">Exercise 3.4.11</a> we now know that Player 2 wants \(E_1(H)=E_1(T)\text{,}\) we can use a little algebra to compute the best defensive strategy for Player 2. Remember, we want to assume that Player 1 will always be able to chose the strategy that will be best for her, and thus Player 2 wants to protect himself. Let's find the probabilities with which Player 2 should play H and T.</p>
+<article class="exercise exercise-like" id="E_mpequations"><a data-knowl="" class="id-ref original" data-refid="hk-E_mpequations"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3.4.12</span><span class="period">.</span><span class="space"> </span><span class="title">Equations for Player 1's expected values.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_mpequations"><article class="exercise exercise-like"><p id="p-516">Let \(P_2(H)\) and \(P_2(T)\) be the probabilities that Player 2 plays H and T respectively. Find equations for \(E_1(H)\) and \(E_1(T)\) in terms of \(P_2(H)\) and \(P_2(T)\) for the game of Matching Pennies. Since we want \(E_1(H)=E_1(T)\text{,}\) set your two equations equal to each other. This gives you one equation in terms of \(P_2(H)\) and \(P_2(T)\text{.}\)</p></article></div>
+<article class="exercise exercise-like" id="E_explainprobeq"><a data-knowl="" class="id-ref original" data-refid="hk-E_explainprobeq"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3.4.13</span><span class="period">.</span><span class="space"> </span><span class="title">The sum equation.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_explainprobeq"><article class="exercise exercise-like"><p id="p-517">Explain why we must also have \(P_2(H)+P_2(T)=1\text{.}\)</p></article></div>
+<p id="p-518">So in general, to solve for Player 2's strategy, we want to write an equation for each of Player 1's pure strategy expected values in terms of Player 2's probabilities. For example, \(E_1(H)\) and \(E_1(T)\) in terms of variables \(P_2(H)\) and \(P_2(T)\text{.}\) We then set the expected values equal to each other. We now have an equation just in terms of Player 2's probabilities.</p>
+<p id="p-519">In order to solve for the probabilities, we also need to use the fact that Player 2's probabilities sum to 1. For example, \(P_2(H)+P_2(T)=1\text{.}\) For a \(2 \times 2\) game, you now have 2 equations with 2 unknowns (\(P_2(H)\) and \(P_2(T)\)). Use an algebraic method such as substitution or elimination to solve the system of equations.</p>
+<article class="exercise exercise-like" id="E_mpsolve"><a data-knowl="" class="id-ref original" data-refid="hk-E_mpsolve"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3.4.14</span><span class="period">.</span><span class="space"> </span><span class="title">Solve for Player 2's probabilities.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_mpsolve"><article class="exercise exercise-like"><p id="p-520">Using the equations from <a class="xref" data-knowl="./knowl/E_mpequations.html" title="Exercise 3.4.12: Equations for Player 1's expected values">Exercise 3.4.12</a> and <a class="xref" data-knowl="./knowl/E_explainprobeq.html" title="Exercise 3.4.13: The sum equation">Exercise 3.4.13</a>, solve for \(P_2(H)\) and \(P_2(T)\text{.}\) You now have the equilibrium mixed strategy for Player 2. Does this match the mixed strategy you determined in <a class="xref" data-knowl="./knowl/E_mpguess.html" title="Exercise 3.4.4: Conjecture a mixed strategy">Exercise 3.4.4</a>?</p></article></div>
+<p id="p-521">Now can you use a similar process to find Player 1's strategy? Whose expected values should you use? Whose probabliities?</p>
+<article class="exercise exercise-like" id="E_mpP1sol"><a data-knowl="" class="id-ref original" data-refid="hk-E_mpP1sol"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3.4.15</span><span class="period">.</span><span class="space"> </span><span class="title">Find Player 1's probabilities.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_mpP1sol"><article class="exercise exercise-like"><p id="p-522">Set up and solve the analogous equations from <a class="xref" data-knowl="./knowl/E_mpequations.html" title="Exercise 3.4.12: Equations for Player 1's expected values">Exercise 3.4.12</a> and <a class="xref" data-knowl="./knowl/E_explainprobeq.html" title="Exercise 3.4.13: The sum equation">Exercise 3.4.13</a> for Player 1. Does this match the mixed strategy from <a class="xref" data-knowl="./knowl/E_mpguess.html" title="Exercise 3.4.4: Conjecture a mixed strategy">Exercise 3.4.4</a>?</p>
 <div class="solutions">
-<a knowl="" class="id-ref" refid="hk-hint-7" id="hint-7"><span class="type">Hint</span></a><div id="hk-hint-7" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-524">We should have an equation for \(E_2(H)\) and one for \(E_2(T)\text{.}\) Since we are looking for the probabilities of each of Player 1's options, the equations should involve \(P_1(H)\) and \(P_1(T)\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-7" id="hint-7"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-7"><div class="hint solution-like"><p id="p-523">We should have an equation for \(E_2(H)\) and one for \(E_2(T)\text{.}\) Since we are looking for the probabilities of each of Player 1's options, the equations should involve \(P_1(H)\) and \(P_1(T)\text{.}\)</p></div></div>
 </div></article></div>
-<p id="p-525">We now have a new method for finding the best mixed strategies for Players 1 and 2, assuming that each player is playing defensively against an ideal player. But how can we find the value of the game? For Player 2, we assumed \(E_1(H)=E_1(T)\text{.}\) In other words, we found the situation in which Player 1's expected value is the same no matter which pure strategy she plays. Thus, Player 1 is <em class="emphasis">indifferent</em> to which pure strategy she plays. If she were not indifferent, then she would play the strategy with a higher expected value. But, as we saw, this would be bad for Player 2. So Player 1 can assume that Player 2 will play the equilibrium mixed strategy. Thus, as long as Player 1 plays a mixed strategy, it doesn't matter whether at any given time, she plays H or T (this is the idea that she is indifferent to them). Hence, the expected value of the game for Player 1 is the same as \(E_1(H)\text{,}\) which is the same as \(E_1(T)\text{.}\) Similarly, we find that the expected value of the game for Player 2 is \(E_2(H)\) (or \(E_2(T)\)). This is a pretty complicated idea. You may need to think about it for a while. In the meantime, use the probabilities you found for each player and the equations for \(E_1(H)\) and  \(E_2(H)\) to find the value of the game for each player.</p>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_mpEVP1" id="E_mpEVP1"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">3.4.16</span> <span class="title">Find Player 1's expected value of the game</span>
-</h6></a></article><div id="hk-E_mpEVP1" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-526">Use the probabilities you calculated in <a knowl="./knowl/E_mpsolve.html" title="Exercise 3.4.14: Solve for Player 2's probabilities">Exercise 3.4.14</a> to find \(E_1(H)\text{,}\) and hence the expected value of the game for Player 1. How does this compare to your prediction for the value of the game that you gave in <a knowl="./knowl/E_mpguessev.html" title="Exercise 3.4.5: Expected value of conjecture">Exercise 3.4.5</a>?</p></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_mpEVP2" id="E_mpEVP2"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">3.4.17</span> <span class="title">Find Player 2's expected value of the game</span>
-</h6></a></article><div id="hk-E_mpEVP2" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-527">Use the probabilities you calculated in <a knowl="./knowl/E_mpP1sol.html" title="Exercise 3.4.15: Find Player 1's probabilities">Exercise 3.4.15</a> to find \(E_2(H)\text{,}\) and hence the expected value of the game for Player 2. How does this compare to your prediction for the value of the game that you gave in <a knowl="./knowl/E_mpguessev.html" title="Exercise 3.4.5: Expected value of conjecture">Exercise 3.4.5</a>?</p></article></div>
-<p id="p-528">Keep practicing with the expected value method on some other games!</p>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_smallrepeatEV" id="E_smallrepeatEV"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">3.4.18</span> <span class="title">Solve a \(2\times 2\) repeated game using expected values</span>
-</h6></a></article><div id="hk-E_smallrepeatEV" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-529">Apply this method of using expected value to <a knowl="./knowl/E_smallrepeat.html" title="Example 3.1.1: A \(2\times 2\) Repeated Game">Example 3.1.1</a> (which we solved using the graphical method in the previous section) to find the equilibrium mixed strategies for each player and the value of the game for each player:</p>
+<p id="p-524">We now have a new method for finding the best mixed strategies for Players 1 and 2, assuming that each player is playing defensively against an ideal player. But how can we find the value of the game? For Player 2, we assumed \(E_1(H)=E_1(T)\text{.}\) In other words, we found the situation in which Player 1's expected value is the same no matter which pure strategy she plays. Thus, Player 1 is <em class="emphasis">indifferent</em> to which pure strategy she plays. If she were not indifferent, then she would play the strategy with a higher expected value. But, as we saw, this would be bad for Player 2. So Player 1 can assume that Player 2 will play the equilibrium mixed strategy. Thus, as long as Player 1 plays a mixed strategy, it doesn't matter whether at any given time, she plays H or T (this is the idea that she is indifferent to them). Hence, the expected value of the game for Player 1 is the same as \(E_1(H)\text{,}\) which is the same as \(E_1(T)\text{.}\) Similarly, we find that the expected value of the game for Player 2 is \(E_2(H)\) (or \(E_2(T)\)). This is a pretty complicated idea. You may need to think about it for a while. In the meantime, use the probabilities you found for each player and the equations for \(E_1(H)\) and  \(E_2(H)\) to find the value of the game for each player.</p>
+<article class="exercise exercise-like" id="E_mpEVP1"><a data-knowl="" class="id-ref original" data-refid="hk-E_mpEVP1"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3.4.16</span><span class="period">.</span><span class="space"> </span><span class="title">Find Player 1's expected value of the game.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_mpEVP1"><article class="exercise exercise-like"><p id="p-525">Use the probabilities you calculated in <a class="xref" data-knowl="./knowl/E_mpsolve.html" title="Exercise 3.4.14: Solve for Player 2's probabilities">Exercise 3.4.14</a> to find \(E_1(H)\text{,}\) and hence the expected value of the game for Player 1. How does this compare to your prediction for the value of the game that you gave in <a class="xref" data-knowl="./knowl/E_mpguessev.html" title="Exercise 3.4.5: Expected value of conjecture">Exercise 3.4.5</a>?</p></article></div>
+<article class="exercise exercise-like" id="E_mpEVP2"><a data-knowl="" class="id-ref original" data-refid="hk-E_mpEVP2"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3.4.17</span><span class="period">.</span><span class="space"> </span><span class="title">Find Player 2's expected value of the game.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_mpEVP2"><article class="exercise exercise-like"><p id="p-526">Use the probabilities you calculated in <a class="xref" data-knowl="./knowl/E_mpP1sol.html" title="Exercise 3.4.15: Find Player 1's probabilities">Exercise 3.4.15</a> to find \(E_2(H)\text{,}\) and hence the expected value of the game for Player 2. How does this compare to your prediction for the value of the game that you gave in <a class="xref" data-knowl="./knowl/E_mpguessev.html" title="Exercise 3.4.5: Expected value of conjecture">Exercise 3.4.5</a>?</p></article></div>
+<p id="p-527">Keep practicing with the expected value method on some other games!</p>
+<article class="exercise exercise-like" id="E_smallrepeatEV"><a data-knowl="" class="id-ref original" data-refid="hk-E_smallrepeatEV"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3.4.18</span><span class="period">.</span><span class="space"> </span><span class="title">Solve a \(2\times 2\) repeated game using expected values.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_smallrepeatEV"><article class="exercise exercise-like"><p id="p-528">Apply this method of using expected value to <a class="xref" data-knowl="./knowl/E_smallrepeat.html" title="Example 3.1.1: A \(2\times 2\) Repeated Game">Example 3.1.1</a> (which we solved using the graphical method in the previous section) to find the equilibrium mixed strategies for each player and the value of the game for each player:</p>
 <div class="displaymath">
 \begin{equation*}
 \left[\begin{matrix}1\amp 0\\
@@ -216,13 +240,23 @@ P_2(T) \amp  = \mbox{ the probability that Player 2 plays T.}
 \end{matrix} \right].
 \end{equation*}
 </div></article></div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-E_RPSEVsol" id="E_RPSEVsol"><h6 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">3.4.19</span> <span class="title">Expected value solution for Rock-Paper-Scissors</span>
-</h6></a></article><div id="hk-E_RPSEVsol" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-530">As we noted in this section, this method can be used to solve bigger games. We just have more equations. Use the expected value method to find the equilibrium mixed strategy for Rock-Paper-Scissors for Player 2.</p>
+<article class="exercise exercise-like" id="E_RPSEVsol"><a data-knowl="" class="id-ref original" data-refid="hk-E_RPSEVsol"><h6 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3.4.19</span><span class="period">.</span><span class="space"> </span><span class="title">Expected value solution for Rock-Paper-Scissors.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_RPSEVsol"><article class="exercise exercise-like"><p id="p-529">As we noted in this section, this method can be used to solve bigger games. We just have more equations. Use the expected value method to find the equilibrium mixed strategy for Rock-Paper-Scissors for Player 2.</p>
 <div class="solutions">
-<a knowl="" class="id-ref" refid="hk-hint-8" id="hint-8"><span class="type">Hint</span></a><div id="hk-hint-8" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-531">You will need to set \(E_1(R)=E_1(P)\) and \(E_1(P)=E_1(S)\text{;}\) solve for \(P_2(R), P_2(P), P_2(S)\text{;}\) etc. It should be very similar to what you did for Matching Pennies, but there will be three equations and three unknowns.</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-8" id="hint-8"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-8"><div class="hint solution-like"><p id="p-530">You will need to set \(E_1(R)=E_1(P)\) and \(E_1(P)=E_1(S)\text{;}\) solve for \(P_2(R), P_2(P), P_2(S)\text{;}\) etc. It should be very similar to what you did for Matching Pennies, but there will be three equations and three unknowns.</p></div></div>
 </div></article></div>
-<p id="p-532">If you found this last exercise to be algebraically arduous, don't worry, we will eventually use technology to help us solve problems with several variables.</p></section></div></main>
+<p id="p-531">If you found this last exercise to be algebraically arduous, don't worry, we will eventually use technology to help us solve problems with several variables.</p></section></div></main>
 </div>
+<!--Start: StatCounter code--><script>
+var sc_project=11588994;
+var sc_invisible=1;
+var sc_security="ed2110b7";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/11588994/0/ed2110b7/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.13/login.js"></script>
 </body>
 </html>
